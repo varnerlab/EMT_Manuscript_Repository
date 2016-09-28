@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Paper_v6.aux
+The style file: plos2009.bst
+Database file #1: References_v1.bib
+A bad cross reference---entry "ChangPP07"
+refers to entry "DBLP:conf/isbi/2007", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/isbi/2007"
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 119 entries,
+            2441 wiz_defined-function locations,
+            1464 strings with 39503 characters,
+and the built_in function-call counts, 101849 in all, are:
+= -- 9312
+> -- 1964
+< -- 5
++ -- 982
+- -- 491
+* -- 8698
+:= -- 12295
+add.period$ -- 243
+call.type$ -- 119
+change.case$ -- 125
+chr.to.int$ -- 0
+cite$ -- 238
+duplicate$ -- 9960
+empty$ -- 10411
+format.name$ -- 603
+if$ -- 22579
+int.to.chr$ -- 0
+int.to.str$ -- 119
+missing$ -- 1330
+newline$ -- 612
+num.names$ -- 119
+pop$ -- 1397
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 947
+stack$ -- 0
+substring$ -- 14315
+swap$ -- 2681
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 847
+width$ -- 122
+write$ -- 1329
+(There was 1 error message)
