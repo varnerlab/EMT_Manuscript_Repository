@@ -1,4 +1,4 @@
-\begin{thebibliography}{119}
+\begin{thebibliography}{93}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Abramoff \emph{et~al.}(2004)Abramoff, Magelhaes \& Ram}]{IMAGEJ}
@@ -27,12 +27,18 @@ Arce L, Pate KT, Waterman ML (2009) Groucho binds two conserved regions of
 Bailey JE (2001) Complex biology with no parameters.
 \newblock \emph{Nat Biotechnol} \textbf{19}: 503--4
 
-\bibitem[{Bonni \emph{et~al.}(2001)Bonni, Wang, Causing, Kavsak, Stroschein,
-  Luo \& Wrana}]{Bonni2001}
-Bonni S, Wang HR, Causing CG, Kavsak P, Stroschein SL, Luo K, Wrana JL (2001)
-  TGF-beta induces assembly of a Smad2-Smurf2 ubiquitin ligase complex that
-  targets SnoN for degradation.
-\newblock \emph{Nat Cell Biol} \textbf{3}: 587--595
+\bibitem[{Bassen \emph{et~al.}(2016)Bassen, Vilkhovoy, Minot, Butcher \&
+  Varner}]{JuPOETs-BioArXiv}
+Bassen D, Vilkhovoy M, Minot M, Butcher JT, Varner JD (2016) {JuPOETs: A
+  Constrained Multiobjective Optimization Approach to Estimate Biochemical
+  Model Ensembles in the Julia Programming Language}.
+\newblock \emph{bioRxiv} \textbf{10.1101/056044}
+
+\bibitem[{Bezanson \emph{et~al.}(2014)Bezanson, Edelman, Karpinski \&
+  Shah}]{Julia}
+Bezanson J, Edelman A, Karpinski S, Shah VB (2014) Julia: {A} Fresh Approach to
+  Numerical Computing.
+\newblock \emph{CoRR} \textbf{abs/1411.1607}
 
 \bibitem[{Bullock \emph{et~al.}(2012)Bullock, Sayan, Packham \&
   Mirnezami}]{Bullock:2012aa}
@@ -69,11 +75,6 @@ Chen WW, Schoeberl B, Jasper PJ, Niepel M, Nielsen UB, Lauffenburger DA, Sorger
   by a mass action model trained against dynamic data.
 \newblock \emph{Mol Syst Biol} \textbf{5}: 239
 
-\bibitem[{Choi \emph{et~al.}(2007)Choi, Park \& Joo}]{Choi2007}
-Choi J, Park SY, Joo CK (2007) Transforming growth factor-beta1 represses
-  E-cadherin production via slug expression in lens epithelial cells.
-\newblock \emph{Invest Ophthalmol Vis Sci} \textbf{48}: 2708--2718
-
 \bibitem[{Choi \emph{et~al.}(2012)Choi, Shi, Jung, Chen \& Cho}]{Choi:2012bs}
 Choi M, Shi J, Jung SH, Chen X, Cho KH (2012) Attractor landscape analysis
   reveals feedback loops in the p53 network that control the cellular response
@@ -99,13 +100,6 @@ Creixell P, Schoof EM, Erler JT, Linding R (2012) Navigating cancer network
   attractors for tumor-specific therapy.
 \newblock \emph{Nat Biotechnol} \textbf{30}: 842--8
 
-\bibitem[{Davies \emph{et~al.}(2005)Davies, Robinson, Smith, Huntley, Prime \&
-  Paterson}]{Davies2005}
-Davies M, Robinson M, Smith E, Huntley S, Prime S, Paterson I (2005) Induction
-  of an epithelial to mesenchymal transition in human immortal and malignant
-  keratinocytes by TGF-beta1 involves MAPK, Smad and AP-1 signalling pathways.
-\newblock \emph{J Cell Biochem} \textbf{95}: 918--931
-
 \bibitem[{Debnath \& Brugge(2005)}]{Debnath:2005qc}
 Debnath J, Brugge JS (2005) Modelling glandular epithelial cancers in
   three-dimensional cultures.
@@ -117,12 +111,6 @@ Debnath J, Muthuswamy SK, Brugge JS (2003) Morphogenesis and oncogenesis of
   MCF-10A mammary epithelial acini grown in three-dimensional basement membrane
   cultures.
 \newblock \emph{Methods} \textbf{30}: 256--268
-
-\bibitem[{Dennler \emph{et~al.}(2002)Dennler, Goumans \& ten
-  Dijke}]{Dennler:2002hl}
-Dennler S, Goumans MJ, ten Dijke P (2002) Transforming growth factor beta
-  signal transduction.
-\newblock \emph{J Leukoc Biol} \textbf{71}: 731--40
 
 \bibitem[{Derynck \& Zhang(2003)}]{Derynck:2003fc}
 Derynck R, Zhang YE (2003) Smad-dependent and Smad-independent pathways in
@@ -152,29 +140,9 @@ Eisenberg LM, Markwald RR (1995) Molecular regulation of atrioventricular
   valvuloseptal morphogenesis.
 \newblock \emph{Circ Res} \textbf{77}: 1--6
 
-\bibitem[{Fan \emph{et~al.}(1999)Fan, Ng, Hill, Nikolic-Paterson, Mu, Atkins \&
-  Lan}]{Fan1999}
-Fan JM, Ng YY, Hill PA, Nikolic-Paterson DJ, Mu W, Atkins RC, Lan HY (1999)
-  Transforming growth factor-beta regulates tubular epithelial-myofibroblast
-  transdifferentiation in vitro.
-\newblock \emph{Kidney Int} \textbf{56}: 1455--1467
-
 \bibitem[{Ferrara(2002)}]{Ferrara:2002kx}
 Ferrara N (2002) VEGF and the quest for tumour angiogenesis factors.
 \newblock \emph{Nat Rev Cancer} \textbf{2}: 795--803
-
-\bibitem[{Fonseca \emph{et~al.}(1993)Fonseca, Fleming
-  \emph{et~al.}}]{fonseca1993genetic}
-Fonseca C, Fleming P, \emph{et~al.} (1993) {G}enetic algorithms for
-  multiobjective optimization: {F}ormulation, discussion and generalization.
-\newblock In \emph{Proceedings of the fifth international conference on genetic
-  algorithms}, vol. 423. Citeseer, pp. 416--423
-
-\bibitem[{Gadkar \emph{et~al.}(2003)Gadkar, Doyle, Crowley \&
-  Varner}]{gadkar2003cybernetic}
-Gadkar KG, Doyle FJ 3rd, Crowley TJ, Varner JD (2003) Cybernetic model
-  predictive control of a continuous bioreactor with cell recycle.
-\newblock \emph{Biotechnol Prog} \textbf{19}: 1487--97
 
 \bibitem[{Gadkar \emph{et~al.}(2005)Gadkar, Varner \& Doyle}]{Gadkar:2005vn}
 Gadkar KG, Varner J, Doyle FJ 3rd (2005) Model identification of signal
@@ -202,13 +170,6 @@ Guaita S, Puig I, Franci C, Garrido M, Dominguez D, Batlle E, Sancho E, Dedhar
   mesenchymal transition in tumor cells is accompanied by MUC1 repression and
   ZEB1 expression.
 \newblock \emph{J Biol Chem} \textbf{277}: 39209--16
-
-\bibitem[{Hales \emph{et~al.}(1994)Hales, Schulz, Chamberlain \&
-  McAvoy}]{Hales1994}
-Hales AM, Schulz MW, Chamberlain CG, McAvoy JW (1994) TGF-beta 1 induces lens
-  cells to accumulate alpha-smooth muscle actin, a marker for subcapsular
-  cataracts.
-\newblock \emph{Curr Eye Res} \textbf{13}: 885--890
 
 \bibitem[{Handl \emph{et~al.}(2007)Handl, Kell \& Knowles}]{Handl:2007fk}
 Handl J, Kell DB, Knowles J (2007) Multiobjective optimization in
@@ -287,40 +248,12 @@ Jiang YG, Luo Y, He Dl, Li X, Zhang Ll, Peng T, Li MC, Lin YH (2007) Role of
   human prostate cancer induced by hypoxia-inducible factor-1alpha.
 \newblock \emph{Int J Urol} \textbf{14}: 1034--9
 
-\bibitem[{Ju \emph{et~al.}(2006)Ju, Ogawa, Heyer, Nierhof, Yu, Kucherlapati,
-  Shafritz \& B{\"o}ttinger}]{Ju:2006so}
-Ju W, Ogawa A, Heyer J, Nierhof D, Yu L, Kucherlapati R, Shafritz DA,
-  B{\"o}ttinger EP (2006) Deletion of Smad2 in mouse liver reveals novel
-  functions in hepatocyte growth and differentiation.
-\newblock \emph{Mol Cell Biol} \textbf{26}: 654--67
-
-\bibitem[{Jungert \emph{et~al.}(2007)Jungert, Buck, von Wichert, Adler,
-  K{\"o}nig, Buchholz, Gress \& Ellenrieder}]{Jungert:2007ri}
-Jungert K, Buck A, von Wichert G, Adler G, K{\"o}nig A, Buchholz M, Gress TM,
-  Ellenrieder V (2007) Sp1 is required for transforming growth
-  factor-beta-induced mesenchymal transition and migration in pancreatic cancer
-  cells.
-\newblock \emph{Cancer Res} \textbf{67}: 1563--70
-
 \bibitem[{Kalita \emph{et~al.}(2011)Kalita, Sargsyan, Tian,
   Paulucci-Holthauzen, Najm, Debusschere \& Brasier}]{2011_kalita_brasier_JBC}
 Kalita MK, Sargsyan K, Tian B, Paulucci-Holthauzen A, Najm HN, Debusschere BJ,
   Brasier AR (2011) Sources of cell-to-cell variability in canonical nuclear
   factor-kB (NF-kB) signaling pathway inferred from single cell dynamic images.
 \newblock \emph{J Biol Chem} \textbf{286}: 37741--57
-
-\bibitem[{Kasai \emph{et~al.}(2005)Kasai, Allen, Mason, Kamimura \&
-  Zhang}]{Kasai2005}
-Kasai H, Allen JT, Mason RM, Kamimura T, Zhang Z (2005) TGF-beta1 induces human
-  alveolar epithelial to mesenchymal cell transition (EMT).
-\newblock \emph{Respir Res} \textbf{6}: 56
-
-\bibitem[{Kavsak \emph{et~al.}(2000)Kavsak, Rasmussen, Causing, Bonni, Zhu,
-  Thomsen \& Wrana}]{Kavsak2000}
-Kavsak P, Rasmussen RK, Causing CG, Bonni S, Zhu H, Thomsen GH, Wrana JL (2000)
-  Smad7 binds to Smurf2 to form an E3 ubiquitin ligase that targets the TGF
-  beta receptor for degradation.
-\newblock \emph{Mol Cell} \textbf{6}: 1365--1375
 
 \bibitem[{Kim \emph{et~al.}(2002)Kim, Lu \& Hay}]{Kim:2002lh}
 Kim K, Lu Z, Hay ED (2002) Direct evidence for a role of beta-catenin/LEF-1
@@ -332,12 +265,6 @@ Kohavi R (1995) {A study of cross-validation and bootstrap for accuracy
   estimation and model selection}.
 \newblock In \emph{International joint Conference on artificial intelligence},
   vol.~14. Citeseer, pp. 1137--1145
-
-\bibitem[{Kretzschmar \emph{et~al.}(1999)Kretzschmar, Doody, Timokhina \&
-  Massagu{\'e}}]{Kretzschmar:1999wb}
-Kretzschmar M, Doody J, Timokhina I, Massagu{\'e} J (1999) A mechanism of
-  repression of TGFbeta/ Smad signaling by oncogenic Ras.
-\newblock \emph{Genes Dev} \textbf{13}: 804--16
 
 \bibitem[{Larue \& Bellacosa(2005)}]{Larue:2005vn}
 Larue L, Bellacosa A (2005) Epithelial-mesenchymal transition in development
@@ -372,17 +299,6 @@ Linding R, Jensen LJ, Ostheimer GJ, van Vugt MATM, J{\o}rgensen C, Miron IM,
   networks.
 \newblock \emph{Cell} \textbf{129}: 1415--26
 
-\bibitem[{Lopez-Casillas \emph{et~al.}(2003)Lopez-Casillas, Riquelme,
-  Perez-Kato, Ponce-Castaneda, Osses, Esparza-Lopez, Gonzalez-Nunez,
-  Cabello-Verrugio, Mendoza, Troncoso \& Brandan}]{Lopez-Casillas2003}
-Lopez-Casillas F, Riquelme C, Perez-Kato Y, Ponce-Castaneda MV, Osses N,
-  Esparza-Lopez J, Gonzalez-Nunez G, Cabello-Verrugio C, Mendoza V, Troncoso V,
-  Brandan E (2003) Betaglycan expression is transcriptionally up-regulated
-  during skeletal muscle differentiation. Cloning of murine betaglycan gene
-  promoter and its modulation by MyoD, retinoic acid, and transforming growth
-  factor-beta.
-\newblock \emph{J Biol Chem} \textbf{278}: 382--390
-
 \bibitem[{Luan \emph{et~al.}(2010)Luan, Szlam, Tanaka, Barie \&
   Varner}]{2010_luan_varner_MolBioSys}
 Luan D, Szlam F, Tanaka KA, Barie PS, Varner JD (2010) Ensembles of uncertain
@@ -400,23 +316,10 @@ Machta BB, Chachra R, Transtrum MK, Sethna JP (2013) Parameter space
 Mancini M, Toker A (2009) NFAT proteins: emerging roles in cancer progression.
 \newblock \emph{Nat Rev Cancer} \textbf{9}: 810--820
 
-\bibitem[{Massague(2003)}]{Massague2003}
-Massague J (2003) Integration of Smad and MAPK pathways: a link and a linker
-  revisited.
-\newblock \emph{Genes Dev} \textbf{17}: 2993--2997
-
 \bibitem[{Massagu{\'e} \emph{et~al.}(2005)Massagu{\'e}, Seoane \&
   Wotton}]{Massague:2005qc}
 Massagu{\'e} J, Seoane J, Wotton D (2005) Smad transcription factors.
 \newblock \emph{Genes Dev} \textbf{19}: 2783--810
-
-\bibitem[{Masszi \emph{et~al.}(2003)Masszi, Di~Ciano, Sirokm{\'a}ny, Arthur,
-  Rotstein, Wang, McCulloch, Rosivall, Mucsi \& Kapus}]{Masszi:2003hb}
-Masszi A, Di~Ciano C, Sirokm{\'a}ny G, Arthur WT, Rotstein OD, Wang J,
-  McCulloch CAG, Rosivall L, Mucsi I, Kapus A (2003) Central role for Rho in
-  TGF-beta1-induced alpha-smooth muscle actin expression during
-  epithelial-mesenchymal transition.
-\newblock \emph{Am J Physiol Renal Physiol} \textbf{284}: F911--24
 
 \bibitem[{Medici \emph{et~al.}(2006)Medici, Hay \& Goodenough}]{Medici:2006qa}
 Medici D, Hay ED, Goodenough DA (2006) Cooperation between snail and LEF-1
@@ -436,12 +339,11 @@ Medici D, Potenta S, Kalluri R (2011) Transforming growth factor-?2 promotes
   Smad-dependent and Smad-independent signalling.
 \newblock \emph{Biochem J} \textbf{437}: 515--520
 
-\bibitem[{Miettinen \emph{et~al.}(1994)Miettinen, Ebner, Lopez \&
-  Derynck}]{Miettinen1994}
-Miettinen PJ, Ebner R, Lopez AR, Derynck R (1994) TGF-beta induced
-  transdifferentiation of mammary epithelial cells to mesenchymal cells:
-  involvement of type I receptors.
-\newblock \emph{J Cell Biol} \textbf{127}: 2021--2036
+\bibitem[{Milo \emph{et~al.}(2010)Milo, Jorgensen, Moran, Weber \&
+  Springer}]{Milo:2010aa}
+Milo R, Jorgensen P, Moran U, Weber G, Springer M (2010) BioNumbers--the
+  database of key numbers in molecular and cell biology.
+\newblock \emph{Nucleic Acids Res} \textbf{38}: D750--3
 
 \bibitem[{Moles \emph{et~al.}(2003)Moles, Mendes \& Banga}]{Moles:2003aa}
 Moles CG, Mendes P, Banga JR (2003) Parameter estimation in biochemical
@@ -465,13 +367,6 @@ Nawshad A, Hay ED (2003) TGFbeta3 signaling activates transcription of the LEF1
   gene to induce epithelial mesenchymal transformation during mouse palate
   development.
 \newblock \emph{J Cell Biol} \textbf{163}: 1291--301
-
-\bibitem[{Nawshad \emph{et~al.}(2005)Nawshad, Lagamba, Polad \&
-  Hay}]{Nawshad:2005pi}
-Nawshad A, Lagamba D, Polad A, Hay ED (2005) Transforming growth factor-beta
-  signaling during epithelial-mesenchymal transformation: implications for
-  embryogenesis and tumor metastasis.
-\newblock \emph{Cells Tissues Organs} \textbf{179}: 11--23
 
 \bibitem[{Nawshad \emph{et~al.}(2007)Nawshad, Medici, Liu \&
   Hay}]{Nawshad:2007kl}
@@ -504,13 +399,6 @@ O'Brien LE, Tang K, Kats ES, Schutz-Geschwender A, Lipschutz JH, Mostov KE
   tubule development.
 \newblock \emph{Dev Cell} \textbf{7}: 21--32
 
-\bibitem[{Oft \emph{et~al.}(1996)Oft, Peli, Rudaz, Schwarz, Beug \&
-  Reichmann}]{Oft1996}
-Oft M, Peli J, Rudaz C, Schwarz H, Beug H, Reichmann E (1996) TGF-beta1 and
-  Ha-Ras collaborate in modulating the phenotypic plasticity and invasiveness
-  of epithelial tumor cells.
-\newblock \emph{Genes Dev} \textbf{10}: 2462--2477
-
 \bibitem[{Park \emph{et~al.}(2010)Park, Lee, Li, Shipitsin, Gelman \&
   Polyak}]{Park:2010fu}
 Park SY, Lee HE, Li H, Shipitsin M, Gelman R, Polyak K (2010) Heterogeneity for
@@ -522,26 +410,6 @@ Park SY, Lee HE, Li H, Shipitsin M, Gelman R, Polyak K (2010) Heterogeneity for
 Pearson GW, Hunter T (2007) Real-time imaging reveals that noninvasive mammary
   epithelial acini can contain motile cells.
 \newblock \emph{J Cell Biol} \textbf{179}: 1555--67
-
-\bibitem[{Peinado \emph{et~al.}(2004)Peinado, Portillo \&
-  Cano}]{Peinado:2004pt}
-Peinado H, Portillo F, Cano A (2004) Transcriptional regulation of cadherins
-  during development and carcinogenesis.
-\newblock \emph{Int J Dev Biol} \textbf{48}: 365--75
-
-\bibitem[{Peinado \emph{et~al.}(2003)Peinado, Quintanilla \&
-  Cano}]{Peinado2003}
-Peinado H, Quintanilla M, Cano A (2003) Transforming growth factor beta-1
-  induces snail transcription factor in epithelial cell lines: mechanisms for
-  epithelial mesenchymal transitions.
-\newblock \emph{J Biol Chem} \textbf{278}: 21113--21123
-
-\bibitem[{Phanish \emph{et~al.}(2006)Phanish, Wahab, Colville-Nash, Hendry \&
-  Dockrell}]{Phanish2006}
-Phanish MK, Wahab NA, Colville-Nash P, Hendry BM, Dockrell MEC (2006) The
-  differential role of Smad2 and Smad3 in the regulation of pro-fibrotic
-  TGFbeta1 responses in human proximal-tubule epithelial cells.
-\newblock \emph{Biochem J} \textbf{393}: 601--607
 
 \bibitem[{Polizzotti \emph{et~al.}(2012)Polizzotti, Basak, Bjornsson, Shubert,
   Yener \& Plopper}]{Polizzotti}
@@ -561,6 +429,11 @@ Rodriguez-Fernandez M, Rehberg M, Kremling A, Banga JR (2013) Simultaneous
   model discrimination and parameter estimation in dynamic models of cellular
   systems.
 \newblock \emph{BMC Syst Biol} \textbf{7}: 76
+
+\bibitem[{Sagar \& Varner(2015)}]{pr3010178}
+Sagar A, Varner JD (2015) Dynamic Modeling of the Human Coagulation Cascade
+  Using Reduced Order Effective Kinetic Models.
+\newblock \emph{Processes} \textbf{3}: 178
 
 \bibitem[{Sainani(2012)}]{Sainani2012}
 Sainani KL (2012) Meet the Skeptics: Why some doubt biomedical models - and
@@ -602,6 +475,14 @@ Strauss R, Li ZY, Liu Y, Beyer I, Persson J, Sova P, M{\"o}ller T, Pesonen S,
   phenotypic heterogeneity and plasticity.
 \newblock \emph{PLoS One} \textbf{6}: e16186
 
+\bibitem[{Suehiro \emph{et~al.}(2014)Suehiro, Kanki, Makihara, Schadler, Miura,
+  Manabe, Aburatani, Kodama \& Minami}]{Suehiro:2014aa}
+Suehiro Ji, Kanki Y, Makihara C, Schadler K, Miura M, Manabe Y, Aburatani H,
+  Kodama T, Minami T (2014) Genome-wide approaches reveal functional vascular
+  endothelial growth factor (VEGF)-inducible nuclear factor of activated T
+  cells (NFAT) c1 binding to angiogenesis-related genes in the endothelium.
+\newblock \emph{J Biol Chem} \textbf{289}: 29044--59
+
 \bibitem[{Sullivan \emph{et~al.}(2009)Sullivan, Sasser, Axel, Vesuna, Raman,
   Ramirez, Oberyszyn \& Hall}]{Sullivan:2009bh}
 Sullivan NJ, Sasser AK, Axel AE, Vesuna F, Raman V, Ramirez N, Oberyszyn TM,
@@ -613,13 +494,6 @@ Sullivan NJ, Sasser AK, Axel AE, Vesuna F, Raman V, Ramirez N, Oberyszyn TM,
 Swain PS, Elowitz MB, Siggia ED (2002) Intrinsic and extrinsic contributions to
   stochasticity in gene expression.
 \newblock \emph{Proc Natl Acad Sci U S A} \textbf{99}: 12795--800
-
-\bibitem[{Tasseff \emph{et~al.}(2010)Tasseff, Nayak, Salim, Kaushik, Rizvi \&
-  Varner}]{Tasseff:2010pi}
-Tasseff R, Nayak S, Salim S, Kaushik P, Rizvi N, Varner JD (2010) Analysis of
-  the molecular networks in androgen dependent and independent prostate cancer
-  revealed fragile and robust subsystems.
-\newblock \emph{PLoS One} \textbf{5}: e8864
 
 \bibitem[{Tasseff \emph{et~al.}(2011)Tasseff, Nayak, Song, Yen \&
   Varner}]{Tasseff:2011ve}
@@ -640,28 +514,6 @@ Terfve C, Cokelaer T, Henriques D, MacNamara A, Goncalves E, Morris MK, van
 Thiery JP (2003) Epithelial-mesenchymal transitions in development and
   pathologies.
 \newblock \emph{Curr Opin Cell Biol} \textbf{15}: 740--6
-
-\bibitem[{Tian \emph{et~al.}(2004)Tian, Byfield, Parks, Stuelten, Nemani, Zhang
-  \& Roberts}]{Tian2004}
-Tian F, Byfield SD, Parks WT, Stuelten CH, Nemani D, Zhang YE, Roberts AB
-  (2004) Smad-binding defective mutant of transforming growth factor beta type
-  I receptor enhances tumorigenesis but suppresses metastasis of breast cancer
-  cell lines.
-\newblock \emph{Cancer Res} \textbf{64}: 4523--4530
-
-\bibitem[{Tian \emph{et~al.}(2003)Tian, {DaCosta Byfield}, Parks, Yoo, Felici,
-  Tang, Piek, Wakefield \& Roberts}]{Tian2003}
-Tian F, {DaCosta Byfield} S, Parks WT, Yoo S, Felici A, Tang B, Piek E,
-  Wakefield LM, Roberts AB (2003) Reduction in Smad2/3 signaling enhances
-  tumorigenesis but suppresses metastasis of breast cancer cell lines.
-\newblock \emph{Cancer Res} \textbf{63}: 8284--8292
-
-\bibitem[{Valcourt \emph{et~al.}(2005)Valcourt, Kowanetz, Niimi, Heldin \&
-  Moustakas}]{Valcourt2005}
-Valcourt U, Kowanetz M, Niimi H, Heldin CH, Moustakas A (2005) TGF-beta and the
-  Smad signaling pathway support transcriptomic reprogramming during
-  epithelial-mesenchymal cell transition.
-\newblock \emph{Mol Biol Cell} \textbf{16}: 1987--2002
 
 \bibitem[{Vega \emph{et~al.}(2004)Vega, Morales, Oca{\~n}a, Vald{\'e}s,
   Fabregat \& Nieto}]{Vega:2004qf}
@@ -695,33 +547,12 @@ Willis BC, Borok Z (2007) TGF-beta-induced EMT: mechanisms and implications for
   fibrotic lung disease.
 \newblock \emph{Am J Physiol Lung Cell Mol Physiol} \textbf{293}: L525--34
 
-\bibitem[{Willis \emph{et~al.}(2005)Willis, Liebler, Luby-Phelps, Nicholson,
-  Crandall, {du Bois} \& Borok}]{Willis2005}
-Willis BC, Liebler JM, Luby-Phelps K, Nicholson AG, Crandall ED, {du Bois} RM,
-  Borok Z (2005) Induction of epithelial-mesenchymal transition in alveolar
-  epithelial cells by transforming growth factor-beta1: potential role in
-  idiopathic pulmonary fibrosis.
-\newblock \emph{Am J Pathol} \textbf{166}: 1321--1332
-
 \bibitem[{Wu \emph{et~al.}(2009)Wu, Deng, Rychahou, Qiu, Evers \&
   Zhou}]{Wu:2009cr}
 Wu Y, Deng J, Rychahou PG, Qiu S, Evers BM, Zhou BP (2009) Stabilization of
   snail by NF-kappaB is required for inflammation-induced cell migration and
   invasion.
 \newblock \emph{Cancer Cell} \textbf{15}: 416--28
-
-\bibitem[{Xie \emph{et~al.}(2003)Xie, Law, Aakre, Edgerton, Shyr, Bhowmick \&
-  Moses}]{Xie2003}
-Xie L, Law BK, Aakre ME, Edgerton M, Shyr Y, Bhowmick NA, Moses HL (2003)
-  Transforming growth factor beta-regulated gene expression in a mouse mammary
-  gland epithelial cell line.
-\newblock \emph{Breast Cancer Res} \textbf{5}: R187--R198
-
-\bibitem[{Xie \emph{et~al.}(2004)Xie, Law, Chytil, Brown, Aakre \&
-  Moses}]{Xie2004}
-Xie L, Law BK, Chytil AM, Brown KA, Aakre ME, Moses HL (2004) Activation of the
-  Erk pathway is required for TGF-beta1-induced EMT in vitro.
-\newblock \emph{Neoplasia} \textbf{6}: 603--610
 
 \bibitem[{Xu \emph{et~al.}(2009)Xu, Lamouille \& Derynck}]{Xu:2009oq}
 Xu J, Lamouille S, Derynck R (2009) TGF-beta-induced epithelial to mesenchymal
@@ -735,21 +566,10 @@ Zajchowski DA, Bartholdi MF, Gong Y, Webster L, Liu HL, Munishkin A, Beauheim
   profiles that predict the aggressive behavior of breast cancer cells.
 \newblock \emph{Cancer Res} \textbf{61}: 5168--78
 
-\bibitem[{Zavadil \emph{et~al.}(2001)Zavadil, Bitzer, Liang, Yang, Massimi,
-  Kneitz, Piek \& Bottinger}]{Zavadil2001}
-Zavadil J, Bitzer M, Liang D, Yang YC, Massimi A, Kneitz S, Piek E, Bottinger
-  EP (2001) Genetic programs of epithelial cell plasticity directed by
-  transforming growth factor-beta.
-\newblock \emph{Proc Natl Acad Sci U S A} \textbf{98}: 6686--6691
-
 \bibitem[{Zavadil \& B{\"o}ttinger(2005)}]{Zavadil:2005fu}
 Zavadil J, B{\"o}ttinger EP (2005) TGF-beta and epithelial-to-mesenchymal
   transitions.
 \newblock \emph{Oncogene} \textbf{24}: 5764--74
-
-\bibitem[{Zhang(2009)}]{Zhang2009a}
-Zhang YE (2009) Non-Smad pathways in TGF-beta signaling.
-\newblock \emph{Cell Res} \textbf{19}: 128--139
 
 \bibitem[{Zhou \emph{et~al.}(2004)Zhou, Deng, Xia, Xu, Li, Gunduz \&
   Hung}]{Zhou:2004kx}
