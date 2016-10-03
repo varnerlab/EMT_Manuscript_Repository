@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 OCT 2015 12:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 SEP 2016 11:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -667,9 +667,9 @@ Overfull \hbox (1.33795pt too wide) in paragraph at lines 506--512
  []
 
 [26]
-Overfull \hbox (8.29587pt too wide) in paragraph at lines 527--529
-\OT1/phv/m/n/12 Lequieu \OT1/phv/m/sl/12 et al. \OT1/phv/m/n/12 (2011), Tass-ef
-f \OT1/phv/m/sl/12 et al. \OT1/phv/m/n/12 (2011). Ro-bust-ness co-ef-fi-cients 
+Overfull \hbox (6.97571pt too wide) in paragraph at lines 527--529
+\OT1/phv/m/n/12 (Lequieu \OT1/phv/m/sl/12 et al.\OT1/phv/m/n/12 , 2011, Tass-ef
+f \OT1/phv/m/sl/12 et al.\OT1/phv/m/n/12 , 2011). Ro-bust-ness co-ef-fi-cients 
 de-noted by $\OML/cmm/m/it/12  []$\OT1/phv/m/n/12 : 
  []
 
@@ -818,7 +818,11 @@ Package pdftex.def Info: ./figs/Fig-9-Supplemental-RawExpression_v2.pdf used on
 l-CompeteErrorTable.pdf>] [20 <./figs/Fig-7-Supplemental-Correlation.pdf>] [21 
 <./figs/Fig-8-Supplemental-YREG1.pdf>] [22 <./figs/Fig-9-Supplemental-RawExpres
 sion_v2.pdf>]
-(./Paper_v7.aux) )
+(./Paper_v7.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 38 (\begingroup)
@@ -826,7 +830,7 @@ sion_v2.pdf>]
 Here is how much of TeX's memory you used:
  5417 strings out of 493089
  81713 string characters out of 6134842
- 176393 words of memory out of 5000000
+ 176394 words of memory out of 5000000
  8754 multiletter control sequences out of 15000+600000
  30121 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -848,7 +852,7 @@ ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
 2015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/te
 xmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf-dis
 t/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Paper_v7.pdf (66 pages, 44204759 bytes).
+Output written on Paper_v7.pdf (66 pages, 44205068 bytes).
 PDF statistics:
  1807 PDF objects out of 2073 (max. 8388607)
  809 compressed objects within 9 object streams
