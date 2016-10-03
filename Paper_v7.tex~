@@ -174,11 +174,11 @@ where a population of cells could be viewed as a dynamic ensemble of context-spe
 In this study, we developed a family of mechanistic models describing the induction of EMT by TGF-$\beta$ isoforms in the presence and absence of vascular endothelial growth factor A (VEGF-A).
 We incorporated mass action kinetics within an ordinary differential equation (ODE) framework to describe the EMT interaction network containing 97 gene, protein or mRNA components interconnected through 169 interactions.
 A family of model parameters was estimated using 41 molecular data sets generated in DLD1 colon carcinoma, MDCKII and A375 melanoma cells using the Pareto optimal ensemble technique (POETs) multiobjective optimization algorithm.
-#POETs identified more than 15,000 likely TGF-$\beta$ induced EMT models, from which we selected approximately 1100 models for further analysis.####
+POETs generated an ensemble of approximately 1400 models for analysis.
 Analysis of the model population suggested that both MCF10A and DLD1 cells could exhibit phenotypic heterogeneity if treated simultaneously with TGF-$\beta$1/2 and VEGF-A.
 This heterogeneity was characterized by a significant fraction of the population being in a “hybrid state” having both high E-cadherin and high Vimentin expression.
 We tested these predictions using qRT-PCR and flow-cytometry studies in a variety of experimental conditions.
-Validation studies confirmed that upwards of ####45\% of the cellular population could be put into the hybrid state in the presence of both TGF-$\beta$1/2 and VEGF-A.
+Validation studies confirmed that upwards of 45\% of the cellular population could be put into the hybrid state in the presence of both TGF-$\beta$1/2 and VEGF-A.
 Moreover, this response depended upon both activation of Sp1 by MAPK and NFATc1 transcriptional activity consistent with the predicted molecular signaling.
 Lastly, the hybrid populations of both DLD1 and MCF10A cells exhibited different functional behavior than those from either TGF-$\beta$ or VEGF-A treatment.
 The extent of ductal branch formation significantly increased with MCF10A cells in the hybrid phenotype, compared with cells treated with VEGF-A alone.
@@ -190,8 +190,8 @@ Together, these results establish a predictive mechanistic model of EMT suscepti
 
 \subsection*{The model population captured key features of TGF-$\beta$ induced EMT}
 The EMT model architecture, based upon curated molecular connectivity,
-described the expression of 80 genes following exposure to TGF-$\beta$ isoforms and VEGF-A (Fig. \ref{fg:F1}).
-The EMT model contained 995 molecular species interconnected by 1700 interactions.
+described the expression of 23 genes following exposure to TGF-$\beta$ isoforms and VEGF-A (Fig. \ref{fg:F1}).
+The EMT model contained 74 molecular species interconnected by 169 interactions.
 Model equations were formulated using mass-action kinetics within an ordinary differential equation (ODE) framework.
 ODEs and mass action kinetics are common tools to model biochemical pathways \citep{Schoeberl:2002rv,Chen:2009uq,Tasseff:2011ve}.
 However, while ODE models can simulate complex intracellular behavior,
@@ -211,9 +211,9 @@ levels) to evaluate the predictive power of the parameter ensemble.
 Additional details of the signaling architecture included in the model are presented in the materials and methods and the supplement.
 
 POETs generated a population of probable signaling models which captured the multiple phases of EMT induction (Fig. \ref{fg:F2}).
-POETs sampled well over 10$^6$ probable models during each stage of the cross-validation #####, using a combination of both local and global random sampling.
-This sampling generated approximately 15,000 highly probable models from which we selected N $\simeq$ 1100 models#### for further analysis.
-The selected models all had the same possible molecular connectivity, but different values for model parameters and extrinsic factors such as RNA polymerase or ribosome abundance.
+POETs sampled well over 10$^4$ probable models during each stage of the cross-validation #####, using a combination of both local and global random sampling.
+From this analysis, N $\simeq$ 1400 models were selected for further analysis.
+The selected models all had the same possible molecular connectivity, but different values for model parameters. Trascription and translation rates, as well as mRNA and protein degradation terms, were set using physical values from the literature, and allowed to vary by a scaling factor, see methods ####citebionumbers####.
 Model selection was based upon Pareto rank, the prediction and training error across all objectives and model to model correlation (supplemental materials).
 The model population recapitulated key signaling events following TGF-$\beta$ exposure.
 We subdivided the response to TGF-$\beta$ exposure into two phases.
@@ -230,13 +230,13 @@ During the second phase, TGF$-\beta$3 secretion and the subsequent autocrine sig
 The TGF$-\beta$3 induced gene expression program involves a complex hierarchy of transcriptional and post-translational regulatory events.
 Absence of E-cadherin indirectly promoted TGF$-\beta$3 expression through the $\beta$-catenin/TCF4 complex following Snail or Slug expression (Fig. \ref{fg:F2}C, Lane 2 or 3).
 Conversely, over-expression of E-cadherin inhibited the TGF$-\beta$3 autocrine production by sequestering cytosolic $\beta$-catenin, thereby blocking EMT (Fig. \ref{fg:F2}C, Lane 4 or 5).
-TGF$-\beta$3 signaled through through the Smad pathway to regulate LEF-1 expression and downstream target EMT genes (Fig. \ref{fg:F2}G).
+TGF$-\beta$3 signaled through the Smad pathway to regulate LEF-1 expression and downstream target EMT genes (Fig. \ref{fg:F2}G).
 TGF$-\beta$3 (10 a.u.) in combination with downstream inhibitors (DN-Smad4 and DN-LEF-1) completely inhibited Vimentin expression, while elevating E-cadherin expression (Fig. \ref{fg:F2}H,I).
 
 The predictive power of the ensemble was tested using both cross validation and by comparing simulations with data sets not used for model training.
-In whole, 78\% of our training objectives were statistically significant (at a 95\% confidence interval) compared to a randomized parameter family (N = 100)
-generated from the best-fit nominal set (starting point for the optimization).
-Conversely, we \emph{predicted} approximately 60\% of the training objectives, at a 95\% confidence interval compared to randomized parameters.
+In whole, 72\% of our training objectives were statistically significant (at a 95\% confidence interval) compared to a randomized parameter family (N = 100)
+generated from a random starting point.
+Conversely, we \emph{predicted} approximately 72\% of the training objectives, at a 95\% confidence interval compared to randomized parameters.
 The model also captured the temporal gene expression responses of E-cadherin, pSmad2, and LEF-1 to within one-standard deviation (up to the 48 hr time-point) (Fig. \ref{fg:F2}J-L).
 This data was not used for model training.
 The high predictability can be attributed to the combination of the leave-one-out cross validation scheme, diverse objective functions, and robustness of the POETs algorithm.
@@ -257,13 +257,12 @@ Given the biochemical evidence supporting SNAIL/SLUG as repressors, we created Y
 expression is downregulated by SNAIL/SLUG. The literature data therefore suggested that YREG1 had two transcriptional targets, LEF-1 and TGF-$\beta$3.
 By adding this regulator, our simulations became consistent with training and literature data.
 Medici et al. suggested a similar idea where feedback between $\beta$-catenin and LEF-1 was likely, although this feedback had yet to be identified \citep{Medici:2008fk}.
-Low levels of YREG1 expression were used in all simulations to regulate the formation of the $\beta$-catenin-LEF-1 complex.
+Low levels of YREG1 expression were present in all simulations to regulate the formation of the $\beta$-catenin-LEF-1 complex.
 To test the potency of YREG1, we conducted knockdown and over-expression simulations following the addition of TGF-$\beta$1/2 (Fig. \ref{fig:S8}).
 In the absence of YREG1, most of the population failed to consistently respond to TGF-$\beta$1/2 exposure compared to the wild-type (Fig. \ref{fig:S8}A).
 Conversely, YREG1 overexpression revealed an exclusively epithelial phenotype following TGF-$\beta$1/2 stimulation (Fig. \ref{fig:S8}B).
 Overexpression of YREG1 repressed LEF-1 and TGF-$\beta$3 expression,
 thereby not allowing free $\beta$-catenin to form the $\beta$-catenin-LEF-1 complex which promotes mesenchymal gene expression, or SMAD activity following from autocrine TGF-$\beta$3 signaling.
-Likewise, the abundance of the pSmad2/4-LEF-1#### complex was also reduced in cells overexpression YREG1, which blocked the repression of E-cadherin.
 Taken together, we found that low YREG1 expression was necessary for stabilizing EMT,
 while elevated YREG1 levels limited the extent of EMT induction.
 
@@ -274,15 +273,10 @@ While we captured the central tendency of many of the molecular features of EMT 
 feature of developmental and pathological programs is population heterogeneity \citep{Park:2010fu}.
 We (and others) previously hypothesized that deterministic model ensembles can interrogate population behavior, at least at a course grained level \citep{Lequieu:2011fj}.
 We tested this hypothesis by analyzing the response of the population of EMT models to extracellular cues and then comparing this response to flow cytometry studies.
-We used robustness coefficients to quantify the response of the individual members of the ensemble to TGF$-\beta$1/2 stimulation.
-We have previously used robustness coefficients to systematically quantify response of a system to structural or operational perturbations,
-for example gene deletions or the addition of a growth factor or hormone  \citep{Song:2010fk,Tasseff:2010pi,Lequieu:2011fj,Tasseff:2011ve}.
-Robustness coefficients quantify shifts in molecular marker abundance resulting from molecular of environmental perturbations relative to an unperturbed control state.
-Robustness coefficients $\gg$ 1 indicate that marker abundance increased, while robustness coefficients $\ll$ 1 indicates marker abundance decreased relative to an unperturbed control.
-A value of $\sim$ 1 indicates approximately no change in marker abundance following the perturbation.
-We calculated robustness coefficients for each member of the ensemble (N $\simeq$ 1100) for two downstream phenotypic markers, Vimentin (mesenchymal) and E-cadherin (epithelial)
+We quantiied the phenotypic response of the individual members of the ensemble to TGF$-\beta$1/2 stimulation as a function of physical measurements of abundance of markers in system.
+We evlautated these quantities for each member of the ensemble (N $\simeq$ 1400) for two downstream phenotypic markers, Vimentin (mesenchymal) and E-cadherin (epithelial)
 following the addition of TGF$-\beta$1/2 alone (Fig. \ref{fg:F3}), and VEGF-A in combination with NFATc inhibitors (Fig. \ref{fg:F4}).
-The absence of TGF$-\beta$1/2 or VEGF-A stimulation was used as the baseline for the robustness calculations.
+We were further able to use this analysis to examine the activity and effects of underlying signaling molecules. 
 
 We identified model subpopulations that exhibited different behaviors following exposure to TGF$-\beta$1/2 (Fig. \ref{fg:F3}A, labeled P1-P4).
 Analysis of the molecular signatures of these subpopulations suggested the abundance, localization and state of the Sp1, AP-1 and NFATc transcription factors controlled population heterogeneity.
@@ -324,7 +318,7 @@ As further predicted, nuclear co-localization of both NFATc1 and phosphorylated 
 Taken together, combined VEGF-A and TGF$-\beta$1/2 treatment elicited a hybrid phenotype expressing both mesenchymal and epithelial characteristics in both MCF10A and DLD1 cells.
 This phenotype was driven by the transcriptional activity of two key transcription factors, Sp1 and NFATc, which could be modulated independently by TGF$-\beta$1/2 and VEGF-A exposure.
 
-Our robustness analysis predicted that NFATc transcriptional activity was critical to maintaining E-cadherin expression in the presence of both VEGF-A and TGF$-\beta$1/2.
+Our phenotypic analysis predicted that NFATc transcriptional activity was critical to maintaining E-cadherin expression in the presence of both VEGF-A and TGF$-\beta$1/2.
 We experimentally tested this hypothesis by exposing both MCF10A (Fig. \ref{fg:F5}E,F) and DLD1 cells (Fig. \ref{fg:S4}) to combinations of VEGF-A and TGF$-\beta$1/2 in the presence or absence of VIVIT,
 a soluble peptide inhibitor of NFATc transcriptional activity \citep{Aramburu:1999if}.
 Treatment with VEGF-A (50ng/ml) and VIVIT (10$\mu$M) in MCF10A cells significantly reduced E-cadherin expression compared to VEGF-A alone (Fig 5D,E).
@@ -361,12 +355,12 @@ Together, these results establish that VEGF-A and TGF$-\beta$1/2 ligand concentr
 
 \section*{Discussion}
 In this study, we developed a family of mechanistic models describing the induction of EMT by TGF-$\beta$ isoforms in the presence and absence of VEGF-A.
-The signaling architecture encoded in the model, which contained 995 molecular species interconnected by 1700 interactions,
-described the expression of 80 genes in response to growth factor stimulation.
+The signaling architecture encoded in the model, which contained 74 molecular species interconnected by 169 interactions,
+described the expression of 23 genes in response to growth factor stimulation.
 This simulation incorporates an unprecedented level of detail compared to previous models, but as a consequence created a large number of unknown model parameters.
 Because these parameters could not be estimated uniquely apriori, we estimated an ensemble of likely parameters using the POETs multiobjective optimization framework.
 The model population was trained and cross-validated to prescribe biological significance using 41 data sets generated in DLD1 colon carcinoma, MDCKII, and A375 melanoma cell lines \citep{Medici:2008fk}.
-POETs generated $>$ 15,000 probable parameter sets using this data, from which we selected N $\simeq$ 1100 for subsequent analysis.
+The absence of TGF$-\beta$1/2 or VEGF-A stimulation was used as the baseline for the robustness calculations.
 Analysis of this population predicted possible phenotypic modes (and their associated signaling) that cells could exhibit when stimulated with TGF-$\beta$ and/or VEGF-A.
 The most novel hypothesis generated from the analysis was that cells could operate in a hybrid state defined by both epithelial and mesenchymal traits when stimulated simultaneously with TGF-$\beta$ and VEGF-A.
 We tested this hypothesis in MCF10A and DLD1 cells stimulated with combinations of TGF-$\beta$ and VEGF-A.
@@ -442,7 +436,7 @@ Recent evidence has established a complex role of Amino terminal Enhancer of Spl
 AES opposes LEF-1 transcriptional activation while Groucho/TLE binds with LEF-1 for a histone deacetylase repression.
 In addition, $\beta$-catenin directly displaces Groucho/TLE repressors from TCF/LEF-1 in Wnt-mediated transcription activation \citep{Arce:2009pr, Grumolato2013}.
 Our model agrees with this newly discovered feedback system, as YREG1 regulates LEF-1 activity leading to EMT stabilization.
-Secondly, we should revisit the role of GSK-3$\beta$. GSK-3$\beta$ is an important regulator which controls the abundance of both Snail and $\beta$-catenin through the ubiquitin-proteasome pathway \citep{Zhou:2004kx,Larue:2005vn}. Specifically to our model, expression of Snail increases through 72 hrs. In contrast, experimental data has shown that activity of Snail peaks at 24 hrs which may be controlled by the GSK-3$\beta$ complex \citep{Medici:2006qa}.  Recent evidence has also suggested an essential role of NF-$\kappa$B in epithelial transformation.  NF-$\kappa$B may influence Snail expression through the AKT pathway and directly stabilize Snail activity \citep{Wu:2009cr}.  This is particularly important for integrating inflammation pathways, such as interleukin-6 (IL-6) and tumor necrosis factor-$\alpha$ (TNF-$\alpha$), which have been linked to EMT in pathological conditions \citep{Sullivan:2009bh}.
+####Secondly, we should revisit the role of GSK-3$\beta$. GSK-3$\beta$ is an important regulator which controls the abundance of both Snail and $\beta$-catenin through the ubiquitin-proteasome pathway \citep{Zhou:2004kx,Larue:2005vn}. Specifically to our model, expression of Snail increases through 72 hrs. In contrast, experimental data has shown that activity of Snail peaks at 24 hrs which may be controlled by the GSK-3$\beta$ complex \citep{Medici:2006qa}.  Recent evidence has also suggested an essential role of NF-$\kappa$B in epithelial transformation.  NF-$\kappa$B may influence Snail expression through the AKT pathway and directly stabilize Snail activity \citep{Wu:2009cr}.  This is particularly important for integrating inflammation pathways, such as interleukin-6 (IL-6) and tumor necrosis factor-$\alpha$ (TNF-$\alpha$), which have been linked to EMT in pathological conditions \citep{Sullivan:2009bh}.
 Other pathways such as Notch have also been shown to act synergistically with TGF-$\beta$ to express Slug in the developing embryo \citep{Niessen:2008nx}.
 Lastly, while we have modeled classical protein signaling, we have not considered the role of regulatory RNAs on EMT.
 There is growing evidence that microRNAs (miRNAs) play a strong role in EMT, where several miRNAs, for example miR-21 and miR-31 are strongly associated with TGF-$\beta$ exposure \citep{Bullock:2012aa}.
