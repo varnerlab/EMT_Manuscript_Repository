@@ -243,13 +243,13 @@ The model also captured the temporal gene expression responses of E-cadherin, pS
 A listing of objective function values resulting from training, cross validation and the random parameter control is given in the supplement (Fig. \ref{fg:ObjTable}).
 
 \subsection*{Identification of a novel LEF-1 regulator}
-During model identification, we found that consistent TGF-$\beta$ induced EMT required an additional regulatory protein.
+During model identification, we found that consistent TGF-$\beta$ induced EMT from a stable epithelial cell population required an additional regulatory protein.
 This protein, which we called hypothetical regulator 1 (YREG1), was required to mediate between SNAIL/SLUG transcriptional activity
 and the upregulation of LEF-1 expression following TGF-$\beta$1/2 exposure.
 SNAIL/SLUG are well known transcriptional repressors \citep{Hemavathy:2000aa,Hemavathy:2000ab,Dhasarathy:2011aa}, although there are a few studies
 which suggest that at least SNAIL can also act as a transcriptional activator \citep{Guaita:2002aa}.
 In the model, we assumed the expression of SNAIL/SLUG was likely regulated by AP1/SP1 \citep{Jackstadt:2013aa}.
-Thus, upon receiving a TGF-$\beta$1/2 signal, the model predicted enhanced SNAIL/SLUG expression, consistent with experimental observations.
+Thus, upon receiving direct Snail/Slug and TGF-$\beta$3 signals, the model predicted enhanced SNAIL/SLUG expression, consistent with experimental observations.
 TGF-$\beta$1/2 stimulation also induces LEF-1 expression. However, literature evidence suggested that LEF-1 expression was not strongly dependent upon AP1/SP1 activity \citep{Eastman:1999aa}.
 Thus, either SNAIL/SLUG are acting as inducers (contrary to substantial biochemical evidence) or, they are repressing the expression of an intermediate repressor.
 Given the biochemical evidence supporting SNAIL/SLUG as repressors, we created YREG1 a hypothetical intermediate repressor whose
@@ -257,15 +257,10 @@ expression is downregulated by SNAIL/SLUG. The literature data therefore suggest
 By adding this regulator, our simulations became consistent with training and literature data.
 Medici et al. suggested that feedback between $\beta$-catenin and LEF-1 was likely, although this feedback had yet to be identified \citep{Medici:2008fk}.
 Low levels of YREG1 expression were present in all simulations to regulate the formation of the $\beta$-catenin-LEF-1 complex.
-To test the potency of YREG1, we conducted over-expression and knockdown simulations following the addition of TGF-$\beta$1/2 (Fig. \ref{fg:F4}C and \ref{fg:F4}D).
-
-% TODO: REVISE -----
-% In the absence of YREG1, most of the population failed to consistently respond to TGF-$\beta$1/2 exposure compared to the wild-type (Fig. \ref{fig:S8}A).
-% Conversely, YREG1 overexpression revealed an exclusively epithelial phenotype following TGF-$\beta$1/2 stimulation (Fig. \ref{fig:S8}B).]
-% Overexpression of YREG1 repressed LEF-1 and TGF-$\beta$3 expression,
-% thereby not allowing free $\beta$-catenin to form the $\beta$-catenin-LEF-1 complex which promotes mesenchymal gene expression, or SMAD activity following from autocrine TGF-$\beta$3 signaling.
-% Taken together, we found that low YREG1 expression was necessary for stabilizing EMT,
-% while elevated YREG1 levels limited the extent of EMT induction.
+To test the effect of YREG1 on the epithelial population, we conducted over-expression and knockdown simulations on untreated cells (Fig. \ref{fg:F4}C and \ref{fg:F4}D).
+In the absence of YREG1, most of the population failed to consistently to retain a stable epithelial state (Fig. \ref{fig:F4}D).
+Conversely, YREG1 overexpression revealed an enhanced epithelial phenotype, while some inherently transformed cells moved towards a hybrid phenotype  (Fig. \ref{fig:F4}C).
+Elevation of YREG1 repressed LEF-1 and TGF-$\beta$3 expression, thereby not allowing free $\beta$-catenin to form the $\beta$-catenin-LEF-1 complex which promotes mesenchymal gene expression, or SMAD activity following from autocrine TGF-$\beta$3 signaling. Taken together, we found that low YREG1 expression was necessary for producing a stabile the model with an epithelial phentoype that is inducable across multiple stimuli such as TGF-$\beta$1/2, TGF-$\beta$3 and SNAIl/SLUG transfection, as seen in the training objectives.
 
 \clearpage
 
@@ -289,8 +284,6 @@ Elevated Sp1 activity decreased E-cadherin expression through Slug-mediated inhi
 However, the most biologically interesting behavior was exhibited by cells achieving a hybrid phenotype, most notable in a dual treatment condition (black arrow), but also present in a small percentage of untreated cells (Fig. \ref{fg:F3}A).
 Models with this hybrid phenotype had elevated Sp1 and NFAT transcriptional activity, resulting in the simultaneous increase of \emph{both} Vimentin and E-cadherin expression (Fig. \ref{fg:F4}A).
 Analysis of these hypothetical cells suggested they had \emph{abnormal} signaling; deregulated NFAT expression and nuclear localization promoted E-cadherin expression while TGF$-\beta$1/2 induced Sp1 action promoted Vimentin expression.
-
-% ####Analysis of the connectivity and information flow through the signaling architecture suggested that Sp1 and NFAT action could be manipulated \emph{independently} by simultaneous TGF$-\beta$1/2 and VEGF-A stimulation (Fig. \ref{fg:S1}).
 
 To test this hypothesis, we simulated the response of the network to TGF$-\beta$1/2 and VEGF-A treatment with and without NFATc inhibitors (Fig. \ref{fg:F4}).
 As expected, stimulation with VEGF-A (50 a.u.) maintained an epithelial population, while TGF$-\beta$1/2 (10 a.u.) exposure shifted
@@ -457,7 +450,9 @@ On the other hand, because of the canonical architecture, we can test the model 
 
 Our signaling network reconstruction was based on Medici et al. who identified the pathways though which MDCKII, DLD1 colon carcinoma,
 and A375 melanoma cells transition towards a mesenchymal phenotype \citep{Medici:2008fk}.
-Sequential activation of MAPK and Smad pathways were initiated upon addition of TGF$-\beta$1/2.  Briefly, TGF$-\beta$2 signals through the RAS-RAF-MEK-ERK pathway to up-regulate Snail and Slug expression \citep{Medici:2006qa}.  Snail, a known repressor of junctional proteins, inhibits the expression of E-cadherin \citep{Cano:2000kh}. This initial repression of E-cadherin leads to a release of $\beta$-catenin from the cell membrane. Cystolic $\beta$-catenin can then translocate to the nucleus and form transcriptional complexes with TCF-4 to drive TGF$-\beta$3 expression \citep{Medici:2008fk}. TGF$-\beta$3 signals to the cells interior by binding to type II receptors, which form heterodimers with type I receptors (ALK5) \citep{Derynck:2003fc}. This activates the receptors serine/threonine kinase activity to phosphorylate and activate the receptor Smads 2/3 \citep{Massague:2005qc}.
+Sequential activation of MAPK and Smad pathways were initiated upon addition of TGF$-\beta$1/2.  Briefly, TGF$-\beta$2 signals through the RAS-RAF-MEK-ERK pathway to up-regulate Snail and Slug expression \citep{Medici:2006qa}.  Snail, a known repressor of junctional proteins, inhibits the expression of E-cadherin \citep{Cano:2000kh}. This initial repression of E-cadherin leads to a release of $\beta$-catenin from the cell membrane. This release of $\beta$-catenin can then translocate to the nucleus and form transcriptional complexes with TCF-4 to drive TGF$-\beta$3 expression \citep{Medici:2008fk}. The PI3K to GSK3 pathway was included and acted as an activating mechanism of $\beta$-catenin signaling through TGF$-\beta$3 signaling \c\
+itep{Medici:2008fk}. GSK3 is known to act on $\beta$-catenin signaling through the ubiquitin-proteasome pathway
+\citep{Zhou:2004kx,Larue:2005vn}. Thereby, further $\beta$-catenin release also resulted from by TGF$-\beta$3 signals to the cells interior by binding to type II receptors, which form heterodimers with type I receptors (ALK5) \citep{Derynck:2003fc}. This activates the receptors serine/threonine kinase activity to phosphorylate and activate the receptor Smads 2/3 \citep{Massague:2005qc}. In the model, receptors are represented as either bound or unbound complexes. 
 Phosphorylated Smads 2/3 (pSmad2/3) form heterodimers and translocate to the nucleus. pSmads complexes up-regulate other transcription factors, such as LEF-1. The pSmad2/4-LEF-1 complex has been shown to directly repress the E-cadherin gene \citep{Nawshad:2007kl}. LEF-1 also binds with $\beta$-catenin to upregulate mesenchymal proteins such as fibronectin \citep{Medici2011}.
 In the model, Smad signaling is lumped into a single smad species that can act in a co-dependent fashion with LEF1 to downregulate E-cadherin.
 The EMT gene expression program was initiated by the binding of TGF$-\beta$ isoforms to TGF$-\beta$ surface receptors.
@@ -474,8 +469,7 @@ However, this transition is not solely driven by transcriptional events.
 At the protein level, the repression of E-cadherin leads to a release of $\beta$-catenin from cell membrane.
 Cystolic $\beta$-catenin then translocates to the nucleus and forms transcriptionally-active complexes with immunoglobulin transcription factor 2 (TCF-4)
 to drive TGF$-\beta$3 expression \citep{Medici:2008fk}. The PI3K to GSK3 pathway was included and acted as an activating mechanism of $\beta$-catenin signaling through TGF$-\beta$3 signaling \citep{Medici:2008fk}. GSK3 is known to act on $\beta$-catenin signaling through the ubiquitin-proteasome pathway
-\citep{Zhou:2004kx,Larue:2005vn}.
-VEGF-A activation of NFATc1 takes place through calcineurin signaling leading to an enhancement of E-cadherin expression \citep{Suehiro:2014aa},
+\citep{Zhou:2004kx,Larue:2005vn}. Lastly, VEGF-A activation of NFATc1 takes place through calcineurin signaling leading to an enhancement of E-cadherin expression \citep{Suehiro:2014aa},
 as supported by our VEGF-A experimental data (Fig. \ref{fg:VEGFA-Data}).
 
 %Additional information about the interactions included in the model,
@@ -678,13 +672,14 @@ In whole, high levels of phosphorylated-Sp1 correlated with vimentin expression,
 
 \clearpage
 
-\begin{figure}
+\begin{figurey}
 \includegraphics [width=1.0\linewidth] {./figs/Fig4_mechanism.pdf}
 \caption{Analysis of underlying signaling responses.
 (A) We examined the distribution of NFATc1 and AP1/SP1 in cells containing the hybrid phenotype (VEGF-A + TGF$-\beta$2 case), showing the potential for cells to express both SP1 and NFATc1 in a non exclusive manner.
 (B) We were able to show a fit to an additional objective demonstrating the actiation of GSK3 through PI3K. Our model captures this activation through TGF$-\beta$3 signaling. LY294002 is a PI3K inhibitor.
-(C) We identified a novel regulator of LEF1 called YREG1 that allows Snail/Slug to emulate an inducer by repressing YREG1. Over expression of YREG1 increases the degree of E-cadherin expression, stabalizing the epithelial phenotype.
-(D) Kockout of YREG1 leads to a loss of both E-cadherin and vimentin for cells that were inherently activated in the untreated population.}\label{fg:F4}
+(C) We identified a novel regulator of LEF1 called YREG1 that allows Snail/Slug to emulate an inducer by repressing YREG1, which was required to stabalize the untreated population. 
+YREG1 overexpression revealed an enhanced epithelial phenotype, while some inherently transformed cells moved towards a hybrid phenotype.
+(D) In the absence of YREG1, most of the population failed to consistently to retain a stable epithelial state.}\label{fg:F4}
 \end{figure}
 
 \clearpage

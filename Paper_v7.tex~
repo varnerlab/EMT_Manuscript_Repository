@@ -89,7 +89,7 @@
 \vspace{0.05in}
 {\par \centering Russell Gould$^{\ddag}$ and David M. Bassen, Anirikh Chakrabarti, Jeffrey D. Varner and Jonathan Butcher$^{\ddag *}$}
 \vspace{0.05in}
-{\par \centering School of Chemical and Biomolecular Engineering and $^{\ddag}$Department of Biomedical Engineering, Cornell University, Ithaca NY 14853}
+{\par \centering Robert Frederick Smith School of Chemical and Biomolecular Engineering and $^{\ddag}$Nancy E. and Peter C. Meinig School of Biomedical Engineering, Cornell University, Ithaca NY 14853}
 \vspace{0.1in}
 {\par \centering \textbf{Running Title:}~ Modeling of TGF-$\beta$ induced EMT}
 \vspace{0.1in}
@@ -100,7 +100,7 @@
 {\par \centering $^{*}$Corresponding author:}
 \vspace{0.1in}
 {\par \centering Jonathan T. Butcher,}
-{\par \centering Associate Professor, Department of Biomedical Engineering,}
+{\par \centering Associate Professor, Nancy E. and Peter C. Meinig School of Biomedical Engineering,}
 {\par \centering 304 Weill Hall, Cornell University, Ithaca NY, 14853}
 {\par \centering Email: jtb47@cornell.edu}
 {\par \centering Phone: (607) 255 - 3575}
@@ -173,8 +173,8 @@ where a population of cells could be viewed as a dynamic ensemble of context-spe
 
 In this study, we developed a family of mechanistic models describing the induction of EMT by TGF-$\beta$ isoforms in the presence and absence of vascular endothelial growth factor A (VEGF-A).
 We incorporated mass action kinetics within an ordinary differential equation (ODE) framework to describe the EMT interaction network containing 97 gene, protein or mRNA components interconnected through 169 interactions.
-A family of model parameters was estimated using 41 molecular data sets generated in DLD1 colon carcinoma, MDCKII and A375 melanoma cells using the Pareto optimal ensemble technique (POETs) multiobjective optimization algorithm.
-POETs generated an ensemble of approximately 1400 models for analysis.
+A family of model parameters was estimated using 41 molecular data sets generated in DLD1 colon carcinoma, MDCKII and A375 melanoma cells using the Pareto optimal ensemble technique (JuPOETs) multiobjective optimization algorithm.
+JuPOETs generated an ensemble of approximately 1400 models for analysis.
 Analysis of the model population suggested that both MCF10A and DLD1 cells could exhibit phenotypic heterogeneity if treated simultaneously with TGF-$\beta$1/2 and VEGF-A.
 This heterogeneity was characterized by a significant fraction of the population being in a “hybrid state” having both high E-cadherin and high Vimentin expression.
 We tested these predictions using qRT-PCR and flow-cytometry studies in a variety of experimental conditions.
@@ -192,7 +192,7 @@ Together, these results establish a predictive mechanistic model of EMT suscepti
 The EMT model architecture, based upon curated molecular connectivity,
 described the expression of 23 genes following exposure to TGF-$\beta$ isoforms and VEGF-A (Fig. \ref{fg:F1}).
 The EMT model contained 74 molecular species interconnected by 169 interactions.
-Model equations were formulated using mass-action kinetics within an ordinary differential equation (ODE) framework.
+Model equations were formulated using either saturation or mass-action kinetics within an ordinary differential equation (ODE) framework.
 ODEs and mass action kinetics are common tools to model biochemical pathways \citep{Schoeberl:2002rv,Chen:2009uq,Tasseff:2011ve}.
 However, while ODE models can simulate complex intracellular behavior,
 they require estimates for model parameters which are often difficult to obtain.
@@ -200,26 +200,29 @@ The EMT model had 251 unknown model parameters, 169 kinetic constants and 45 non
 As expected, these parameters were not uniquely identifiable given the training data \citep{Gadkar:2005vn}.
 Thus, instead of identifying a single best fit (but uncertain) model,
 we estimated a sloppy population of models (each consistent with the training data) by simultaneously minimizing the difference between model simulations and 41 molecular
-data sets using the Pareto Optimal Ensemble Technique (POETs).
+data sets using the Pareto Optimal Ensemble Technique (JuPOETs).
 The training data were generated in DLD1 colon carcinoma, MDCKII, and A375 melanoma cells following
-exposure to TGF-$\beta$ isoforms \citep{Medici:2008fk}. We organized these data sets into 11 objective functions which were simultaneously minimized by POETs.
+exposure to TGF-$\beta$ isoforms \citep{Medici:2008fk}. We organized these data sets into 11 objective functions which were simultaneously minimized by JuPOETs.
 Additionally, we used 12 molecular data sets generated in HK-2 cells following VEGF-A exposure to train VEGF-A responsive model processes \citep{Lian:2011bs}.
 To guard against overfitting, we augmented the multiobjective optimization with leave-one-out cross validation to independently estimate both the training and
 prediction error for each objective. Thus, we generated 11 different model ensembles.
 Lastly, we compared model predictions with independent data sets not used during training (both at the molecular and model population
 levels) to evaluate the predictive power of the parameter ensemble.
-Additional details of the signaling architecture included in the model are presented in the materials and methods and the supplement.
 
-POETs generated a population of probable signaling models which captured the multiple phases of EMT induction (Fig. \ref{fg:F2}).
-POETs sampled well over 10$^4$ probable models during each stage of the cross-validation #####, using a combination of both local and global random sampling.
+JuPOETs generated a population of probable signaling models which captured the multiple phases of EMT induction (Fig. \ref{fg:F2}).
+JuPOETs sampled well over 10$^4$ probable models during each stage of the cross-validation using global random sampling.
 From this analysis, N $\simeq$ 1400 models were selected for further analysis.
-The selected models all had the same possible molecular connectivity, but different values for model parameters. Trascription and translation rates, as well as mRNA and protein degradation terms, were set using physical values from the literature, and allowed to vary by a scaling factor, see methods ####citebionumbers####.
-Model selection was based upon Pareto rank, the prediction and training error across all objectives and model to model correlation (supplemental materials).
+The selected models all had the same possible molecular connectivity, but different values for model parameters.
+Transcription and translation rates, as well as mRNA and protein degradation terms, were set using physical values from the literature \citep{Milo:2010aa},
+and allowed to vary by a scaling factor, see methods.
+Model selection was based upon Pareto rank, the prediction and training error across all objectives.
 The model population recapitulated key signaling events following TGF-$\beta$ exposure.
 We subdivided the response to TGF-$\beta$ exposure into two phases.
 First, TGF-$\beta$1/2 signaling initiated a program which downregulated E-cadeherin expression in a MAPK dependent manner while
 simultaneously upregulating TGF-$\beta$3 expression. Second, TGF$-\beta$3 secretion initiated an autocrine feedback which upregulated the expression of
 mesenchymal markers such as Vimentin and key upstream transcription factors such as LEF-1 in a SMAD dependent manner.
+TGF-$\beta$3 expression was also able to sustain $\beta$-catenin release by inhibiting its sequestration by the APC complex through PI3K mediated GSK3,
+which was captured by the model (Fig. \ref{fg:F4}B).
 Each phase involved the hierarchal expression and/or post-translational modification of several key transcription factors.
 During the first phase, stimulation with TGF-$\beta$1/2 (10 a.u.) activated both the SMAD and MAPK pathways.
 MAPK activation resulted in the phosphorylation of the transcription factor activator protein 1 (AP-1), which in-turn upregulated the expression of Snail, a well established transcriptional repressor (Fig. \ref{fg:F2}A).
@@ -235,36 +238,29 @@ TGF$-\beta$3 (10 a.u.) in combination with downstream inhibitors (DN-Smad4 and D
 
 The predictive power of the ensemble was tested using both cross validation and by comparing simulations with data sets not used for model training.
 In whole, 72\% of our training objectives were statistically significant (at a 95\% confidence interval) compared to a randomized parameter family (N = 100)
-generated from a random starting point.
-Conversely, we \emph{predicted} approximately 72\% of the training objectives, at a 95\% confidence interval compared to randomized parameters.
-The model also captured the temporal gene expression responses of E-cadherin, pSmad2, and LEF-1 to within one-standard deviation (up to the 48 hr time-point) (Fig. \ref{fg:F2}J-L).
-This data was not used for model training.
-The high predictability can be attributed to the combination of the leave-one-out cross validation scheme, diverse objective functions, and robustness of the POETs algorithm.
-Taken together, the model captured the key signaling events revealed by Medici \emph{et al.} \citep{Medici:2008fk} that drive the phenotypic conversion.
-A listing of data used for training is included in the supplement (Fig. \ref{fig:S5} and Fig. \ref{fig:S6}).
+generated from a random starting point. Conversely, we \emph{predicted} approximately 72\% of the training objectives, at a 95\% confidence interval compared to randomized parameters.
+The model also captured the temporal gene expression responses of E-cadherin, pSmad2, and LEF-1 (not used for model training) to within one-standard deviation (up to the 48 hr time-point) (Fig. \ref{fg:F2}J-L). Taken together, the model captured the key signaling events revealed by Medici \emph{et al.} \citep{Medici:2008fk} that drive the phenotypic conversion.
+A listing of objective function values resulting from training, cross validation and the random parameter control is given in the supplement (Fig. \ref{fg:ObjTable}).
 
 \subsection*{Identification of a novel LEF-1 regulator}
-During model identification, we found that consistent TGF-$\beta$ induced EMT required an additional regulatory protein.
+During model identification, we found that consistent TGF-$\beta$ induced EMT from a stable epithelial cell population required an additional regulatory protein.
 This protein, which we called hypothetical regulator 1 (YREG1), was required to mediate between SNAIL/SLUG transcriptional activity
 and the upregulation of LEF-1 expression following TGF-$\beta$1/2 exposure.
 SNAIL/SLUG are well known transcriptional repressors \citep{Hemavathy:2000aa,Hemavathy:2000ab,Dhasarathy:2011aa}, although there are a few studies
 which suggest that at least SNAIL can also act as a transcriptional activator \citep{Guaita:2002aa}.
 In the model, we assumed the expression of SNAIL/SLUG was likely regulated by AP1/SP1 \citep{Jackstadt:2013aa}.
-Thus, upon receiving a TGF-$\beta$1/2 signal, the model predicted enhanced SNAIL/SLUG expression, consistent with experimental observations.
+Thus, upon receiving direct Snail/Slug and TGF-$\beta$3 signals, the model predicted enhanced SNAIL/SLUG expression, consistent with experimental observations.
 TGF-$\beta$1/2 stimulation also induces LEF-1 expression. However, literature evidence suggested that LEF-1 expression was not strongly dependent upon AP1/SP1 activity \citep{Eastman:1999aa}.
 Thus, either SNAIL/SLUG are acting as inducers (contrary to substantial biochemical evidence) or, they are repressing the expression of an intermediate repressor.
 Given the biochemical evidence supporting SNAIL/SLUG as repressors, we created YREG1 a hypothetical intermediate repressor whose
 expression is downregulated by SNAIL/SLUG. The literature data therefore suggested that YREG1 had two transcriptional targets, LEF-1 and TGF-$\beta$3.
 By adding this regulator, our simulations became consistent with training and literature data.
-Medici et al. suggested a similar idea where feedback between $\beta$-catenin and LEF-1 was likely, although this feedback had yet to be identified \citep{Medici:2008fk}.
+Medici et al. suggested that feedback between $\beta$-catenin and LEF-1 was likely, although this feedback had yet to be identified \citep{Medici:2008fk}.
 Low levels of YREG1 expression were present in all simulations to regulate the formation of the $\beta$-catenin-LEF-1 complex.
-To test the potency of YREG1, we conducted knockdown and over-expression simulations following the addition of TGF-$\beta$1/2 (Fig. \ref{fig:S8}).
-In the absence of YREG1, most of the population failed to consistently respond to TGF-$\beta$1/2 exposure compared to the wild-type (Fig. \ref{fig:S8}A).
-Conversely, YREG1 overexpression revealed an exclusively epithelial phenotype following TGF-$\beta$1/2 stimulation (Fig. \ref{fig:S8}B).
-Overexpression of YREG1 repressed LEF-1 and TGF-$\beta$3 expression,
-thereby not allowing free $\beta$-catenin to form the $\beta$-catenin-LEF-1 complex which promotes mesenchymal gene expression, or SMAD activity following from autocrine TGF-$\beta$3 signaling.
-Taken together, we found that low YREG1 expression was necessary for stabilizing EMT,
-while elevated YREG1 levels limited the extent of EMT induction.
+To test the effect of YREG1 on the epithelial population, we conducted over-expression and knockdown simulations on untreated cells (Fig. \ref{fg:F4}C and \ref{fg:F4}D).
+In the absence of YREG1, most of the population failed to consistently respond to retain a stable epithelial state (Fig. \ref{fig:F4}D).
+Conversely, YREG1 overexpression revealed an enhanced epithelial phenotype, while some inherently transformed cells moved towards a hybrid phenotype  (Fig. \ref{fig:F4}C).
+Elevation of YREG1 repressed LEF-1 and TGF-$\beta$3 expression, thereby not allowing free $\beta$-catenin to form the $\beta$-catenin-LEF-1 complex which promotes mesenchymal gene expression, or SMAD activity following from autocrine TGF-$\beta$3 signaling. Taken together, we found that low YREG1 expression was necessary for producing a stabile the model with an epithelial phentoype that is inducable across multiple stimuli such as TGF-$\beta$1/2, TGF-$\beta$3 and SNAIl/SLUG transfection.
 
 \clearpage
 
@@ -275,52 +271,47 @@ We (and others) previously hypothesized that deterministic model ensembles can i
 We tested this hypothesis by analyzing the response of the population of EMT models to extracellular cues and then comparing this response to flow cytometry studies.
 We quantiied the phenotypic response of the individual members of the ensemble to TGF$-\beta$1/2 stimulation as a function of physical measurements of abundance of markers in system.
 We evlautated these quantities for each member of the ensemble (N $\simeq$ 1400) for two downstream phenotypic markers, Vimentin (mesenchymal) and E-cadherin (epithelial)
-following the addition of TGF$-\beta$1/2 alone (Fig. \ref{fg:F3}), and VEGF-A in combination with NFATc inhibitors (Fig. \ref{fg:F4}).
-We were further able to use this analysis to examine the activity and effects of underlying signaling molecules. 
+following the addition of TGF$-\beta$1/2 alone (Fig. \ref{fg:F3}), and VEGF-A in combination with NFATc inhibitors (Fig. \ref{fg:F3}).
+We were further able to use this analysis to examine the activity and effects of underlying signaling molecules.
 
-We identified model subpopulations that exhibited different behaviors following exposure to TGF$-\beta$1/2 (Fig. \ref{fg:F3}A, labeled P1-P4).
+We identified model subpopulations that exhibited different behaviors following exposure to TGF$-\beta$1/2 (Fig. \ref{fg:F3}A).
 Analysis of the molecular signatures of these subpopulations suggested the abundance, localization and state of the Sp1, AP-1 and NFATc transcription factors controlled population heterogeneity.
-The behavior of the majority of models ($>$70\%) was similar to subpopulation one (P1) or subpopulation two (P2) in Fig \ref{fg:F3}.
+The behavior of the majority of models ($>$80\%) respond to treatment in Fig \ref{fg:F3}A-C, moving off of the untreated population set (gray).
 These models showed the classically expected behavior, a switch from an epithelial to mesenchymal phenotype following TGF$-\beta$1/2 exposure.
-Models near P1 had evaluated nuclear localized phosphorylated Sp1, relative to non-induced cells (and models near P2).
+Models near resembling untreated cells  had evaluated nuclear localized phosphorylated Sp1, relative to non-induced cells.
 Elevated Sp1 activity decreased E-cadherin expression through Slug-mediated inhibition, which in turn increased Vimentin expression through TGF$-\beta$3 autocrine signaling and the liberation of $\beta$-catenin.
-Near P2, Sp1 transcriptional activity was lower than P1, leading to only modestly increased Vimentin expression and E-cadherin repression following TGF$-\beta$1/2 stimulation.
-Near subpopulation three (P3), reduced levels of nuclear phosphorylated AP-1, Sp1, and NFAT (resulting from the loss of ERK kinase activity)
-were responsible for Vimentin \emph{repression} relative to the control.
-However, the most biologically interesting behavior was exhibited by subpopulation four (P4).
-Models near P4 had elevated Sp1 and NFAT transcriptional activity, which increased \emph{both} Vimentin and E-cadherin expression.
-Analysis of these hypothetical cells suggested they had \emph{abnormal} signaling; deregulated NFAT expression and nuclear localization promoted E-cadherin expression while TGF$-\beta$1/2 induced Sp1 action promoted Vimentin expression. Analysis of the connectivity and information flow through the signaling architecture suggested that Sp1 and NFAT action could be manipulated \emph{independently} by simultaneous TGF$-\beta$1/2 and VEGF-A stimulation (Fig. \ref{fg:S1}).
+
+However, the most biologically interesting behavior was exhibited by cells achieving a hybrid phenotype, most notable in a dual treatment condition (black arrow), but also present in a small percentage of untreated cells (Fig. \ref{fg:F3}A).
+Models with this hybrid phenotype had elevated Sp1 and NFAT transcriptional activity, resulting in the simultaneous increase of \emph{both} Vimentin and E-cadherin expression (Fig. \ref{fg:F4}A).
+Analysis of these hypothetical cells suggested they had \emph{abnormal} signaling; deregulated NFAT expression and nuclear localization promoted E-cadherin expression while TGF$-\beta$1/2 induced Sp1 action promoted Vimentin expression.
 
 To test this hypothesis, we simulated the response of the network to TGF$-\beta$1/2 and VEGF-A treatment with and without NFATc inhibitors (Fig. \ref{fg:F4}).
-As expected, stimulation with VEGF-A (50 a.u.) maintained an epithelial population (Q4-43.6\%), while TGF$-\beta$1/2 (10 a.u.) exposure shifted
-the population from an epithelial (Q4-5.5\%) to a mesenchymal (Q1-45.6\%) phenotype (Fig. \ref{fg:F4}A and Fig. \ref{fg:F4}B).
-On the other hand, combined stimulation with TGF$-\beta$1/2 (10 a.u.) and VEGF-A (50 a.u.) increased both E-cadherin and Vimentin expression (Q2-45.3\%), resulting in a hybrid phenotype with both epithelial and mesenchymal characteristics (Fig. \ref{fg:F4}C).
-To better understand this hybrid response, we quantified the simulated protein levels for E-cadherin, Vimentin, phosphorylated nuclear Sp1, nuclear NFATc1, $\alpha$-smooth muscle actin ($\alpha$-SMA) and Slug as a function of condition (Fig. \ref{fg:S2}A-C).
+As expected, stimulation with VEGF-A (50 a.u.) maintained an epithelial population, while TGF$-\beta$1/2 (10 a.u.) exposure shifted
+the population from an epithelial to a mesenchymal phenotype (Fig. \ref{fg:F3}A and Fig. \ref{fg:F3}B).
+On the other hand, combined stimulation with TGF$-\beta$1/2 (10 a.u.) and VEGF-A (50 a.u.) increased both E-cadherin and Vimentin expression, resulting in a hybrid phenotype with both epithelial and mesenchymal characteristics (Fig. \ref{fg:F3}C).
 Vimentin expression was correlated with high levels of nuclear phosphorylated Sp1, following TGF$-\beta$1/2 exposure.
 Conversely, elevated E-cadherin expression depended upon the activity of NFAT transcription factors downstream of VEGF-A stimulation.
 To further isolate the role of NFAT on this hybrid state, we simulated the inhibition of NFAT transcriptional activity across all conditions (all else being equal).
-NFAT inhibition in combination with VEGF-A treatment blocked all E-cadherin positive sets (Fig. \ref{fg:F4}D).
-Likewise, TGF$-\beta$1/2 treatment in combination with NFATc inhibition also resulted in the loss of E-cadherin expression (Fig. \ref{fg:F4}E).
-Lastly, NFATc inhibition in combination with simultaneous TGF$-\beta$1/2 and VEGF-A exposure repressed nearly all E-cadherin expression, shifting nearly the entire population towards a mesenchymal phenotype (Fig. \ref{fg:F4}F). Taken together, high levels of nuclear localized phosphorylated Sp1 correlated with Vimentin expression, while NFATc transcriptional activity was predicted to be critical for maintaining E-cadherin expression.
+NFAT inhibition in combination with VEGF-A and TGF$-\beta$1/2 treatments blocks increased activation of E-cadherin (Fig. \ref{fg:F3}D and Fig. \ref{fg:F3}E).
+Lastly, NFATc inhibition in combination with simultaneous TGF$-\beta$1/2 and VEGF-A exposure repressed nearly all E-cadherin expression, shifting nearly the entire population towards a mesenchymal phenotype (Fig. \ref{fg:F4}F). Taken together, high levels of nuclear localized phosphorylated Sp1 correlated with Vimentin expression, while NFATc transcriptional activity was predicted to be critical for maintaining E-cadherin expression in the prescence of competing signals.
+In particular, when present, VEGF-A signaling through NFATc was predicted to provide a protective up-regulation of E-cadherin.
 
 \subsection*{Combined TGF$-\beta$2 and VEGF-A exposure drives heterogeneity in MCF10A and DLD1 cells}
 The EMT model simulations suggested the transcriptional activity of NFATc and Sp1 could be independently tuned to generate a hybrid cell population with both epithelial and mesenchymal characteristics.
-To test this hypothesis, we exposed either quiescent epithelial (MCFA10, (Fig. \ref{fg:F5})) or transformed epithelial cells (DLD1, (Fig. \ref{fg:S3})) to combinations of TGF$-\beta$1/2 and/or VEGF-A.
-As expected, treatment with TGF$-\beta$1/2 (10ng/ml) increased Slug and Vimentin expression, while repressing E-cadherin expression both at the transcript and protein levels in MCF10A (Fig. \ref{fg:F5}A-B) and DLD1 cells (Fig. \ref{fg:S4}C, Fig S3 D,E).
+To test this hypothesis, we exposed either quiescent epithelial (MCFA10, (Fig. \ref{fg:F5})) or transformed epithelial cells (DLD1, (Fig. \ref{fg:S3})) to combinations of TGF$-\beta$1/2 and/or VEGF-A. As expected, treatment with TGF$-\beta$1/2 (10ng/ml) increased Slug and Vimentin expression, while repressing E-cadherin expression both at the transcript and protein levels in MCF10A (Fig. \ref{fg:F5}A-B) and DLD1 cells (Fig. \ref{fg:S4}C, Fig S3 D,E).
 Both MCF10A (Fig. \ref{fg:F5}C) and DLD1 cells (Fig. \ref{fg:S3}E,G) transitioned from quiescent cobblestone morphology to spread spindle shapes, consistent with EMT.
 As predicted, we found increased nuclear localization of phosphorylated Sp1 following TGF$-\beta$1/2 stimulation in both MCF10A (Fig. \ref{fg:F5}B,C) and DLD1 cells (Fig. \ref{fg:S3}E,F).
 Consistent with model predictions, VEGF-A (50ng/ml) treatment increased the abundance of NFATc1 and E-cadherin at both the transcript and protein level in both MCF10A (Fig. \ref{fg:F5}A) and DLD1 (Fig. \ref{fg:S3}A) cells.
 We also found that NFATc1 nuclear localization significantly increased in both MCF10 and DLD1 treated with VEGF-A independently of the abundance of nuclear localized phosphorylated Sp1 levels (Fig. \ref{fg:F5}B,C Fig.S3C,E ).
 Interestingly, combining VEGF-A (50ng/ml) with TGF$-\beta$1/2 (10ng/ml) resulted in significantly elevated expression of both E-cadherin and Vimentin at the transcript and protein levels in both MCF10A and DLD1 cells (Fig 5A,B; Fig S3D,E; Fig S4C).
 NFATc1 expression increased, while Sp1 expression was similar to the TGF$-\beta$1/2 case alone (Fig. \ref{fg:F5}A-B,  Fig S3D,E; Fig S4C)), supporting their independent regulation.
-The expression of Slug, and Vimentin significantly increased, while E-cadherin levels were increased in MCF10A cells (Fig 5A) and maintained at control levels in DLD1 cells (Fig. S3D).
+The expression of Slug, and Vimentin significantly increased, while E-cadherin levels were increased in MCF10A cells (Fig 5A) and maintained at control levels in DLD1 cells (Fig. S3D).y
 As further predicted, nuclear co-localization of both NFATc1 and phosphorylated Sp1 were apparent in MCF10A and DLD1 cells treated with both ligands (Fig. \ref{fg:F5}B,C Fig S3E,F).
 Taken together, combined VEGF-A and TGF$-\beta$1/2 treatment elicited a hybrid phenotype expressing both mesenchymal and epithelial characteristics in both MCF10A and DLD1 cells.
 This phenotype was driven by the transcriptional activity of two key transcription factors, Sp1 and NFATc, which could be modulated independently by TGF$-\beta$1/2 and VEGF-A exposure.
 
 Our phenotypic analysis predicted that NFATc transcriptional activity was critical to maintaining E-cadherin expression in the presence of both VEGF-A and TGF$-\beta$1/2.
-We experimentally tested this hypothesis by exposing both MCF10A (Fig. \ref{fg:F5}E,F) and DLD1 cells (Fig. \ref{fg:S4}) to combinations of VEGF-A and TGF$-\beta$1/2 in the presence or absence of VIVIT,
-a soluble peptide inhibitor of NFATc transcriptional activity \citep{Aramburu:1999if}.
+We experimentally tested this hypothesis by exposing both MCF10A (Fig. \ref{fg:F5}E,F) and DLD1 cells (Fig. \ref{fg:S4}) to combinations of VEGF-A and TGF$-\beta$1/2 in the presence or absence of VIVIT, a soluble peptide inhibitor of NFATc transcriptional activity \citep{Aramburu:1999if}.
 Treatment with VEGF-A (50ng/ml) and VIVIT (10$\mu$M) in MCF10A cells significantly reduced E-cadherin expression compared to VEGF-A alone (Fig 5D,E).
 Co-treatment with VIVIT and TGF$-\beta$1/2 did not enhance EMT capacity of MCF10A cells above that of TGF$-\beta$1/2 alone (Fig 5A,B,E).
 Likewise, VIVIT in combination with both TGF$-\beta$1/2 and VEGF-A resulted in a loss of E-cadherin gene and protein expression, while Slug and Vimentin levels remained increased (Fig. \ref{fg:F5}D,E ).
@@ -358,7 +349,7 @@ In this study, we developed a family of mechanistic models describing the induct
 The signaling architecture encoded in the model, which contained 74 molecular species interconnected by 169 interactions,
 described the expression of 23 genes in response to growth factor stimulation.
 This simulation incorporates an unprecedented level of detail compared to previous models, but as a consequence created a large number of unknown model parameters.
-Because these parameters could not be estimated uniquely apriori, we estimated an ensemble of likely parameters using the POETs multiobjective optimization framework.
+Because these parameters could not be estimated uniquely apriori, we estimated an ensemble of likely parameters using the JuPOETs multiobjective optimization framework.
 The model population was trained and cross-validated to prescribe biological significance using 41 data sets generated in DLD1 colon carcinoma, MDCKII, and A375 melanoma cell lines \citep{Medici:2008fk}.
 The absence of TGF$-\beta$1/2 or VEGF-A stimulation was used as the baseline for the robustness calculations.
 Analysis of this population predicted possible phenotypic modes (and their associated signaling) that cells could exhibit when stimulated with TGF-$\beta$ and/or VEGF-A.
@@ -436,7 +427,8 @@ Recent evidence has established a complex role of Amino terminal Enhancer of Spl
 AES opposes LEF-1 transcriptional activation while Groucho/TLE binds with LEF-1 for a histone deacetylase repression.
 In addition, $\beta$-catenin directly displaces Groucho/TLE repressors from TCF/LEF-1 in Wnt-mediated transcription activation \citep{Arce:2009pr, Grumolato2013}.
 Our model agrees with this newly discovered feedback system, as YREG1 regulates LEF-1 activity leading to EMT stabilization.
-####Secondly, we should revisit the role of GSK-3$\beta$. GSK-3$\beta$ is an important regulator which controls the abundance of both Snail and $\beta$-catenin through the ubiquitin-proteasome pathway \citep{Zhou:2004kx,Larue:2005vn}. Specifically to our model, expression of Snail increases through 72 hrs. In contrast, experimental data has shown that activity of Snail peaks at 24 hrs which may be controlled by the GSK-3$\beta$ complex \citep{Medici:2006qa}.  Recent evidence has also suggested an essential role of NF-$\kappa$B in epithelial transformation.  NF-$\kappa$B may influence Snail expression through the AKT pathway and directly stabilize Snail activity \citep{Wu:2009cr}.  This is particularly important for integrating inflammation pathways, such as interleukin-6 (IL-6) and tumor necrosis factor-$\alpha$ (TNF-$\alpha$), which have been linked to EMT in pathological conditions \citep{Sullivan:2009bh}.
+
+Recent evidence has also suggested an essential role of NF-$\kappa$B in epithelial transformation.  NF-$\kappa$B may influence Snail expression through the AKT pathway and directly stabilize Snail activity \citep{Wu:2009cr}.  This is particularly important for integrating inflammation pathways, such as interleukin-6 (IL-6) and tumor necrosis factor-$\alpha$ (TNF-$\alpha$), which have been linked to EMT in pathological conditions \citep{Sullivan:2009bh}.
 Other pathways such as Notch have also been shown to act synergistically with TGF-$\beta$ to express Slug in the developing embryo \citep{Niessen:2008nx}.
 Lastly, while we have modeled classical protein signaling, we have not considered the role of regulatory RNAs on EMT.
 There is growing evidence that microRNAs (miRNAs) play a strong role in EMT, where several miRNAs, for example miR-21 and miR-31 are strongly associated with TGF-$\beta$ exposure \citep{Bullock:2012aa}.
@@ -445,7 +437,7 @@ Addressing missing structural components like these, could generate more insight
 \clearpage
 
 \section*{Materials and Methods}
-The simulation code and parameter ensemble used in this study can be downloaded from GitHub (https://github.com/jeffreyvarner/TGFb-VEGFA-Model\_v1.git).
+All model code and parameter ensemble is freely available under an MIT software license and can be downloaded from http://www.varnerlab.org.
 
 \subsection*{Signaling network connectivity}
 The EMT model described the gene expression program resulting from TGF$-\beta$ and VEGF-A signaling in a prototypical epithelial cell.
@@ -454,12 +446,13 @@ The network connectivity was curated from more than 40 primary literature source
 The model interactome was not specific to a single epithelial cell line.
 Rather, we assembled canonical pathways involved in TGF$-\beta$ and VEGF-A signaling, defaulting to human connectivity when possible.
 Using a canonical architecture allowed us to explore general features of TGF$-\beta$ induced EMT without cell line specific artifacts.
-On the other hand, because of the canonical architecture, we evaluated the simulation conclusions in several cell lines to test the generality of our conclusions.
+On the other hand, because of the canonical architecture, we can test the model against several cell lines to test the generality of our conclusions.
 
 Our signaling network reconstruction was based on Medici et al. who identified the pathways though which MDCKII, DLD1 colon carcinoma,
 and A375 melanoma cells transition towards a mesenchymal phenotype \citep{Medici:2008fk}.
-Sequential activation of MAPK and Smad pathways were initiated upon addition of TGF$\beta$1/2.  Briefly, TGF$\beta$2 signals through the RAS-RAF-MEK-ERK pathway to up-regulate Snail and Slug expression \citep{Medici:2006qa}.  Snail, a known repressor of junctional proteins, inhibits the expression of E-cadherin \citep{Cano:2000kh}. This initial repression of E-cadherin leads to a release of $\beta$-catenin from the cell membrane. Cystolic $\beta$-catenin can then translocate to the nucleus and form transcriptional complexes with TCF-4 to drive TGF$\beta$3 expression \citep{Medici:2008fk}. TGF$\beta$3 signals to the cells interior by binding to type II receptors, which form heterodimers with type I receptors (ALK5) \citep{Derynck:2003fc}. This activates the receptors serine/threonine kinase activity to phosphorylate and activate the receptor Smads 2/3 \citep{Massague:2005qc}.
-Phosphorylated Smads 2/3 (pSmad2/3) form heterodimers with partner Smad4 and translocate to the nucleus. pSmads complexes up-regulate other transcription factors, such as LEF-1. The pSmad2/4/LEF-1 has been shown to directly repress the E-cadherin gene \citep{Nawshad:2007kl}. LEF-1 also binds with $\beta$-catenin to upregulate mesenchymal proteins such as fibronectin \citep{Medici2011}.
+Sequential activation of MAPK and Smad pathways were initiated upon addition of TGF$-\beta$1/2.  Briefly, TGF$-\beta$2 signals through the RAS-RAF-MEK-ERK pathway to up-regulate Snail and Slug expression \citep{Medici:2006qa}.  Snail, a known repressor of junctional proteins, inhibits the expression of E-cadherin \citep{Cano:2000kh}. This initial repression of E-cadherin leads to a release of $\beta$-catenin from the cell membrane. Cystolic $\beta$-catenin can then translocate to the nucleus and form transcriptional complexes with TCF-4 to drive TGF$-\beta$3 expression \citep{Medici:2008fk}. TGF$-\beta$3 signals to the cells interior by binding to type II receptors, which form heterodimers with type I receptors (ALK5) \citep{Derynck:2003fc}. This activates the receptors serine/threonine kinase activity to phosphorylate and activate the receptor Smads 2/3 \citep{Massague:2005qc}.
+Phosphorylated Smads 2/3 (pSmad2/3) form heterodimers and translocate to the nucleus. pSmads complexes up-regulate other transcription factors, such as LEF-1. The pSmad2/4-LEF-1 complex has been shown to directly repress the E-cadherin gene \citep{Nawshad:2007kl}. LEF-1 also binds with $\beta$-catenin to upregulate mesenchymal proteins such as fibronectin \citep{Medici2011}.
+In the model, Smad signaling is lumped into a single smad species that can act in a co-dependent fashion with LEF1 to downregulate E-cadherin.
 The EMT gene expression program was initiated by the binding of TGF$-\beta$ isoforms to TGF$-\beta$ surface receptors.
 Binding of extracellular TGF$-\beta$1/2 with TGF$-\beta$ surface receptors I/II (TGF$-\beta$R-I/II) initiates the assembly of adapter complexes which starts the
 downstream signaling program. In the model, TGF$-\beta$1/2 binds TGF$-\beta$R-I/II followed by the recruitment of activin receptor-like kinase 1 (ALK1) and
@@ -473,64 +466,137 @@ Repression of E-cadherin expression is the central event in the transition from 
 However, this transition is not solely driven by transcriptional events.
 At the protein level, the repression of E-cadherin leads to a release of $\beta$-catenin from cell membrane.
 Cystolic $\beta$-catenin then translocates to the nucleus and forms transcriptionally-active complexes with immunoglobulin transcription factor 2 (TCF-4)
-to drive TGF$-\beta$3 expression \citep{Medici:2008fk}.
-Simultaneously, ERK1/2-mediated phosphorylation of the AP1 and Sp1 transcription factors can also regulate transcriptional complexes involving NFAT, Slug, and Smads.
-Lastly, canonical pathways for processing extracellular VEGF-A, BMP and Wnt signals, in addition to the PI3K pathway
-were also included in the model. Additional information about the interactions included in the model,
-along with the Systems Biology Markup Language (SBML) file encoding these interactions are included in the supplemental materials.
+to drive TGF$-\beta$3 expression \citep{Medici:2008fk}. The PI3K to GSK3 pathway was included and acted as an activating mechanism of $\beta$-catenin signaling through TGF$-\beta$3 signaling \citep{Medici:2008fk}. GSK3 is known to act on $\beta$-catenin signaling through the ubiquitin-proteasome pathway
+\citep{Zhou:2004kx,Larue:2005vn}.
+VEGF-A activation of NFATc1 takes place through calcineurin signaling leading to an enhancement of E-cadherin expression \citep{Suehiro:2014aa},
+as supported by our VEGF-A experimental data (Fig. \ref{fg:VEGFA-Data}).
 
+%Additional information about the interactions included in the model,
+%along with the Systems Biology Markup Language (SBML) file encoding these interactions are included in the supplemental materials.
 
 \subsection*{Formulation, solution and analysis of the EMT model equations}
-EMT was modeled using mass-action kinetics within an ordinary differential equation (ODE) framework:
-\begin{equation}\label{asseassertain_massbalance}
-\frac{d\mathbf{x}}{dt}=\mathbf{S}\cdot\mathbf{r}\left(\mathbf{x},\mathbf{k}\right)\qquad\mathbf{x}\left(t_{o}\right)=\mathbf{x}_{o}
+\subsubsection*{EMT signaling events.}
+EMT signaling events were modeled using either saturation or mass-action kinetics within an ordinary differential equation (ODE) framework:
+\begin{equation}
+	\frac{1}{\tau_{i}}\frac{dx_{i}}{dt}  =  \sum_{j = 1}^{\mathcal{R}}\sigma_{ij}r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right)-\mu x_{i}\qquad{i=1,2,\hdots,\mathcal{M}}\\
 \end{equation}
-The quantity $\mathbf{x}$ denotes the vector describing the abundance of protein, mRNA, and other species in the model ($995\times 1$).
-The stoichiometric matrix $\mathbf{S}$ encodes the signaling architecture considered in the model ($995\times 1700$).
-Each row of $\mathbf{S}$ describes a signaling component while each column describes a particular interaction.
-The $(i,j)$ element of $\mathbf{S}$, denoted by $\sigma_{ij}$, describes how species $i$ is involved with interaction $j$.
-If $\sigma_{ij}>0$, species $i$ is produced by interaction $j$. Conversely, If $\sigma_{ij}<0$, then species $i$ is consumed in interaction $j$.
-Lastly, if $\sigma_{ij}=0$, then species $i$ is not involved in interaction $j$.
-The term  $\mathbf{r}\left(\mathbf{x},\mathbf{k}\right)$ denotes the vector of interactions rates ($1700\times{1}$).
-We modeled each network interaction (gene expression, translation and biochemical transformations)
-using elementary rate laws where all reversible interactions were split into two irreversible steps (supplemental materials).
-Thus, the rate expression for interaction $q$ was given by:
-\begin{equation}\label{eq-mass-action}
-r_{q}\left(\mathbf{x},k_{q}\right)=k_{q}\prod_{j\in\left\{\mathbf{R}_{q}\right\}}x_{j}^{-\sigma_{jq}}
+where $\mathcal{R}$ denotes the number of signaling reactions and $\mathcal{M}$ denotes the number of proteins in the model.
+The quantity $\tau_{i}$ denotes a time scale parameter for species $i$ which captures unmodeled effects. In the current study $\tau_{i} = 1$ for all species.
+The quantity $r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right)$ denotes the rate of reaction $j$.
+Typically, reaction $j$ is a non-linear function of biochemical and enzyme species abundance, as well as unknown model parameters $\mathbf{k}$ ($\mathcal{K}\times{1}$).
+The quantity $\sigma_{ij}$ denotes the stoichiometric coefficient for species $i$ in reaction $j$.
+If $\sigma_{ij}>0$, species $i$ is produced by reaction $j$.
+Conversely, if $\sigma_{ij}<0$, species $i$ is consumed by reaction $j$, while $\sigma_{ij} = 0$ indicates species $i$ is not connected with reaction $j$.
+Species balances were subject to the initial conditions $\mathbf{x}\left(t_{o}\right) = \mathbf{x}_{o}$.
+
+Rate processes were written as the product of a kinetic term ($\bar{r}_{j}$) and a control term ($v_{j}$) in the EMT model.
+The rate of enzyme catalyzed reactions was modeled using saturation kinetics:
+\begin{equation}\label{eqn:rate-saturation}
+	\bar{r}_{j} = k_{j}^{cat}\epsilon_{i}\left(\frac{x_{s}}{K_{js} + x_{s}}\right)
 \end{equation}
-The set $\left\{\mathbf{R}_{q}\right\}$ denotes reactants for reaction $q$, while $\sigma_{jq}$ denotes the stoichiometric coefficient (element of the matrix $\mathbf{S}$) governing species $j$ in reaction $q$. The quantity $k_{q}$ denotes the rate constant (unknown) governing reaction $q$.
-Model equations were generated in the C-programming language using the UNIVERSAL code generator, starting from an text-based input file (supplemental materials).
-UNIVERSAL, an open source Objective-C/Java code generator, is available as a Google Code project (http://code.google.com/p/universal-code-generator/).
-Model equations were solved using the CVODE solver in the SUNDIALS library \citep{Hindmarsh2005} on an Apple workstation (Apple, Cupertino, CA)
-as previously described \citep{Tasseff:2011ve}.
+where $k_{j}^{cat}$ denotes the catalytic rate constant for reaction $j$, $\epsilon_{i}$ denotes the abundance of the enzyme catalyzing reaction $j$,
+and $K_{js}$ denotes the saturation constant for species $s$ in reaction $j$.
+On the other hand, mass action kinetics were used to model protein-protein binding interactions within the network:
+\begin{equation}\label{eqn:rate-action}
+	\bar{r}_{j} = k_{j}^{max}\prod_{s\in{m_{j}^{-}}}x_{s}^{-\sigma_{sj}}
+\end{equation}
+where $k_{j}^{max}$ denotes the maximum rate for reaction $j$, $\sigma_{sj}$ denotes the stoichiometric coefficient for species $s$ in reaction $j$,
+and $s\in{m_{j}}$ denotes the set of \textit{reactants} for reaction $j$. We assumed all binding interactions were irreversible.
+
+The control terms $0\leq v_{j}\leq 1$ depended upon the combination of factors which influenced rate process $j$.
+For each rate, we used a rule-based approach to select from competing control factors.
+If rate $j$ was influenced by $1,\dots,m$ factors, we modeled this relationship as
+$v_{j}=\mathcal{I}_{j}\left(f_{1j}\left(\cdot\right),\hdots,f_{mj}\left(\cdot\right)\right)$
+where $0\leq f_{ij}\left(\cdot\right)\leq 1$ denotes a regulatory transfer function quantifying the influence of factor $i$ on rate $j$.
+The function $\mathcal{I}_{j}\left(\cdot\right)$ is an integration rule which maps the output of regulatory transfer functions into a control
+variable. In this study, we used $\mathcal{I}_{j}\in\left\{min,max\right\}$ \citep{pr3010178}. If a process has no modifying factors, $v_{j}=1$.
+
+\subsubsection*{EMT gene expression processes.}
+The EMT model described both signal transduction and gene expression events following the addition of TGF$-\beta$ and VEGF-A.
+For each gene, we modeled both the resulting mRNA ($m_{j}$) and protein ($p_{j}$):
+\begin{eqnarray}
+	\frac{dm_{j}}{dt} &=& r_{T,j} - \left(\mu+\delta_{m,j}\right)m_{j}+\lambda_{j}\\
+	\frac{dp_{j}}{dt} &=& r_{X,j} - \left(\mu+\delta_{p,j}\right)p_{j}
+\end{eqnarray}where $j=1,2,\dots,\mathcal{G}$.
+The terms $r_{T,j}$ and $r_{X,j}$ denote the specific rate of transcription, and translation while
+the terms $\delta_{m,j}$ and $\delta_{p,j}$ denote degradation constants for mRNA and protein, respectively.
+Lastly, $\mu$ denotes the specific growth rate, and $\lambda_{j}$ denotes the constitutive rate of gene expression for gene $j$.
+The specific transcription rate was modeled as the product of a kinetic term $\bar{r}_{T,j}$ and a control term $u_{j}$ which described how the
+abundance of transcription factors, or other regulators influenced the expression of gene $j$. The kinetic rate of transcription was modeled as:
+\begin{equation}
+	\bar{r}_{T,j} = \alpha_{j}\left[V^{max}_{T}\left(\frac{G_{j}}{K_{T}+G_{j}}\right)\right]
+\end{equation}where the maximum gene expression rate was defined as the product of a characteristic transcription rate constant ($k_{T}$)
+and the abundance of RNA polymerase, $V^{max}_{T} = k_{T}\left(RNAP\right)$. The parameter $\alpha_{j}$ was used to adjust the transcription to that of gene $j$
+(estimated in this study), while $k_{T}$, $G_{j}$ and $RNAP$ were estimated from literature \citep{Milo:2010aa}.
+Similar to the signaling processes, the gene expression control term $0\leq u_{j}\leq 1$ depended upon the combination of factors which influenced rate process $j$.
+For each rate, we used a rule-based approach to select from competing control factors.
+If the expression of gene $j$ was influenced by $1,\dots,m$ factors, we modeled this relationship as
+$u_{j}=\mathcal{I}_{j}\left(f_{1j}\left(\cdot\right),\hdots,f_{mj}\left(\cdot\right)\right)$
+where $0\leq f_{ij}\left(\cdot\right)\leq 1$ denotes a regulatory transfer function quantifying the influence of factor $i$ on the expression of gene $j$.
+The function $\mathcal{I}_{j}\left(\cdot\right)$ is an integration rule which maps the output of regulatory transfer functions into a control
+variable. In this study, we used $\mathcal{I}_{j}\in\left\{min,max\right\}$ \citep{pr3010178}.
+If a gene expression process has no modifying factors, $u_{j}=1$.
+Lastly, the specific translation rate was modeled as:
+\begin{equation}
+	r_{X,j} = \beta_{j}\left[V^{max}_{X}\left(\frac{m_{j}}{K_{X}+m_{j}}\right)\right]
+\end{equation}where $V^{max}_{X}$ denotes a characteristic maximum translation rate estimated from literature, $\beta_{j}$ denotes the transcript specific correction the characteristic translation rate,
+and $K_{X}$ denotes a translation saturation constant.
+The characteristic maximum translation rate was defined as the product of a characteristic translation rate constant ($k_{X}$)
+and the abundance of Ribosomes ($RIBO$), $V^{max}_{X} = k_{X}\left(RIBO\right)$, where both $k_{X}$ and $RIBO$ abundance were estimated from literature \citep{Milo:2010aa}.
+
+The signaling and gene expression model equations were implemented in Julia and solved using the \texttt{CVODE} routine of the Sundials package \citep{Julia,Hindmarsh2005}.
+The model code and parameter ensemble is freely available under an MIT software license and can be downloaded from http://www.varnerlab.org.
+
+% \begin{equation}\label{asseassertain_massbalance}
+% \frac{d\mathbf{x}}{dt}=\mathbf{S}\cdot\mathbf{r}\left(\mathbf{x},\mathbf{k}\right)\qquad\mathbf{x}\left(t_{o}\right)=\mathbf{x}_{o}
+% \end{equation}
+% The quantity $\mathbf{x}$ denotes the vector describing the abundance of protein, mRNA, and other species in the model ($995\times 1$).
+% The stoichiometric matrix $\mathbf{S}$ encodes the signaling architecture considered in the model ($995\times 1700$).
+% Each row of $\mathbf{S}$ describes a signaling component while each column describes a particular interaction.
+% The $(i,j)$ element of $\mathbf{S}$, denoted by $\sigma_{ij}$, describes how species $i$ is involved with interaction $j$.
+% If $\sigma_{ij}>0$, species $i$ is produced by interaction $j$. Conversely, If $\sigma_{ij}<0$, then species $i$ is consumed in interaction $j$.
+% Lastly, if $\sigma_{ij}=0$, then species $i$ is not involved in interaction $j$.
+% The term  $\mathbf{r}\left(\mathbf{x},\mathbf{k}\right)$ denotes the vector of interactions rates ($1700\times{1}$).
+% We modeled each network interaction (gene expression, translation and biochemical transformations)
+% using elementary rate laws where all reversible interactions were split into two irreversible steps (supplemental materials).
+% Thus, the rate expression for interaction $q$ was given by:
+% \begin{equation}\label{eq-mass-action}
+% r_{q}\left(\mathbf{x},k_{q}\right)=k_{q}\prod_{j\in\left\{\mathbf{R}_{q}\right\}}x_{j}^{-\sigma_{jq}}
+% \end{equation}
+% The set $\left\{\mathbf{R}_{q}\right\}$ denotes reactants for reaction $q$, while $\sigma_{jq}$ denotes the stoichiometric coefficient (element of the matrix $\mathbf{S}$) governing species $j$ in reaction $q$. The quantity $k_{q}$ denotes the rate constant (unknown) governing reaction $q$.
+% Model equations were generated in the C-programming language using the UNIVERSAL code generator, starting from an text-based input file (supplemental materials).
+% UNIVERSAL, an open source Objective-C/Java code generator, is available as a Google Code project (http://code.google.com/p/universal-code-generator/).
+% Model equations were solved using the CVODE solver in the SUNDIALS library \citep{Hindmarsh2005} on an Apple workstation (Apple, Cupertino, CA)
+% as previously described \citep{Tasseff:2011ve}.
 
 \subsubsection*{Estimation of model parameters using multiobjective optimization.}
-The EMT model had 1756 unknown parameters (1700 kinetic constants and 56 non-zero initial conditions) which were not uniquely identifiable given the training data.
+The EMT model had 296 unknown parameters (169 kinetic constants, 44 saturation constants, 38 control logic paramters, and 45 non-zero initial conditions) which were not uniquely identifiable given the training data.
 Instead, we estimated a population of likely models (each consistent with the training data)
 using 41 data sets generated in DLD1 colon carcinoma, MDCKII, and A375 melanoma cells taken from Medici \emph{et al.} \citep{Medici:2008fk}.
-We used the Pareto Optimal Ensemble Technique (POETs) multiobjective optimization framework in combination
+We used the Pareto Optimal Ensemble Technique (JuPOETs) multiobjective optimization framework in combination
 with leave-one-out cross-validation to estimate an ensemble of model parameters \citep{Song:2010fk}.
 Cross-validation was used to calculate both training and prediction error during the parameter estimation procedure \citep{kohavi1995study}.
 The 41 intracellular protein and mRNA data-sets used for identification were organized into 11 objective functions.
 These 11 objective functions were then partitioned, where each partition contained ten training objectives and one validation objective.
-The training and validation data were Western blots. Thus, all model simulations were in arbitrary units.
-However, POETs does allow a soft constraint on the order of magnitude of the model concentration scale.
-In this study, we assumed the natural model concentration scale was pmol/L. We did not place a lower bound on model states.
-However, based on the pmol/L natural scale, we treated all values less than 10$^{-3}$ as zero (or no expression).
+The training and validation data were Western blots. We achived a physical simulation scale by establishing characteristic rates of transcription, translation, mRNA and protein degradation, as well as characteristic concentrations of ribosomes and RNAPs \citep{Milo:2010aa}.
+The concentration scale is in nM, with proteins ranging from 10-1000nM and mRNA ranging from 0.01 to 1nM, reflecting the true abundances and ratios between each species.
 
-\subsubsection*{Robustness coefficients.} Robustness coefficients were calculated as shown previously \citep{Tasseff:2011ve,Lequieu:2011fj}.
-Robustness coefficients denoted by $\alpha\left(i,j,t_{o},t_{f}\right)$:
-\begin{equation}
-\alpha\left(i,j,t_{o},t_{f}\right)=\left(\displaystyle\int_{t_{o}}^{t_{f}}x_{i}\left(t\right)dt\right)^{-1}\left(\displaystyle\int_{t_{o}}^{t_{f}}x^{(j)}_{i}\left(t\right)dt\right)
-\end{equation}
-quantify the response of a marker to a structural or operational perturbation to the network architecture.
-Here $t_o$ and $t_f$ denote the initial and final simulation time respectively, while
-$i$ and $j$ denote the indices for the marker and the perturbation respectively. A value of $\alpha\left(i,j,t_{o},t_{f}\right)>1$, indicates increased marker abundance, while $\alpha\left(i,j,t_{o},t_{f}\right)<1$ indicates decreased marker abundance following perturbation $j$. If
-$\alpha\left(i,j,t_{o},t_{f}\right)\sim{1}$ the $j$th perturbation does not influence the abundance of marker $i$.
-Robustness coefficients were calculated for each member of the ensemble (N $\simeq$ 1100).
+% \subsubsection*{Robustness coefficients.} Robustness coefficients were calculated as shown previously \citep{Tasseff:2011ve,Lequieu:2011fj}.
+% Robustness coefficients denoted by $\alpha\left(i,j,t_{o},t_{f}\right)$:
+% \begin{equation}
+% \alpha\left(i,j,t_{o},t_{f}\right)=\left(\displaystyle\int_{t_{o}}^{t_{f}}x_{i}\left(t\right)dt\right)^{-1}\left(\displaystyle\int_{t_{o}}^{t_{f}}x^{(j)}_{i}\left(t\right)dt\right)
+% \end{equation}
+% quantify the response of a marker to a structural or operational perturbation to the network architecture.
+% Here $t_o$ and $t_f$ denote the initial and final simulation time respectively, while
+% $i$ and $j$ denote the indices for the marker and the perturbation respectively. A value of $\alpha\left(i,j,t_{o},t_{f}\right)>1$, indicates increased marker abundance, while $\alpha\left(i,j,t_{o},t_{f}\right)<1$ indicates decreased marker abundance following perturbation $j$. If
+% $\alpha\left(i,j,t_{o},t_{f}\right)\sim{1}$ the $j$th perturbation does not influence the abundance of marker $i$.
+% Robustness coefficients were calculated for each member of the ensemble (N $\simeq$ 1100).
 
 \subsection*{Cell culture and experimental interrogation}
 DLD1 colon carcinoma, MCF10A, and HUVEC were acquired from the American Tissue Culture Collection (Manassas, VA). Cells were grown in culture with RPMI 1640 medium with 10\% fetal bovine serum and 1\% penicillin/streptomycin for DLD1, EBM-2 supplemented with EGM-2, 5\% fetal bovine serum, and 1\% penicillin/streptomycin for HUVEC, or MGEM 2 supplemented with insulin, bovine pituitary extract, cholera toxin, hEGF, hydrocortisone, 5\% horse serum, and 1\% penicillin/streptomycin for MCF10A. Cells were serum starved for 24 hours and removed from all experimental conditions.  Recombinant VEGFA165 was also removed from culture medium prior to experimentation.  Recombinant human TGF$-\beta$2 (R$\And$D Systems, Minneapolis, MN) was added to the culture medium at a concentration of 10 ng/ml and recombinant VEGFA165 at a concentration of (5ng/ml, 50ng/ml) for all relative experiments.  NFAT inhibitor (VIVIT peptide) (EMDBiosciences, Darmstadt, Germany), was added to the culture medium at a concentration of 10$\mu$M for all relative experiments.   Cells were passaged 1:3 or 1:4 every 3-6 d and used between passages 4 and 8.
+
+\subsubsection*{VEGF treatment}
+DLD1 and MCF10A cells were suspended in culture media (with RPMI 1640 medium with 10\% fetal bovine serum and 1\% penicillin/streptomycin for DLD1 or MGEM 2 supplemented with insulin, bovine pituitary extract, cholera toxin, hEGF, hydrocortisone, 5\% horse serum, and 1\% penicillin/streptomycin for MCF10A), and allowed to aggregate overnight in hanging drop culture (20$\mu$L; 20,000 cells).  The spherical aggregates were placed on the surface of neutralized type I collagen hydrogels (1.5mg/mL) and allowed to adhere.  Cultures were then serum starved (1\% serum) for 24 hours.  Recombinant VEGFA165 was then added to the media (5ng/ml, 50ng/ml) and mRNA was harvested after 3hr and 24hr timepoint.
 
 \subsubsection*{RT-PCR}
 RNA extractions were performed using a Qiagen total RNA purification kit (Qiagen, Valencia, CA) and RNA was reverse transcribed to cDNA using the SuperScript III RT-PCR kit with oligo(dT) primer (Invitrogen).  Sufficient quality RNA was determined by an absorbance ratio A260/A280 of 1.8-2.1, while the quantity of RNA was determined by measuring the absorbance at 260nm (A260).  Real-time PCR experiments were conducted using the SYBR Green PCR system (Biorad, Hercules, CA) on a Biorad CFX96 cycler, with 40 cycles per sample. Cycling temperatures were as follows: denaturing, 95C; annealing, 60C; and extension, 70C.  Primers were designed to detect GAPDH, E-cadherin, vimentin, Slug, Sp1, and NFATc1 in cDNA clones: Sp1 (F-TTG AAA AAG GAG TTG GTG GC, R-TGC TGG TTC TGT AAG TTG GG, Accession NG030361.1), NFATc1 (F-GCA TCA CAG GGA AGA CCG TGT C, R-GAA GTT CAA TGT CGG AGT TTC TGA G, Accession  NG029226.1).  GAPDH, E-cadherin, vimentin, and Slug primers were taken from previously published literature \citep{Medici:2008fk}.
@@ -571,68 +637,66 @@ Results are expressed as mean $\pm$ standard error, n$\geq$6. Data was analyzed 
 \clearpage
 
 \begin{figure}
-\includegraphics [width=1.0\linewidth] {./figs/Fig-1-Network.pdf}
-\caption{Model connectivity recreates the core architecture during EMT. The EMT network contains 995 nodes (proteins, mRNA, and genes) interconnected by 1700 interactions.
-Central to EMT induction, activation of the MAPK cascade occurs through TGF-$\beta$1/2 binding which activates the AP-1/Sp1 transcriptional axis. AP-1/Sp1 drives an autocrine response of TGF-$\beta$3, which activates the Smad cascade, leading to phenotypic change. Conversely, VEGF-A binding promotes an epithelial phenotype through NFAT activation.
-Other important signaling pathways not shown but also incorporated include the BMP, Wnt, and PI3K pathways.
+\includegraphics [width=1.0\linewidth] {./figs/Fig1_coarse_network.pdf}
+\caption{Model connectivity recreates the core architecture during EMT. The EMT network contains 97 nodes (proteins, mRNA, and genes) interconnected by 169 interactions.
+Central to EMT induction, activation of the MAPK cascade occurs through TGF-$\beta$1/2 binding which activates the AP-1/Sp1 transcriptional axis. AP-1/Sp1 drives an autocrine response of TGF-$\beta$3, which activates the Smad cascade, leading to phenotypic change. Conversely, VEGF-A binding can stabalize an epithelial phenotype through NFAT activation.
+Downstream activation of $\beta$-catenin signaling due to E-cadherin loss and GSK3 inactivation of $\beta$-cateinin confinement is critical to the complete activation of the EMT program.
 The complete list of molecular interactions that comprise the model is given in the supplement.}\label{fg:F1}
 \end{figure}
 
-%\clearpage
+\clearpage
 
 \begin{figure}
-\includegraphics [width=1.0\linewidth] {./figs/Fig-2-Training.pdf}
-\caption{Training and validation simulations. The population of EMT models qualitatively captured TGF$\beta$-induced EMT signaling.
-(A-I) The population was generated using POETs and trained using 11 different objective functions (41 data sets) taken from Medici \emph{et al.} \citep{Medici:2008fk}.
-The model captured the simulated experiments for 78\% of the cases.
-(J-L)  The model populations were also compared against untrained temporal data to measure the effectiveness as a pure prediction.
-The high predictability can be contributed to the leave-one-out cross validation scheme, objective functions with overlapping data, and multi-objective optimization algorithm.}\label{fg:F2}
+\includegraphics [width=1.0\linewidth] {./figs/Fig2_training.pdf}
+\caption{Training and validation simulations. The population of EMT models qualitatively captured TGF$-\beta$-induced EMT signaling.
+(A-I) The population was generated using JuPOETs and trained using 11 different objective functions (41 data sets) taken from Medici \emph{et al.} \citep{Medici:2008fk}.
+The model captured the simulated experiments for 72\% of the cases.
+(J-L)  The model populations were also compared against untrained temporal data to measure the effectiveness as a pure prediction.}\label{fg:F2}
 \end{figure}
 
-%\clearpage
+\clearpage
 
 \begin{figure}
-\includegraphics [width=1.0\linewidth] {./figs/Fig-3-HypotheticalPhenotype.pdf}
-\caption{Simulated TGF$\beta$1/2 exposure promoted phenotype heterogeneity.
-Robustness coefficients were used to quantify the effect of perturbations after steady state across the population of data sets.
-Coefficients with values $>$ 1 ($<$ 1) indicated a marker increased (decreased) compared to a base state, while a value of 1 indicated approximately no change following a perturbation.
-E-cadherin and Vimentin robustness coefficients were used as phenotypic markers.
-(A) TGF$\beta$1/2 perturbation, we isolated 4 distinct parameter sets known to have phenotypically different behaviors.
-(B) Each region has been represented by a small signaling network.
-From our analysis, we determined that the differences were a function of downstream transcription factors (phosphorylated-Sp1, and NFAT) within the TGF$\beta$2 and VEGFA pathway, respectively.
-(C) We hypothesized that elevated phosphorylated-Sp1 and NFAT levels could drive phenotype heterogeneity through simultaneous TGF$\beta$2 and VEGFA treatment, similar to region three (R3).}\label{fg:F3}
+\includegraphics [width=1.0\linewidth] {./figs/Fig3_phenotype.pdf}
+\caption{Simulated VEGF-A and TGF$-\beta$1/2 exposure promoted phenotype heterogeneity.
+Simulated response to TGF$-\beta$1/2 and VEGF-A exposure with and without axis specific inhibitors.
+Vimentin and E-cadherin abundances (in nM) were used to quantify the shift in population at 48 hrs.
+(A-C) VEGF-A (50 a.u.) treatment resulted in a population with enhanced epithelial properties.
+This was contrary to the addition of TGF$-\beta$2 (10 a.u.), which shifted the population towards a mesenchymal phenotype.
+Interestingly, the combined effects of TGF$-\beta$2 and VEGFA was found to increase both ecadherin and vimentin levels, creating a heterogeneous population (black arrow), which can also be seen in a minority of untreated cells (gray arrow). (D-F) To isolate the effect of NFAT, we inhibited NFAT de-phosphorylation in combination with VEGFA. This negated the increase in ecadherin expression and shifted the population towards a mesenchymal phenotype (Q1,Q3).  Likewise, combining NFAT inhibition with TGF$-\beta$ mitigated all VEGF enhanced ecadherin expression.
+Lastly, combination of TGF$-\beta$2, VEGFA, and NFAT inhibition nearly mitigated all effects of VEGFA, shifting the heterogeneous population towards a mesenchymal phenotype.
+In whole, high levels of phosphorylated-Sp1 correlated with vimentin expression, while NFAT was responsible for maintaining E-cadherin expression, although neither were mutually exclusive.}
+\label{fg:F3}
 \end{figure}
 
-%\clearpage
+\clearpage
 
 \begin{figure}
-\includegraphics [width=1.0\linewidth] {./figs/Fig-4-Robustness.pdf}
-\caption{Simulated response to TGF$\beta$1/2 and VEGF-A exposure with and without axis specific inhibitors.
-Robustness coefficients were used to quantify the shift in population at 48 hrs.
-(A-C) VEGF-A (50 a.u.) treatment resulted in a population with enhanced epithelial (Q4) properties.
-This was contrary to the addition of TGF$\beta$2 (10 a.u.), which shifted the population towards a mesenchymal phenotype (Q1).
-Interestingly, the combined effects of TGF$\beta$2 and VEGFA was found to increase both ecadherin and vimentin levels, creating a heterogeneous population (Q2).
-(D-F) To isolate the effect of NFAT, we inhibited NFAT de-phosphorylation in combination with VEGFA.  This negated the increase in ecadherin expression and shifted the population towards a mesenchymal phenotype (Q1,Q3).  Likewise, combining NFAT inhibition with TGF$\beta$ mitigated all ecadherin expression (Q2) confirming their importance for population heterogeneity.  Lastly, combination of TGF$\beta$2, VEGFA, and NFAT inhibition nearly mitigated all effects of VEGFA, shifting the heterogeneous population (Q2) towards a mesenchymal phenotype (Q1).
-In whole, high levels of phosphorylated-Sp1 correlated with vimentin expression, while NFAT was responsible for maintaining E-cadherin expression, although neither were mutually exclusive.}\label{fg:F4}
+\includegraphics [width=1.0\linewidth] {./figs/Fig4_mechanism.pdf}
+\caption{Analysis of underlying signaling responses.
+(A) We examined the distribution of NFATc1 and AP1/SP1 in cells containing the hybrid phenotype (VEGF-A + TGF$-\beta$2 case), showing the potential for cells to express both SP1 and NFATc1 in a non exclusive manner.
+(B) We were able to show a fit to an additional objective demonstrating the actiation of GSK3 through PI3K. Our model captures this activation through TGF$-\beta$3 signaling. LY294002 is a PI3K inhibitor.
+(C) We identified a novel regulator of LEF1 called YREG1 that allows Snail/Slug to emulate an inducer by repressing YREG1. Over expression of YREG1 increases the degree of E-cadherin expression, stabalizing the epithelial phenotype.
+(D) Kockout of YREG1 leads to a loss of both E-cadherin and vimentin for cells that were inherently activated in the untreated population.}\label{fg:F4}
 \end{figure}
 
-%\clearpage
+\clearpage
 
 \begin{figure}
 \includegraphics [width=1.0\linewidth] {./figs/Fig-5-MCF10A-Validation.pdf}
-\caption{Simultaneous TGF-$\beta$1/2 and VEGF-A treatment induced phenotype heterogeneity and is dependent upon NFAT activity \emph{in-vitro}.  (A) In MCF10A, treatment with (10ng/ml) TGF$\beta$2 increased Slug and vimentin, while ecadherin expression was inhibited at both the gene and protein level at 48 hrs.  Conversely, VEGFA alone increased both NFATc1 and ecadherin gene expression.  Simultaneous TGF$\beta$2 (10ng/ml) and VEGFA (50ng/ml) treatment increased Slug, NFATc1, and vimentin expression, while also increasing ecadherin levels via qPCR.  (B-C)  Immunofluorescence confirmed these results and nuclear co-localization of both phospho-Sp1 and NFAT were found dependent upon TGF$\beta$2 and VEGFA, respectively. (D) To isolate the effect of NFAT, treatment of VEGFA (50ng/ml) and VIVIT (10$\mu$M) reduced ecadherin expression at 48hrs (control-dashed line).  Similarly, combined TGF$\beta$2, VEGFA and VIVIT treatment increased Slug and vimentin expression, while inhibiting ecadherin levels via qPCR.  (E) These findings were confirmed via immunofluorescence as the VIVIT peptide inhibited ecadherin and nuclear localization of NFATc1 in all three cases.  (F)  Quantitative flow cytometry also confirmed this trend.  Similar experiments in DLD1 followed a similar trend (supplement).  Magnification, 40x. Scale bars: 50$\mu$m.  C=Control, T=TGF$\beta$2 , V=VEGFA, VI= NFAT inhibitor (VIVIT).  Asterisks signify statistical differences from each other according to a one-way ANOVA with Tukey's post hoc (p$\prec$0.05).}\label{fg:F5}
+\caption{Simultaneous TGF-$\beta$1/2 and VEGF-A treatment induced phenotype heterogeneity and is dependent upon NFAT activity \emph{in-vitro}.  (A) In MCF10A, treatment with (10ng/ml) TGF$-\beta$2 increased Slug and vimentin, while ecadherin expression was inhibited at both the gene and protein level at 48 hrs.  Conversely, VEGFA alone increased both NFATc1 and ecadherin gene expression.  Simultaneous TGF$-\beta$2 (10ng/ml) and VEGFA (50ng/ml) treatment increased Slug, NFATc1, and vimentin expression, while also increasing ecadherin levels via qPCR.  (B-C)  Immunofluorescence confirmed these results and nuclear co-localization of both phospho-Sp1 and NFAT were found dependent upon TGF$-\beta$2 and VEGFA, respectively. (D) To isolate the effect of NFAT, treatment of VEGFA (50ng/ml) and VIVIT (10$\mu$M) reduced ecadherin expression at 48hrs (control-dashed line).  Similarly, combined TGF$-\beta$2, VEGFA and VIVIT treatment increased Slug and vimentin expression, while inhibiting ecadherin levels via qPCR.  (E) These findings were confirmed via immunofluorescence as the VIVIT peptide inhibited ecadherin and nuclear localization of NFATc1 in all three cases.  (F)  Quantitative flow cytometry also confirmed this trend.  Similar experiments in DLD1 followed a similar trend (supplement).  Magnification, 40x. Scale bars: 50$\mu$m.  C=Control, T=TGF$-\beta$2 , V=VEGFA, VI= NFAT inhibitor (VIVIT).  Asterisks signify statistical differences from each other according to a one-way ANOVA with Tukey's post hoc (p$\prec$0.05).}\label{fg:F5}
 \end{figure}
 
-%\clearpage
+\clearpage
 
 \begin{figure}
 \includegraphics[width=0.5\linewidth] {./figs/Fig-6-Phenotyping.pdf}
-\caption{Ductal branching is dependent upon phenotype heterogeneity within MCF10A in 3-D culture.  MCF10A and DLD1 were formed into spheroids overnight and explanted to a collagen gel for 72 hrs.  For compaction and tubular assays, cells were embedded into collagen gels for 72 hrs, and the extent of tubulogenesis was measured at 7 days.  (A-D) Within MCF10A, TGF$\beta$2 (10ng/ml) enhanced invasion and contractile properties while, VEGFA (50ng/ml) promoted increased migration.  TGF$\beta$2 with VEGFA significantly increased migration, while limiting with compaction.  VIVIT (10$\mu$M) in combination with VEGFA and TGF$\beta$2 decreased migration and compaction, while increasing invasion.  (D) Likewise, cell morphology (circularity index) correlated with both invasion and compaction in MCF10A.  (E-F) The size of tubular structures (acini) also increased significantly upon addition of VEGFA, while the number of ductal branches was most significant upon simultaneous TGF$\beta$2 and VEGFA treatment (Red-Ecadherin, Green-Factin, Blue-Nuclear).   DLD1 cells followed a similar trend, although the degree of migration, invasion, and compaction was less significant.  In addition, no tubular structures were identified during the 7 day tubulogenesis endpoints.  Scale bars: 500$\mu$m, 1000$\mu$m, 250$\mu$m, and 80$\mu$m, respectively.  C=Control, T=TGF$\beta$2 , V=VEGFA, VI= NFAT inhibitor (VIVIT).  Asterisks signify statistical differences from each other according to a one-way ANOVA with Tukey's post hoc (p$\prec$0.05).
+\caption{Ductal branching is dependent upon phenotype heterogeneity within MCF10A in 3-D culture.  MCF10A and DLD1 were formed into spheroids overnight and explanted to a collagen gel for 72 hrs.  For compaction and tubular assays, cells were embedded into collagen gels for 72 hrs, and the extent of tubulogenesis was measured at 7 days.  (A-D) Within MCF10A, TGF$-\beta$2 (10ng/ml) enhanced invasion and contractile properties while, VEGFA (50ng/ml) promoted increased migration.  TGF$-\beta$2 with VEGFA significantly increased migration, while limiting with compaction.  VIVIT (10$\mu$M) in combination with VEGFA and TGF$-\beta$2 decreased migration and compaction, while increasing invasion.  (D) Likewise, cell morphology (circularity index) correlated with both invasion and compaction in MCF10A.  (E-F) The size of tubular structures (acini) also increased significantly upon addition of VEGFA, while the number of ductal branches was most significant upon simultaneous TGF$-\beta$2 and VEGFA treatment (Red-Ecadherin, Green-Factin, Blue-Nuclear).   DLD1 cells followed a similar trend, although the degree of migration, invasion, and compaction was less significant.  In addition, no tubular structures were identified during the 7 day tubulogenesis endpoints.  Scale bars: 500$\mu$m, 1000$\mu$m, 250$\mu$m, and 80$\mu$m, respectively.  C=Control, T=TGF$-\beta$2 , V=VEGFA, VI= NFAT inhibitor (VIVIT).  Asterisks signify statistical differences from each other according to a one-way ANOVA with Tukey's post hoc (p$\prec$0.05).
 Boxes in the left-most panel identify regions identified by arrows that were then imaged in greater zoom in the panel immediately below.
 The box diagram was not repeated for arrows in the other panels for clarity, but the same method was applied.}\label{fg:F6}
 \end{figure}
 
-%\clearpage
+\clearpage
 
 % Supplemental figures -
 % Set the S-
