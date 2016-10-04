@@ -237,8 +237,8 @@ TGF$-\beta$3 signaled through the Smad pathway to regulate LEF-1 expression and 
 TGF$-\beta$3 (10 a.u.) in combination with downstream inhibitors (DN-Smad4 and DN-LEF-1) completely inhibited Vimentin expression, while elevating E-cadherin expression (Fig. \ref{fg:F2}H,I).
 
 The predictive power of the ensemble was tested using both cross validation and by comparing simulations with data sets not used for model training.
-In whole, 72\% of our training objectives were statistically significant (at a 95\% confidence interval) compared to a randomized parameter family (N = 100)
-generated from a random starting point. Conversely, we \emph{predicted} approximately 72\% of the training objectives, at a 95\% confidence interval compared to randomized parameters.
+In whole, 100\% of our training objectives were statistically significant (at a 95\% confidence interval) compared to a randomized parameter family (N = 100)
+generated from a random starting point. Conversely, we \emph{predicted} 100\% of the training objectives, at a 95\% confidence interval compared to randomized parameters (Wicoxon non-parametric test).
 The model also captured the temporal gene expression responses of E-cadherin, pSmad2, and LEF-1 (not used for model training) to within one-standard deviation (up to the 48 hr time-point) (Fig. \ref{fg:F2}J-L). Taken together, the model captured the key signaling events revealed by Medici \emph{et al.} \citep{Medici:2008fk} that drive the phenotypic conversion.
 A listing of objective function values resulting from training, cross validation and the random parameter control is given in the supplement (Fig. \ref{fg:ObjTable}).
 
@@ -457,18 +457,14 @@ Phosphorylated Smads 2/3 (pSmad2/3) form heterodimers and translocate to the nuc
 In the model, Smad signaling is lumped into a single smad species that can act in a co-dependent fashion with LEF1 to downregulate E-cadherin.
 The EMT gene expression program was initiated by the binding of TGF$-\beta$ isoforms to TGF$-\beta$ surface receptors.
 Binding of extracellular TGF$-\beta$1/2 with TGF$-\beta$ surface receptors I/II (TGF$-\beta$R-I/II) initiates the assembly of adapter complexes which starts the
-downstream signaling program. In the model, TGF$-\beta$1/2 binds TGF$-\beta$R-I/II followed by the recruitment of activin receptor-like kinase 1 (ALK1) and
-TGF$-\beta$ surface receptor III (TGF$-\beta$R-III) to form the activated receptor complex \citep{Derynck:2003fc}.
-Alternatively, we also included activin receptor-like kinase 5 (ALK5) recruitment in combination with Endoglin and TGF$-\beta$R-III
-as a second (redundant) activated receptor complex \citep{Gatza:2010if}.
+downstream signaling program.
 Complex assembly activates the serine/threonine kinase activity on the receptor, leading to the recruitment and phosphorylation of Smad partners \citep{Massague:2005qc}.
 Phosphorylated Smads2/3 (pSmad2/3) form heterodimers with partner Smad4 and then translocate to the nucleus where they act as both transcriptional activators and repressors.
-Nuclear pSmad2/3-Smad4 form transcriptional complexes with several genes in the model including lymphoid enhancer-binding factor 1 (\emph{LEF-1}), Nuclear factor of activated T-cells, cytoplasmic 1 (\emph{NFACT1}), and Specificity Protein 1 (\emph{SP1}).  On the other hand, nuclear pSmad2/3-Smad4 represses (in combination with the LEF-1 protein) the expression of E-cadherin (\emph{Cdh1}) \citep{Nawshad:2007kl} and Cadherin 5, type 2 (VE-Cadherin encoded by \emph{Cdh5}).
 Repression of E-cadherin expression is the central event in the transition from an epithelial to a mesenchymal phenotype \citep{Cano:2000kh}.
 However, this transition is not solely driven by transcriptional events.
 At the protein level, the repression of E-cadherin leads to a release of $\beta$-catenin from cell membrane.
 Cystolic $\beta$-catenin then translocates to the nucleus and forms transcriptionally-active complexes with immunoglobulin transcription factor 2 (TCF-4)
-to drive TGF$-\beta$3 expression \citep{Medici:2008fk}. The PI3K to GSK3 pathway was included and acted as an activating mechanism of $\beta$-catenin signaling through TGF$-\beta$3 signaling \citep{Medici:2008fk}. GSK3 is known to act on $\beta$-catenin signaling through the ubiquitin-proteasome pathway
+to drive TGF$-\beta$3 expression \citep{Medici:2008fk}. The PI3K to GSK3 pathway was included and acted as an activating mechanism of $\beta$-catenin signaling through TGF$-\beta$3 signaling \citep{Medici:2008fk}. GSK3 is known to act on $\beta$-catenin signaling through the ubiquitin-proteasome pathway.
 \citep{Zhou:2004kx,Larue:2005vn}. Lastly, VEGF-A activation of NFATc1 takes place through calcineurin signaling leading to an enhancement of E-cadherin expression \citep{Suehiro:2014aa},
 as supported by our VEGF-A experimental data (Fig. \ref{fg:VEGFA-Data}).
 
