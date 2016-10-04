@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 OCT 2016 13:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 OCT 2016 14:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -653,15 +653,15 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 110.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 118.
- [1
+) [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 132.
- [1] [2] [3] [4]
+ [1]
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 170.
+ [2] [3] [4]
 [5]
 Overfull \hbox (1.94997pt too wide) in paragraph at lines 213--232
  \OT1/phv/b/n/12 The model pop-u-la-tion cap-tured key fea-tures of TGF-$\OML/c
@@ -751,7 +751,7 @@ File: ./figs/Fig-6-Phenotyping.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./figs/Fig-6-Phenotyping.pdf used on input line 717.
 (pdftex.def)             Requested size: 234.8775pt x 357.40317pt.
  [46 <./figs/Fig-6-Phenotyping.pdf>]
-(./Supplemental-JB.tex
+(./Supplemental-JB-v7.tex
 Overfull \hbox (5.91953pt too wide) in paragraph at lines 5--8
 \OT1/phv/m/n/12 tran-scrip-tion and trans-la-tion pa-ram-e-ters to es-tab-lish 
 the char-ac-ter-is-tic syn-the-sis and degra-
@@ -811,8 +811,8 @@ ine 269.
 ### bottom level 
 Here is how much of TeX's memory you used:
  7544 strings out of 493089
- 107630 string characters out of 6134842
- 306369 words of memory out of 5000000
+ 107639 string characters out of 6134842
+ 307371 words of memory out of 5000000
  10871 multiletter control sequences out of 15000+600000
  28534 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -835,7 +835,7 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/te
 xmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf-dis
 t/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Paper_v7.pdf (53 pages, 43423832 bytes).
+Output written on Paper_v7.pdf (53 pages, 43423193 bytes).
 PDF statistics:
  1337 PDF objects out of 1440 (max. 8388607)
  488 compressed objects within 5 object streams
