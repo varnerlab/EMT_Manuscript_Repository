@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 OCT 2016 11:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 OCT 2016 12:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -552,39 +552,66 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \bframebox=\box56
 LaTeX Info: Redefining \\ on input line 3056.
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count120
+\lst@gtempboxa=\box57
+\lst@token=\toks25
+\lst@length=\count121
+\lst@currlwidth=\dimen154
+\lst@column=\count122
+\lst@pos=\count123
+\lst@lostspace=\dimen155
+\lst@width=\dimen156
+\lst@newlines=\count124
+\lst@lineno=\count125
+\lst@maxwidth=\dimen157
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+\c@lstnumber=\count126
+\lst@skipnumbers=\count127
+\lst@framebox=\box58
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/09/06 1.5e listings configuration
+))
+Package: listings 2014/09/06 1.5e (Carsten Heinz)
+
 (./Paper_v7.aux)
 \openout1 = `Paper_v7.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 86.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 105.
+
  (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 ) (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count120
-\scratchdimen=\dimen154
-\scratchbox=\box57
-\nofMPsegments=\count121
-\nofMParguments=\count122
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count123
-\MPscratchDim=\dimen155
-\MPnumerator=\count124
-\makeMPintoPDFobject=\count125
-\everyMPtoPDFconversion=\toks26
+\scratchcounter=\count128
+\scratchdimen=\dimen158
+\scratchbox=\box59
+\nofMPsegments=\count129
+\nofMParguments=\count130
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count131
+\MPscratchDim=\dimen159
+\MPnumerator=\count132
+\makeMPintoPDFobject=\count133
+\everyMPtoPDFconversion=\toks27
 )
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
 Package caption Info: sidecap package is loaded.
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -612,30 +639,31 @@ LaTeX Info: Redefining \selectfont on input line 126.
 \RaggedRightParindent=\skip70
 \JustifyingParindent=\skip71
 )
+\c@lstlisting=\count134
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 88.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 108.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 88.
-LaTeX Font Info:    Try loading font information for U+msa on input line 90.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 108.
+LaTeX Font Info:    Try loading font information for U+msa on input line 110.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 90.
+LaTeX Font Info:    Try loading font information for U+msb on input line 110.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 98.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 118.
  [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 112.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 132.
  [1] [2] [3] [4]
 [5]
-Overfull \hbox (1.94997pt too wide) in paragraph at lines 192--211
+Overfull \hbox (1.94997pt too wide) in paragraph at lines 212--231
  \OT1/phv/b/n/12 The model pop-u-la-tion cap-tured key fea-tures of TGF-$\OML/c
 mm/m/it/12 ^^L$ \OT1/phv/b/n/12 in-duced EMT \OT1/phv/m/n/12 The EMT model
  []
@@ -643,13 +671,13 @@ mm/m/it/12 ^^L$ \OT1/phv/b/n/12 in-duced EMT \OT1/phv/m/n/12 The EMT model
 [6
 
 ] [7] [8] [9]
-Overfull \hbox (3.12497pt too wide) in paragraph at lines 268--274
+Overfull \hbox (3.12497pt too wide) in paragraph at lines 288--294
  \OT1/phv/b/n/12 TGF$\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 ^^L$\OT1/phv/b/n/12 1
 /2 and VEGF-A ex-po-sure pro-motes phe-no-type het-ero-gene-ity through NFATc
  []
 
 
-Overfull \hbox (1.2753pt too wide) in paragraph at lines 268--274
+Overfull \hbox (1.2753pt too wide) in paragraph at lines 288--294
 \OT1/phv/b/n/12 and phos-pho-ry-lated Sp1 \OT1/phv/m/n/12 While we cap-tured th
 e cen-tral ten-dency of many of the molec-
  []
@@ -679,33 +707,33 @@ Underfull \hbox (badness 1237) in paragraph at lines 536--539
 File: ./figs/Fig1_coarse_network.pdf Graphic file (type pdf)
 
 <use ./figs/Fig1_coarse_network.pdf>
-Package pdftex.def Info: ./figs/Fig1_coarse_network.pdf used on input line 629.
+Package pdftex.def Info: ./figs/Fig1_coarse_network.pdf used on input line 649.
 
 (pdftex.def)             Requested size: 469.75502pt x 350.20508pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 633.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 653.
  [42 <./figs/Fig1_coarse_network.pdf>]
 <./figs/Fig2_training.pdf, id=282, 614.295pt x 682.55pt>
 File: ./figs/Fig2_training.pdf Graphic file (type pdf)
 
 <use ./figs/Fig2_training.pdf>
-Package pdftex.def Info: ./figs/Fig2_training.pdf used on input line 639.
+Package pdftex.def Info: ./figs/Fig2_training.pdf used on input line 659.
 (pdftex.def)             Requested size: 469.75502pt x 521.95117pt.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 643.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 663.
  [43 <./figs/Fig2_training.pdf>]
 <./figs/Fig3_phenotype.pdf, id=302, 614.295pt x 616.3025pt>
 File: ./figs/Fig3_phenotype.pdf Graphic file (type pdf)
 
 <use ./figs/Fig3_phenotype.pdf>
-Package pdftex.def Info: ./figs/Fig3_phenotype.pdf used on input line 649.
+Package pdftex.def Info: ./figs/Fig3_phenotype.pdf used on input line 669.
 (pdftex.def)             Requested size: 469.75502pt x 471.2912pt.
  [44 <./figs/Fig3_phenotype.pdf>]
 <./figs/Fig4_mechanism.pdf, id=322, 794.97pt x 560.0925pt>
 File: ./figs/Fig4_mechanism.pdf Graphic file (type pdf)
 
 <use ./figs/Fig4_mechanism.pdf>
-Package pdftex.def Info: ./figs/Fig4_mechanism.pdf used on input line 664.
+Package pdftex.def Info: ./figs/Fig4_mechanism.pdf used on input line 684.
 (pdftex.def)             Requested size: 469.75502pt x 330.97304pt.
  [45 <./figs/Fig4_mechanism.pdf>]
 <./figs/Fig-5-MCF10A-Validation.pdf, id=340, 601.24625pt x 588.1975pt>
@@ -713,17 +741,28 @@ File: ./figs/Fig-5-MCF10A-Validation.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-5-MCF10A-Validation.pdf>
 Package pdftex.def Info: ./figs/Fig-5-MCF10A-Validation.pdf used on input line 
-676.
+696.
 (pdftex.def)             Requested size: 469.75502pt x 459.57304pt.
  [46 <./figs/Fig-5-MCF10A-Validation.pdf>] <./figs/Fig-6-Phenotyping.pdf, id=47
 1, 509.905pt x 775.89874pt>
 File: ./figs/Fig-6-Phenotyping.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-6-Phenotyping.pdf>
-Package pdftex.def Info: ./figs/Fig-6-Phenotyping.pdf used on input line 683.
+Package pdftex.def Info: ./figs/Fig-6-Phenotyping.pdf used on input line 703.
 (pdftex.def)             Requested size: 234.8775pt x 357.40317pt.
  [47 <./figs/Fig-6-Phenotyping.pdf>]
-(./Supplemental-JB.tex [1
+(./Supplemental-JB.tex
+Overfull \hbox (5.91953pt too wide) in paragraph at lines 5--8
+\OT1/phv/m/n/12 tran-scrip-tion and trans-la-tion pa-ram-e-ters to es-tab-lish 
+the char-ac-ter-is-tic syn-the-sis and degra-
+ []
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <6> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 40.
+ [1
 
 
 
@@ -733,54 +772,55 @@ Package pdftex.def Info: ./figs/Fig-6-Phenotyping.pdf used on input line 683.
 
 
 ]
-<./figs/Fig-Supplemental-Error-Table.pdf, id=1106, 794.97pt x 260.975pt>
+[2] <./figs/Fig-Supplemental-Error-Table.pdf, id=1111, 794.97pt x 260.975pt>
 File: ./figs/Fig-Supplemental-Error-Table.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-Supplemental-Error-Table.pdf>
 Package pdftex.def Info: ./figs/Fig-Supplemental-Error-Table.pdf used on input 
-line 30.
+line 92.
 (pdftex.def)             Requested size: 469.75502pt x 154.21683pt.
 
-<./figs/Fig-3-Supplemental-DLD1.pdf, id=1107, 555.07375pt x 566.115pt>
+<./figs/Fig-3-Supplemental-DLD1.pdf, id=1112, 555.07375pt x 566.115pt>
 File: ./figs/Fig-3-Supplemental-DLD1.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-3-Supplemental-DLD1.pdf>
 Package pdftex.def Info: ./figs/Fig-3-Supplemental-DLD1.pdf used on input line 
-174.
+236.
 (pdftex.def)             Requested size: 469.75502pt x 479.10094pt.
 
-<./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf, id=1108, 746.79pt x 563.10374pt>
+<./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf, id=1113, 746.79pt x 563.10374pt>
 File: ./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf>
 Package pdftex.def Info: ./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf used on in
-put line 188.
+put line 250.
 (pdftex.def)             Requested size: 469.75502pt x 354.20734pt.
- [2 <./figs/Fig-Supplemental-Error-Table.pdf>] [3 <./figs/Fig-3-Supplemental-DL
-D1.pdf>] [4 <./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf>]
-<./figs/Fig-Supplemental-Data-VEGFA.pdf, id=1259, 392.46625pt x 635.37375pt>
+ [3 <./figs/Fig-Supplemental-Error-Table.pdf>] [4 <./figs/Fig-3-Supplemental-DL
+D1.pdf>] [5 <./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf>]
+<./figs/Fig-Supplemental-Data-VEGFA.pdf, id=1264, 392.46625pt x 635.37375pt>
 File: ./figs/Fig-Supplemental-Data-VEGFA.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-Supplemental-Data-VEGFA.pdf>
 Package pdftex.def Info: ./figs/Fig-Supplemental-Data-VEGFA.pdf used on input l
-ine 207.
+ine 269.
 (pdftex.def)             Requested size: 352.31625pt x 570.40591pt.
-) [5 <./figs/Fig-Supplemental-Data-VEGFA.pdf>] (./Paper_v7.aux) )
+) [6 <./figs/Fig-Supplemental-Data-VEGFA.pdf>] (./Paper_v7.aux) )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 38 (\begingroup)
+### semi simple group (level 1) entered at line 40 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 5295 strings out of 493089
- 78791 string characters out of 6134842
- 163894 words of memory out of 5000000
- 8640 multiletter control sequences out of 15000+600000
- 28198 words of font info for 66 fonts, out of 8000000 for 9000
+ 7541 strings out of 493089
+ 107579 string characters out of 6134842
+ 306311 words of memory out of 5000000
+ 10868 multiletter control sequences out of 15000+600000
+ 28534 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,7n,43p,1894b,1058s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,7n,47p,1894b,3084s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
 usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
 sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
@@ -791,13 +831,14 @@ texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texli
 ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf-d
-ist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Paper_v7.pdf (53 pages, 43401392 bytes).
+e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on Paper_v7.pdf (54 pages, 43423170 bytes).
 PDF statistics:
- 1329 PDF objects out of 1440 (max. 8388607)
- 482 compressed objects within 5 object streams
+ 1340 PDF objects out of 1440 (max. 8388607)
+ 490 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

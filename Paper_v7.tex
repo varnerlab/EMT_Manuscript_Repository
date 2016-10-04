@@ -24,6 +24,8 @@
 \usepackage{simplemargins}
 \usepackage{lineno}
 
+\usepackage{listings}
+
 \urlstyle{rm}
 
 %\textwidth = 6.50 in
@@ -43,6 +45,23 @@
 %\bibliographystyle{plain}
 \bibliographystyle{msb}
 
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstdefinestyle{myCustomMatlabStyle}{
+%belowcaptionskip=\baselineskip,
+breaklines=true,
+%frame=L,
+xleftmargin=\parindent,
+language=Octave,
+showstringspaces=false,
+basicstyle=\tiny\ttfamily,
+keywordstyle=\bfseries\color{black},
+commentstyle=\itshape\color{black},
+identifierstyle=\color{blue},
+stringstyle=\color{orange},
+}
 
 \makeatletter
 \renewcommand\subsection{\@startsection
@@ -84,6 +103,7 @@
 \renewcommand{\figurename}{Fig.}
 
 \begin{document}
+
 \begin{titlepage}
 {\par\centering\textbf{\Large Population heterogeneity in the epithelial to mesenchymal transition is controlled by NFAT and phosphorylated Sp1}}
 \vspace{0.05in}
@@ -431,8 +451,7 @@ Our model agrees with this newly discovered feedback system, as YREG1 regulates 
 Recent evidence has also suggested an essential role of NF-$\kappa$B in epithelial transformation.  NF-$\kappa$B may influence Snail expression through the AKT pathway and directly stabilize Snail activity \citep{Wu:2009cr}.  This is particularly important for integrating inflammation pathways, such as interleukin-6 (IL-6) and tumor necrosis factor-$\alpha$ (TNF-$\alpha$), which have been linked to EMT in pathological conditions \citep{Sullivan:2009bh}.
 Other pathways such as Notch have also been shown to act synergistically with TGF-$\beta$ to express Slug in the developing embryo \citep{Niessen:2008nx}.
 Lastly, while we have modeled classical protein signaling, we have not considered the role of regulatory RNAs on EMT.
-There is growing evidence that microRNAs (miRNAs) play a strong role in EMT, where several miRNAs, for example miR-21 and miR-31 are strongly associated with TGF-$\beta$ exposure \citep{Bullock:2012aa}.
-Addressing missing structural components like these, could generate more insight into TGF-$\beta$ signaling and its role in phenotypic transformation.
+There is growing evidence that microRNAs (miRNAs) play a strong role in EMT, where several miRNAs, for example miR-21 and miR-31 are strongly associated with TGF-$\beta$ exposure \citep{Bullock:2012aa}. Addressing missing structural components like these, could generate more insight into TGF-$\beta$ signaling and its role in phenotypic transformation.
 
 \clearpage
 
@@ -532,6 +551,7 @@ Lastly, the specific translation rate was modeled as:
 and $K_{X}$ denotes a translation saturation constant.
 The characteristic maximum translation rate was defined as the product of a characteristic translation rate constant ($k_{X}$)
 and the abundance of Ribosomes ($RIBO$), $V^{max}_{X} = k_{X}\left(RIBO\right)$, where both $k_{X}$ and $RIBO$ abundance were estimated from literature \citep{Milo:2010aa}.
+The values used for the characteristic transcription and translation parameters are given in the supplemental materials.
 
 The signaling and gene expression model equations were implemented in Julia and solved using the \texttt{CVODE} routine of the Sundials package \citep{Julia,Hindmarsh2005}.
 The model code and parameter ensemble is freely available under an MIT software license and can be downloaded from http://www.varnerlab.org.
@@ -559,11 +579,11 @@ The model code and parameter ensemble is freely available under an MIT software 
 % as previously described \citep{Tasseff:2011ve}.
 
 \subsubsection*{Estimation of model parameters using multiobjective optimization.}
-The EMT model had 296 unknown parameters (169 kinetic constants, 44 saturation constants, 38 control logic paramters, and 45 non-zero initial conditions) which were not uniquely identifiable given the training data.
+The EMT model had 296 unknown parameters (169 kinetic constants, 44 saturation constants, 38 control logic parameters, and 45 non-zero initial conditions) which were not uniquely identifiable given the training data.
 Instead, we estimated a population of likely models (each consistent with the training data)
 using 41 data sets generated in DLD1 colon carcinoma, MDCKII, and A375 melanoma cells taken from Medici \emph{et al.} \citep{Medici:2008fk}.
 We used the Pareto Optimal Ensemble Technique (JuPOETs) multiobjective optimization framework in combination
-with leave-one-out cross-validation to estimate an ensemble of model parameters \citep{Song:2010fk}.
+with leave-one-out cross-validation to estimate an ensemble of model parameters \citep{Song:2010fk,JuPOETs-BioArXiv}.
 Cross-validation was used to calculate both training and prediction error during the parameter estimation procedure \citep{kohavi1995study}.
 The 41 intracellular protein and mRNA data-sets used for identification were organized into 11 objective functions.
 These 11 objective functions were then partitioned, where each partition contained ten training objectives and one validation objective.
