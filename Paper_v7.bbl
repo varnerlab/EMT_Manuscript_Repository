@@ -1,4 +1,4 @@
-\begin{thebibliography}{92}
+\begin{thebibliography}{93}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Abramoff \emph{et~al.}(2004)Abramoff, Magelhaes \& Ram}]{IMAGEJ}
@@ -530,6 +530,11 @@ Villaverde AF, Banga JR (2014) Reverse engineering and identification in
 Wayman J, Varner J (2013) Biological systems modeling of metabolic and
   signaling networks.
 \newblock \emph{Curr Opin Chem Eng} \textbf{2}: 365 -- 372
+
+\bibitem[{Wayman \emph{et~al.}(2015)Wayman, Sagar \& Varner}]{pr3010138}
+Wayman JA, Sagar A, Varner JD (2015) Dynamic Modeling of Cell-Free Biochemical
+  Networks Using Effective Kinetic Models.
+\newblock \emph{Processes} \textbf{3}: 138
 
 \bibitem[{Welch-Reardon \emph{et~al.}(2014)Welch-Reardon, Wu \&
   Hughes}]{Welch-Reardon:2014aa}

@@ -134,7 +134,7 @@ Epithelial to mesenchymal transition (EMT) is an essential differentiation progr
 EMT is induced by soluble transforming growth factor $\beta$ (TGF-$\beta$) family members, and restricted by vascular endothelial growth factor family members.
 While many downstream molecular regulators of EMT have been identified, these have been largely evaluated individually without considering potential crosstalk.
 In this study, we created an ensemble of dynamic mathematical models describing TGF-$\beta$ induced EMT to better understand the operational hierarchy of this complex molecular program.
-These models incorporate mass action kinetics within an ordinary differential equation (ODE) framework to describe the transcriptional and post-translational regulatory events driving EMT.
+We used ordinary differential equations (ODEs) to describe the transcriptional and post-translational regulatory events driving EMT.
 Model parameters were estimated from multiple data sets using multiobjective optimization, in combination with cross-validation.
 TGF-$\beta$ exposure drove the model population toward a mesenchymal phenotype, while an epithelial phenotype was enhanced following vascular endothelial growth factor A (VEGF-A) exposure.
 Simulations predicted that the transcription factors phosphorylated SP1 and NFAT were master regulators promoting or inhibiting EMT, respectively.
@@ -147,7 +147,7 @@ Together, these results establish a predictive mechanistic model of EMT suscepti
 Tissue formation and remodeling requires a complex and dynamic balance of interactions between epithelial cells, which reside on the surface, and mesenchymal cells that reside in the tissue interior. During embryonic development, wound healing, and cancer, epithelial cells transform into a mesenchymal cell to form new types of tissues.
 It is important to understand this process so that it can be controlled to generate beneficial effects and limit pathological differentiation.
 Much research over the past 20 years has identified many different molecular species that are relevant, but these have mainly been studied one at a time.
-In this study, we developed and implemented a novel computational strategy to interrogate all of the known players in this transformation process to identify which are the major bottlenecks.
+In this study, we developed and implemented a novel computational strategy to interrogate the key players in this transformation process to identify which are the major bottlenecks.
 We determined that NFATc1 and pSP1 are essential for promoting epithelial or mesenchymal differentiation, respectively.
 We then predicted the existence of a partially transformed cell that exhibits both epithelial and mesenchymal characteristics.
 We found this partial cell type develops a network of invasive but stunted vascular structures that may be a unique cell target for understanding cancer progression and angiogenesis.
@@ -167,7 +167,7 @@ We found this partial cell type develops a network of invasive but stunted vascu
 \linenumbers
 
 \section*{Introduction}
-The epithelial to mesenchymal transition (EMT) is a broadly participating, evolutionarily conserved differentiation program essential for tissue morphogenesis, remodeling and pathological processes such as cancer \citep{Thiery:2003il}. During EMT polarized, tightly adhered epithelial cell monolayers are transformed into non-interacting motile mesenchymal cells that simultaneously degrade and synthesize extracellular matrix (ECM) components and invade into the underlying tissue space \citep{Stahl:2001pd}. EMT is the fundamental initiator of developmental processes such as embryonic gastrulation and valvulogenesis \citep{Eisenberg:1995ai} (also Kalluri J Clin Invest 2009, Thiery Cell 2009). Transforming growth factor $\beta$ (TGF-$\beta$) family members are important inducers of both developmental and pathological EMT \citep{Zavadil:2005fu,Xu:2009oq}. Decades of research has focused on identifying molecular regulators of EMT, but almost all on a single gene and in a nearly binary yes/no level of qualitative understanding. Medici and coworkers recently identified a core signaling program by which TGF-$\beta$ isoforms induce EMT across a variety of cell lines \citep{Medici:2006qa,Medici:2008fk}.
+The epithelial to mesenchymal transition (EMT) is a broadly participating, evolutionarily conserved differentiation program essential for tissue morphogenesis, remodeling and pathological processes such as cancer \citep{Thiery:2003il}. During EMT polarized, tightly adhered epithelial cell monolayers are transformed into non-interacting motile mesenchymal cells that simultaneously degrade and synthesize extracellular matrix (ECM) components and invade into the underlying tissue space \citep{Stahl:2001pd}. EMT is the fundamental initiator of developmental processes such as embryonic gastrulation and valvulogenesis \citep{Eisenberg:1995ai} (also Kalluri J Clin Invest 2009, Thiery Cell 2009). Transforming growth factor $\beta$ (TGF-$\beta$) family members are important inducers of both developmental and pathological EMT \citep{Zavadil:2005fu,Xu:2009oq}. Decades of research has focused on identifying molecular regulators of EMT, but almost all on a single gene and in a nearly binary yes/no level of qualitative understanding. Medici and coworkers identified a core signaling program by which TGF-$\beta$ isoforms induce EMT across a variety of cell lines \citep{Medici:2006qa,Medici:2008fk}.
 This program involves carefully orchestrated rounds of gene expression driven by the Smad and Snail families of transcription factors as well as
 other key factors such as lymphoid enhancer-binding factor 1 (LEF-1), nuclear factor of activated T-cells, cytoplasmic 1 (NFATc1), and specificity protein 1 (Sp1).
 Coregulators such as $\beta$-catenin, NF-$\kappa$B, and the ErbB family of receptor tyrosine kinases however also participate in EMT regulation, but the degree of each's influence is difficult to ascertain in isolation \citep{Kim:2002lh,Jiang:2007aa,Huber:2004aa,Hardy:2010aa}.
@@ -188,11 +188,12 @@ Shortly thereafter, Sethna and coworkers showed that complex model behavior is o
 Thus, reasonable model predictions are often possible with only limited parameter information.
 Taking advantage of this property, we developed sloppy techniques for parameter identification using ensembles of deterministic models \citep{Song:2010fk}.
 Furthermore, we proposed that the sloppy behavior of biological networks may also be seen as a source of cell-to-cell \citep{Lequieu:2011fj} or even patient-to-patient heterogeneity \citep{2010_luan_varner_MolBioSys}.
-Recently, Bayesian parameter identification techniques have also been used to explore cell-to-cell heterogeneity  \citep{2011_kalita_brasier_JBC,2011_hasenauer_allgower_BMCBioinfo},
+Bayesian parameter identification techniques have also been used to explore cell-to-cell heterogeneity  \citep{2011_kalita_brasier_JBC,2011_hasenauer_allgower_BMCBioinfo},
 where a population of cells could be viewed as a dynamic ensemble of context-specific biochemical networks \citep{2012_creixell_linding_NatBiotech}.
 
-In this study, we developed a family of mechanistic models describing the induction of EMT by TGF-$\beta$ isoforms in the presence and absence of vascular endothelial growth factor A (VEGF-A).
-We incorporated mass action kinetics within an ordinary differential equation (ODE) framework to describe the EMT interaction network containing 97 gene, protein or mRNA components interconnected through 169 interactions.
+In this study, we developed a family of mathematical models describing the induction of EMT by TGF-$\beta$ isoforms in the presence and absence of vascular endothelial growth factor A (VEGF-A).
+We integrated a simple rule-based description of activity and gene expression regulation with traditional ordinary differential equation (ODE) modeling to describe an EMT interaction network containing 97 gene, protein or mRNA components interconnected through 169 interactions.
+This integration allows the description of complex regulatory interactions in the absence of specific mechanistic information, it also allowed to build a predictive yet compact model.
 A family of model parameters was estimated using 41 molecular data sets generated in DLD1 colon carcinoma, MDCKII and A375 melanoma cells using the Pareto optimal ensemble technique (JuPOETs) multiobjective optimization algorithm.
 JuPOETs generated an ensemble of approximately 1400 models for analysis.
 Analysis of the model population suggested that both MCF10A and DLD1 cells could exhibit phenotypic heterogeneity if treated simultaneously with TGF-$\beta$1/2 and VEGF-A.
@@ -212,18 +213,18 @@ Together, these results establish a predictive mechanistic model of EMT suscepti
 The EMT model architecture, based upon curated molecular connectivity,
 described the expression of 23 genes following exposure to TGF-$\beta$ isoforms and VEGF-A (Fig. \ref{fg:F1}).
 The EMT model contained 74 molecular species interconnected by 169 interactions.
-Model equations were formulated using either saturation or mass-action kinetics within an ordinary differential equation (ODE) framework.
-ODEs and mass action kinetics are common tools to model biochemical pathways \citep{Schoeberl:2002rv,Chen:2009uq,Tasseff:2011ve}.
+Model equations were formulated as ordinary differential equations (ODEs) augmented with rule-based descriptions of activity and gene expression regulation.
+ODEs are common tools to model biochemical pathways \citep{Schoeberl:2002rv,Chen:2009uq,Tasseff:2011ve}.
 However, while ODE models can simulate complex intracellular behavior,
 they require estimates for model parameters which are often difficult to obtain.
-The EMT model had 251 unknown model parameters, 169 kinetic constants and 45 non-zero initial conditions.
+The EMT model had 251 unknown model parameters, 169 kinetic constants 38 control constants and 44 saturation constants.
 As expected, these parameters were not uniquely identifiable given the training data \citep{Gadkar:2005vn}.
 Thus, instead of identifying a single best fit (but uncertain) model,
 we estimated a sloppy population of models (each consistent with the training data) by simultaneously minimizing the difference between model simulations and 41 molecular
 data sets using the Pareto Optimal Ensemble Technique (JuPOETs).
 The training data were generated in DLD1 colon carcinoma, MDCKII, and A375 melanoma cells following
 exposure to TGF-$\beta$ isoforms \citep{Medici:2008fk}. We organized these data sets into 11 objective functions which were simultaneously minimized by JuPOETs.
-Additionally, we used 12 molecular data sets generated in HK-2 cells following VEGF-A exposure to train VEGF-A responsive model processes \citep{Lian:2011bs}.
+Additionally, we used data generated in this study (Fig. \ref{fg:VEGFA-Data}), and 12 molecular data sets generated in HK-2 cells following VEGF-A exposure to train VEGF-A responsive model processes \citep{Lian:2011bs}.
 To guard against overfitting, we augmented the multiobjective optimization with leave-one-out cross validation to independently estimate both the training and
 prediction error for each objective. Thus, we generated 11 different model ensembles.
 Lastly, we compared model predictions with independent data sets not used during training (both at the molecular and model population
@@ -256,7 +257,7 @@ Conversely, over-expression of E-cadherin inhibited the TGF$-\beta$3 autocrine p
 TGF$-\beta$3 signaled through the Smad pathway to regulate LEF-1 expression and downstream target EMT genes (Fig. \ref{fg:F2}G).
 TGF$-\beta$3 (10 a.u.) in combination with downstream inhibitors (DN-Smad4 and DN-LEF-1) completely inhibited Vimentin expression, while elevating E-cadherin expression (Fig. \ref{fg:F2}H,I).
 
-The predictive power of the ensemble was tested using both cross validation and by comparing simulations with data sets not used for model training.
+The predictive power of the ensemble was tested using cross validation and by comparing simulations with data not used for model training.
 In whole, all of our training objectives were statistically significant (at a 95\% confidence interval) compared to a randomized parameter family (N = 100)
 generated from a random starting point. Conversely, we \emph{predicted} all of the training objectives, at a 95\% confidence interval compared to randomized parameters (Wicoxon non-parametric test). The model also captured the temporal gene expression responses of E-cadherin, pSmad2, and LEF-1 (not used for model training) to within one-standard deviation (up to the 48 hr time-point) (Fig. \ref{fg:F2}J-L). Taken together, the model captured the key signaling events revealed by Medici \emph{et al.} \citep{Medici:2008fk} that drive the phenotypic conversion.
 A listing of objective function values resulting from training, cross validation and the random parameter control is given in the supplement (Fig. \ref{fg:ObjTable}).
@@ -280,7 +281,9 @@ To test the effect of YREG1 on the epithelial population, we conducted over-expr
 In the absence of YREG1, the population of models failed to consistently to retain a stable epithelial state (Fig. \ref{fg:F4}D).
 Conversely, YREG1 amplification revealed an enhanced epithelial phenotype, while some inherently transformed cells moved towards a hybrid phenotype  (Fig. \ref{fg:F4}C).
 Elevated YREG1 repressed LEF-1 and TGF-$\beta$3 expression, thereby not allowing free $\beta$-catenin to form the $\beta$-catenin-LEF-1 complex, or TGF-$\beta$3 induced SMAD activation.
-Taken together, low YREG1 expression was required for the maintenance of a stable epithelial phenotype that was simultaneously inducible across TGF-$\beta$1/2, TGF-$\beta$3 and SNAIl/SLUG transfection, as seen in the training objectives.
+Taken together, low YREG1 expression was required for the maintenance of a stable epithelial phenotype that was simultaneously inducible across TGF-$\beta$1/2, TGF-$\beta$3 and SNAIl/SLUG transfection.
+
+%as seen in the training objectives.
 
 \clearpage
 
@@ -366,11 +369,10 @@ Together, these results establish that VEGF-A and TGF$-\beta$1/2 ligand concentr
 \clearpage
 
 \section*{Discussion}
-In this study, we developed a family of mechanistic models describing the induction of EMT by TGF-$\beta$ isoforms in the presence and absence of VEGF-A.
-The signaling architecture encoded in the model, which contained 74 molecular species interconnected by 169 interactions,
+In this study, we developed a family of mathematical models describing the induction of EMT by TGF-$\beta$ isoforms in the presence and absence of VEGF-A.
+The model, which contained 74 molecular species interconnected by 169 interactions,
 described the expression of 23 genes in response to growth factor stimulation.
-This simulation incorporates an unprecedented level of detail compared to previous models, but as a consequence created a large number of unknown model parameters.
-Because these parameters could not be estimated uniquely apriori, we estimated an ensemble of likely parameters using the JuPOETs multiobjective optimization framework.
+We estimated an ensemble of likely model parameters using the JuPOETs multiobjective optimization framework.
 The model population was trained and cross-validated to prescribe biological significance using 41 data sets generated in DLD1 colon carcinoma, MDCKII, and A375 melanoma cell lines \citep{Medici:2008fk}.
 Analysis of this population predicted possible phenotypic modes (and their associated signaling) that cells could exhibit when stimulated with TGF-$\beta$ and/or VEGF-A.
 The most novel hypothesis generated from the analysis was that cells could operate in a hybrid state defined by both epithelial and mesenchymal traits when stimulated simultaneously with TGF-$\beta$ and VEGF-A.
@@ -384,7 +386,7 @@ Cells routinely process a multitude of signals simultaneously, especially when c
 For example, oncogenic cells integrate both mechanical and chemical cues in their local microenvironment during tumorigenesis, including cytokines VEGF and TGF$-\beta$ \citep{Hong:2013mi}.
 VEGF-A mediates pathological angiogenic remodeling of tumors \citep{Nagy:2007lh}, while TGF$-\beta$ can elicit both protective and oncogenic responses \citep{Ferrara:2002kx,Willis:2007uq}.
 While much research has tested signaling pathways individually, far less is understood about combinatorial stimulation, such as with both VEGF-A and TGF$-\beta$.
-Recent \emph{in vitro} and \emph{in vivo} evidence has suggested that epithelial cells can exhibit heterogeneous phenotypes in addition to classically defined epithelial or mesenchymal states \citep{Polyak2009,Strauss:2011fk}.
+Both \emph{in vitro} and \emph{in vivo} studies have suggested that epithelial cells can exhibit heterogeneous phenotypes in addition to classically defined epithelial or mesenchymal states \citep{Polyak2009,Strauss:2011fk}.
 For example, expression profiling in human epithelial cancer cell lines demonstrated a spectrum of phenotypes, including some that expressed both E-cadherin and Vimentin simultaneously \citep{Neve:2006uq,Welch-Reardon:2014aa}.
 Zajchowski \emph{et al.}, speculated that these expression profiles were somehow important for maintaining epithelial properties, while simultaneously allowing other functional behavior such as proliferation and migration \citep{Zajchowski:2001kx}.
 Whether and how heterogeneous phenotypes arise and participate in cancer progression, as well as their response to pharmacological inhibition are fundamental questions
@@ -422,15 +424,14 @@ Data-driven approaches \citep{Cirit:2012kx}, boolean \citep{Choi:2012bs} or othe
 are emerging paradigms that constrain model complexity by the availability of the training and validation data.
 Other techniques such as constraints based modeling, which is commonly used to model metabolic networks, have also been applied to model transcriptional networks, although primarily in lower eukaryotes and prokaryotes \citep{Hyduke:2010rt}. These techniques (and many others, see review \citep{Wayman2013}) are certainly exciting, with many interesting properties.
 Here, we used a traditional approach of mass action kinetics within an ordinary differential equation framework that also included transfer functions to simplify scenarios where reactions involving one species are controlled by several others (e.g. E-cadherin transcription).
-The identification problem for the EMT model was massively underdetermined.
-This is not uncommon for differential equation models, especially those that are highly mechanistic.
-Of course, we could have discarded mechanism or reduced the model scope to decrease the complexity of the identification problem.
+The identification problem for the EMT model was underdetermined (not uncommon for differential equation based models).
 However, a central criticism leveled by biologists is that model simplification is often done at the cost of biological reality, or done for reasons of computational expediency \citep{Sainani2012}.
 To avoid this criticism, we systematically identified an ensemble of likely models each consistent with the training data, instead of a single but uncertain best fit model.
 Previously, we (and others) have suggested that deterministic ensembles could model heterogeneous populations in situations where stochastic computation was not feasible \citep{Lequieu:2011fj}.
 Population heterogeneity using deterministic model families has previously been explored for bacterial growth in batch cultures \citep{Lee:2009fk}.
 In that case, distributions were generated because the model parameters varied over the ensemble, i.e., extrinsic noise led to population heterogeneity.
-In this study, parameters controlling physical interactions such as disassociation rates or the rate of assembly or degradation of macromolecular machinery such as ribosomes were widely distributed over the ensemble. Population heterogeneity can also arise from intrinsic thermal fluctuations, which are not captured by a deterministic population of models \citep{Swain:2002ve}.
+In this study, parameters controlling physical interactions such as disassociation rates, or processes such as gene expression were distributed over the ensemble.
+Population heterogeneity can also arise from intrinsic thermal fluctuations, which are not captured by a deterministic population of models \citep{Swain:2002ve}.
 Thus, deterministic ensembles, provide a coarse-grained or extrinsic-only ability to simulate population diversity. Despite this limitation, our prediction of phenotypic heterogeneity
 (and the underlying signaling events responsible for the heterogeneity) was consistent with experimental observations. This suggested that deterministic ensembles could simulate
 disease or developmental processes in which heterogeneity plays an important role, without having to resort to stochastic simulation.
@@ -448,7 +449,8 @@ AES opposes LEF-1 transcriptional activation while Groucho/TLE binds with LEF-1 
 In addition, $\beta$-catenin directly displaces Groucho/TLE repressors from TCF/LEF-1 in Wnt-mediated transcription activation \citep{Arce:2009pr, Grumolato2013}.
 Our model agrees with this newly discovered feedback system, as YREG1 regulates LEF-1 activity leading to EMT stabilization.
 
-Recent evidence has also suggested an essential role of NF-$\kappa$B in epithelial transformation.  NF-$\kappa$B may influence Snail expression through the AKT pathway and directly stabilize Snail activity \citep{Wu:2009cr}.  This is particularly important for integrating inflammation pathways, such as interleukin-6 (IL-6) and tumor necrosis factor-$\alpha$ (TNF-$\alpha$), which have been linked to EMT in pathological conditions \citep{Sullivan:2009bh}.
+NF-$\kappa$B may also play an essential role of in the epithelial transformation.
+NF-$\kappa$B may influence Snail expression through the AKT pathway and directly stabilize Snail activity \citep{Wu:2009cr}.  This is particularly important for integrating inflammation pathways, such as interleukin-6 (IL-6) and tumor necrosis factor-$\alpha$ (TNF-$\alpha$), which have been linked to EMT in pathological conditions \citep{Sullivan:2009bh}.
 Other pathways such as Notch have also been shown to act synergistically with TGF-$\beta$ to express Slug in the developing embryo \citep{Niessen:2008nx}.
 Lastly, while we have modeled classical protein signaling, we have not considered the role of regulatory RNAs on EMT.
 There is growing evidence that microRNAs (miRNAs) play a strong role in EMT, where several miRNAs, for example miR-21 and miR-31 are strongly associated with TGF-$\beta$ exposure \citep{Bullock:2012aa}. Addressing missing structural components like these, could generate more insight into TGF-$\beta$ signaling and its role in phenotypic transformation.
@@ -465,7 +467,7 @@ The network connectivity was curated from more than 40 primary literature source
 The model interactome was not specific to a single epithelial cell line.
 Rather, we assembled canonical pathways involved in TGF$-\beta$ and VEGF-A signaling, defaulting to human connectivity when possible.
 Using a canonical architecture allowed us to explore general features of TGF$-\beta$ induced EMT without cell line specific artifacts.
-On the other hand, because of the canonical architecture, we can test the model against several cell lines to test the generality of our conclusions.
+%On the other hand, because of the canonical architecture, we can test the model against several cell lines to test the generality of our conclusions.
 
 Our signaling network reconstruction was based on Medici et al. who identified the pathways though which MDCKII, DLD1 colon carcinoma,
 and A375 melanoma cells transition towards a mesenchymal phenotype \citep{Medici:2008fk}.
@@ -488,8 +490,8 @@ EMT signaling events were modeled using either saturation or mass-action kinetic
 \begin{equation}
 	\frac{1}{\tau_{i}}\frac{dx_{i}}{dt}  =  \sum_{j = 1}^{\mathcal{R}}\sigma_{ij}r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right)-\mu x_{i}\qquad{i=1,2,\hdots,\mathcal{M}}\\
 \end{equation}
-where $\mathcal{R}$ denotes the number of signaling reactions and $\mathcal{M}$ denotes the number of proteins in the model.
-The quantity $\tau_{i}$ denotes a time scale parameter for species $i$ which captures unmodeled effects. In the current study $\tau_{i} = 1$ for all species.
+where $\mathcal{R}$ denotes the number of signaling reactions and $\mathcal{M}$ denotes the number of signaling proteins in the model.
+The quantity $\tau_{i}$ denotes a time scale parameter for species $i$ which captures un-modeled effects; in the current study $\tau_{i} = 1$ for all species.
 The quantity $r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right)$ denotes the rate of reaction $j$.
 Typically, reaction $j$ is a non-linear function of biochemical and enzyme species abundance, as well as unknown model parameters $\mathbf{k}$ ($\mathcal{K}\times{1}$).
 The quantity $\sigma_{ij}$ denotes the stoichiometric coefficient for species $i$ in reaction $j$.
@@ -509,7 +511,9 @@ On the other hand, mass action kinetics were used to model protein-protein bindi
 	\bar{r}_{j} = k_{j}^{max}\prod_{s\in{m_{j}^{-}}}x_{s}^{-\sigma_{sj}}
 \end{equation}
 where $k_{j}^{max}$ denotes the maximum rate for reaction $j$, $\sigma_{sj}$ denotes the stoichiometric coefficient for species $s$ in reaction $j$,
-and $s\in{m_{j}}$ denotes the set of \textit{reactants} for reaction $j$. We assumed all binding interactions were irreversible.
+and $s\in{m_{j}}$ denotes the set of \textit{reactants} for reaction $j$. Reversible binding was decomposed into two irreversible steps.
+
+%We assumed all binding interactions were irreversible.
 
 The control terms $0\leq v_{j}\leq 1$ depended upon the combination of factors which influenced rate process $j$.
 For each rate, we used a rule-based approach to select from competing control factors.
@@ -517,24 +521,26 @@ If rate $j$ was influenced by $1,\dots,m$ factors, we modeled this relationship 
 $v_{j}=\mathcal{I}_{j}\left(f_{1j}\left(\cdot\right),\hdots,f_{mj}\left(\cdot\right)\right)$
 where $0\leq f_{ij}\left(\cdot\right)\leq 1$ denotes a regulatory transfer function quantifying the influence of factor $i$ on rate $j$.
 The function $\mathcal{I}_{j}\left(\cdot\right)$ is an integration rule which maps the output of regulatory transfer functions into a control
-variable. In this study, we used $\mathcal{I}_{j}\in\left\{min,max\right\}$ \citep{pr3010178}. If a process has no modifying factors, $v_{j}=1$.
+variable. In this study, we used $\mathcal{I}_{j}\in\left\{min,max\right\}$ and hill transfer functions \citep{pr3010178,pr3010138}.
+If a process has no modifying factors, $v_{j}=1$.
 
 \subsubsection*{EMT gene expression processes.}
 The EMT model described both signal transduction and gene expression events following the addition of TGF$-\beta$ and VEGF-A.
-For each gene, we modeled both the resulting mRNA ($m_{j}$) and protein ($p_{j}$):
+For each gene of the $\mathcal{G}=23$ we considered, we modeled both the resulting mRNA ($m_{j}$) and protein ($p_{j}$):
 \begin{eqnarray}
 	\frac{dm_{j}}{dt} &=& r_{T,j} - \left(\mu+\delta_{m,j}\right)m_{j}+\lambda_{j}\\
 	\frac{dp_{j}}{dt} &=& r_{X,j} - \left(\mu+\delta_{p,j}\right)p_{j}
 \end{eqnarray}where $j=1,2,\dots,\mathcal{G}$.
-The terms $r_{T,j}$ and $r_{X,j}$ denote the specific rate of transcription, and translation while
+The terms $r_{T,j}$ and $r_{X,j}$ denote the specific rates of transcription, and translation while
 the terms $\delta_{m,j}$ and $\delta_{p,j}$ denote degradation constants for mRNA and protein, respectively.
 Lastly, $\mu$ denotes the specific growth rate, and $\lambda_{j}$ denotes the constitutive rate of gene expression for gene $j$.
 The specific transcription rate was modeled as the product of a kinetic term $\bar{r}_{T,j}$ and a control term $u_{j}$ which described how the
-abundance of transcription factors, or other regulators influenced the expression of gene $j$. The kinetic rate of transcription was modeled as:
+abundance of transcription factors, or other regulators influenced the expression of gene $j$.
+The kinetic rate of transcription was modeled as:
 \begin{equation}
 	\bar{r}_{T,j} = \alpha_{j}\left[V^{max}_{T}\left(\frac{G_{j}}{K_{T}+G_{j}}\right)\right]
 \end{equation}where the maximum gene expression rate was defined as the product of a characteristic transcription rate constant ($k_{T}$)
-and the abundance of RNA polymerase, $V^{max}_{T} = k_{T}\left(RNAP\right)$. The parameter $\alpha_{j}$ was used to adjust the transcription to that of gene $j$
+and the abundance of RNA polymerase, $V^{max}_{T} = k_{T}\left(RNAP\right)$. The parameter $\alpha_{j}$ denotes the gene specific correction to the characteristic transcription rate.
 (estimated in this study), while $k_{T}$, $G_{j}$ and $RNAP$ were estimated from literature \citep{Milo:2010aa}.
 Similar to the signaling processes, the gene expression control term $0\leq u_{j}\leq 1$ depended upon the combination of factors which influenced rate process $j$.
 For each rate, we used a rule-based approach to select from competing control factors.
@@ -542,7 +548,7 @@ If the expression of gene $j$ was influenced by $1,\dots,m$ factors, we modeled 
 $u_{j}=\mathcal{I}_{j}\left(f_{1j}\left(\cdot\right),\hdots,f_{mj}\left(\cdot\right)\right)$
 where $0\leq f_{ij}\left(\cdot\right)\leq 1$ denotes a regulatory transfer function quantifying the influence of factor $i$ on the expression of gene $j$.
 The function $\mathcal{I}_{j}\left(\cdot\right)$ is an integration rule which maps the output of regulatory transfer functions into a control
-variable. In this study, we used $\mathcal{I}_{j}\in\left\{min,max\right\}$ \citep{pr3010178}.
+variable. In this study, we used $\mathcal{I}_{j}\in\left\{min,max\right\}$ and hill transfer functions \citep{pr3010178,pr3010138}.
 If a gene expression process has no modifying factors, $u_{j}=1$.
 Lastly, the specific translation rate was modeled as:
 \begin{equation}
@@ -551,7 +557,11 @@ Lastly, the specific translation rate was modeled as:
 and $K_{X}$ denotes a translation saturation constant.
 The characteristic maximum translation rate was defined as the product of a characteristic translation rate constant ($k_{X}$)
 and the abundance of Ribosomes ($RIBO$), $V^{max}_{X} = k_{X}\left(RIBO\right)$, where both $k_{X}$ and $RIBO$ abundance were estimated from literature \citep{Milo:2010aa}.
-The values used for the characteristic transcription and translation parameters are given in the supplemental materials.
+
+In this study, we estimated $k_{T}, k_{X}, RNAP$ and $RIBO$ from literature. We calculated the concentration for gene $j$ by assuming, on average,
+the cell had two copies of each gene at any given time. We also estimated characteristic values for $\delta_{m,j}$ and $\delta_{p,j}$,
+and corrected these values with mRNA/protein specific correction factors. Thus, the bulk of our gene expression parameters were based directly upon literature values.
+The values used for the characteristic transcription/translation parameters are given in the supplemental materials.
 
 The signaling and gene expression model equations were implemented in Julia and solved using the \texttt{CVODE} routine of the Sundials package \citep{Julia,Hindmarsh2005}.
 The model code and parameter ensemble is freely available under an MIT software license and can be downloaded from http://www.varnerlab.org.
@@ -584,11 +594,15 @@ Instead, we estimated a population of likely models (each consistent with the tr
 using 41 data sets generated in DLD1 colon carcinoma, MDCKII, and A375 melanoma cells taken from Medici \emph{et al.} \citep{Medici:2008fk}.
 We used the Pareto Optimal Ensemble Technique (JuPOETs) multiobjective optimization framework in combination
 with leave-one-out cross-validation to estimate an ensemble of model parameters \citep{Song:2010fk,JuPOETs-BioArXiv}.
+Model parameter values were adjusted to minimize the residual between simulations and experimental measurements for the 11 objective functions (supplemental materials).
 Cross-validation was used to calculate both training and prediction error during the parameter estimation procedure \citep{kohavi1995study}.
 The 41 intracellular protein and mRNA data-sets used for identification were organized into 11 objective functions.
 These 11 objective functions were then partitioned, where each partition contained ten training objectives and one validation objective.
-The training and validation data were Western blots. We achived a physical simulation scale by establishing characteristic rates of transcription, translation, mRNA and protein degradation, as well as characteristic concentrations of ribosomes and RNAPs \citep{Milo:2010aa}.
-The concentration scale is in nM, with proteins ranging from 10-1000nM and mRNA ranging from 0.01 to 1nM, reflecting the true abundances and ratios between each species.
+The training and validation data were Western blots. We achieved a biologically realistic concentration scale by establishing characteristic rates of transcription, translation, mRNA and protein degradation, as well as characteristic concentrations of ribosomes and RNAPs using the Bionumbers database \citep{Milo:2010aa}, (supplemental materials).
+The overall concentration scale was nM, with proteins ranging from 10-1000nM and mRNA ranging from 0.01 to 1nM, reflecting the true abundances and ratios between each species.
+An initial nominal parameter set was established by inspection. JuPOETs was then allowed to search in a neighborhood of $\pm$30\% of this nominal set.
+The parameter ensemble estimated by JuPOETs is available with the model source code.
+JuPOETs is open source and freely available for download under an MIT software license from http://www.varnerlab.org.
 
 % \subsubsection*{Robustness coefficients.} Robustness coefficients were calculated as shown previously \citep{Tasseff:2011ve,Lequieu:2011fj}.
 % Robustness coefficients denoted by $\alpha\left(i,j,t_{o},t_{f}\right)$:

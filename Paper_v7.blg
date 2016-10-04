@@ -6,45 +6,45 @@ Database file #1: References_v1.bib
 A bad cross reference---entry "ChangPP07"
 refers to entry "DBLP:conf/isbi/2007", which doesn't exist
 Warning--I didn't find a database entry for "DBLP:conf/isbi/2007"
-You've used 92 entries,
+You've used 93 entries,
             2755 wiz_defined-function locations,
-            1209 strings with 27351 characters,
-and the built_in function-call counts, 123625 in all, are:
-= -- 11311
-> -- 4858
+            1213 strings with 27503 characters,
+and the built_in function-call counts, 124570 in all, are:
+= -- 11397
+> -- 4890
 < -- 26
-+ -- 4675
-- -- 1350
-* -- 10820
-:= -- 16325
-add.period$ -- 94
-call.type$ -- 92
-change.case$ -- 820
-chr.to.int$ -- 91
-cite$ -- 92
-duplicate$ -- 9549
-empty$ -- 10015
-format.name$ -- 1652
-if$ -- 25651
++ -- 4703
+- -- 1359
+* -- 10901
+:= -- 16457
+add.period$ -- 95
+call.type$ -- 93
+change.case$ -- 827
+chr.to.int$ -- 92
+cite$ -- 93
+duplicate$ -- 9626
+empty$ -- 10094
+format.name$ -- 1664
+if$ -- 25845
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 1000
-newline$ -- 372
-num.names$ -- 368
-pop$ -- 2782
+missing$ -- 1009
+newline$ -- 376
+num.names$ -- 372
+pop$ -- 2804
 preamble$ -- 1
-purify$ -- 816
+purify$ -- 823
 quote$ -- 0
-skip$ -- 2328
+skip$ -- 2346
 stack$ -- 0
-substring$ -- 13237
-swap$ -- 2442
+substring$ -- 13325
+swap$ -- 2465
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 828
+type$ -- 837
 warning$ -- 0
-while$ -- 917
+while$ -- 925
 width$ -- 0
-write$ -- 1107
+write$ -- 1119
 (There was 1 error message)
