@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 OCT 2016 14:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 OCT 2016 14:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -941,10 +941,16 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
+LaTeX Font Info:    Try loading font information for U+mvs on input line 104.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/marvosym/umvs.fd)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-mvs.cfg
+File: mt-mvs.cfg 2006/07/05 v1.1 microtype config. file: Marvosym Euro (RS)
+)
 <PLOSlogo.png, id=4, 111.41624pt x 39.14626pt>
 File: PLOSlogo.png Graphic file (type png)
  <use PLOSlogo.png>
-Package pdftex.def Info: PLOSlogo.png used on input line 160.
+Package pdftex.def Info: PLOSlogo.png used on input line 152.
 (pdftex.def)             Requested size: 111.41597pt x 39.14615pt.
 
 
@@ -963,7 +969,7 @@ Package microtype Info: Loading generic settings for font family
 ogo.png (PNG copy)>]
 File: PLOSlogo.png Graphic file (type png)
  <use PLOSlogo.png>
-Package pdftex.def Info: PLOSlogo.png used on input line 187.
+Package pdftex.def Info: PLOSlogo.png used on input line 170.
 (pdftex.def)             Requested size: 111.41597pt x 39.14615pt.
  [2]
 File: PLOSlogo.png Graphic file (type png)
@@ -1130,7 +1136,7 @@ File: PLOSlogo.png Graphic file (type png)
 Package pdftex.def Info: PLOSlogo.png used on input line 654.
 (pdftex.def)             Requested size: 111.41597pt x 39.14615pt.
  [30]
-<./figs/Fig1_coarse_network.pdf, id=503, 1001.7425pt x 746.79pt>
+<./figs/Fig1_coarse_network.pdf, id=504, 1001.7425pt x 746.79pt>
 File: ./figs/Fig1_coarse_network.pdf Graphic file (type pdf)
 
 <use ./figs/Fig1_coarse_network.pdf>
@@ -1141,7 +1147,7 @@ File: PLOSlogo.png Graphic file (type png)
  <use PLOSlogo.png>
 Package pdftex.def Info: PLOSlogo.png used on input line 664.
 (pdftex.def)             Requested size: 111.41597pt x 39.14615pt.
- [31 <./figs/Fig1_coarse_network.pdf>] <./figs/Fig2_training.pdf, id=637, 614.2
+ [31 <./figs/Fig1_coarse_network.pdf>] <./figs/Fig2_training.pdf, id=638, 614.2
 95pt x 682.55pt>
 File: ./figs/Fig2_training.pdf Graphic file (type pdf)
 
@@ -1152,7 +1158,7 @@ File: PLOSlogo.png Graphic file (type png)
  <use PLOSlogo.png>
 Package pdftex.def Info: PLOSlogo.png used on input line 674.
 (pdftex.def)             Requested size: 111.41597pt x 39.14615pt.
- [32 <./figs/Fig2_training.pdf>] <./figs/Fig3_phenotype.pdf, id=660, 614.295pt 
+ [32 <./figs/Fig2_training.pdf>] <./figs/Fig3_phenotype.pdf, id=661, 614.295pt 
 x 616.3025pt>
 File: ./figs/Fig3_phenotype.pdf Graphic file (type pdf)
 
@@ -1168,7 +1174,7 @@ File: PLOSlogo.png Graphic file (type png)
 Package pdftex.def Info: PLOSlogo.png used on input line 689.
 (pdftex.def)             Requested size: 111.41597pt x 39.14615pt.
  [33 <./figs/Fig3_phenotype.pdf>]
-<./figs/Fig4_mechanism.pdf, id=682, 794.97pt x 560.0925pt>
+<./figs/Fig4_mechanism.pdf, id=683, 794.97pt x 560.0925pt>
 File: ./figs/Fig4_mechanism.pdf Graphic file (type pdf)
 
 <use ./figs/Fig4_mechanism.pdf>
@@ -1178,7 +1184,7 @@ File: PLOSlogo.png Graphic file (type png)
  <use PLOSlogo.png>
 Package pdftex.def Info: PLOSlogo.png used on input line 701.
 (pdftex.def)             Requested size: 111.41597pt x 39.14615pt.
- [34 <./figs/Fig4_mechanism.pdf>] <./figs/Fig-5-MCF10A-Validation.pdf, id=702, 
+ [34 <./figs/Fig4_mechanism.pdf>] <./figs/Fig-5-MCF10A-Validation.pdf, id=703, 
 601.24625pt x 588.1975pt>
 File: ./figs/Fig-5-MCF10A-Validation.pdf Graphic file (type pdf)
 
@@ -1195,7 +1201,7 @@ File: PLOSlogo.png Graphic file (type png)
 Package pdftex.def Info: PLOSlogo.png used on input line 708.
 (pdftex.def)             Requested size: 111.41597pt x 39.14615pt.
  [35 <./figs/Fig-5-MCF10A-Validation.pdf>]
-<./figs/Fig-6-Phenotyping.pdf, id=835, 509.905pt x 775.89874pt>
+<./figs/Fig-6-Phenotyping.pdf, id=836, 509.905pt x 775.89874pt>
 File: ./figs/Fig-6-Phenotyping.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-6-Phenotyping.pdf>
@@ -1273,7 +1279,7 @@ nored
                    \relax 
 l.80 \begin{equation}
                      \label{norm_exp_data}
-<./figs/Fig-Supplemental-Error-Table.pdf, id=1535, 794.97pt x 260.975pt>
+<./figs/Fig-Supplemental-Error-Table.pdf, id=1536, 794.97pt x 260.975pt>
 File: ./figs/Fig-Supplemental-Error-Table.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-Supplemental-Error-Table.pdf>
@@ -1281,7 +1287,7 @@ Package pdftex.def Info: ./figs/Fig-Supplemental-Error-Table.pdf used on input
 line 92.
 (pdftex.def)             Requested size: 379.4175pt x 124.55775pt.
 
-<./figs/Fig-3-Supplemental-DLD1.pdf, id=1536, 555.07375pt x 566.115pt>
+<./figs/Fig-3-Supplemental-DLD1.pdf, id=1537, 555.07375pt x 566.115pt>
 File: ./figs/Fig-3-Supplemental-DLD1.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-3-Supplemental-DLD1.pdf>
@@ -1289,7 +1295,7 @@ Package pdftex.def Info: ./figs/Fig-3-Supplemental-DLD1.pdf used on input line
 236.
 (pdftex.def)             Requested size: 379.4175pt x 386.9658pt.
 
-<./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf, id=1537, 746.79pt x 563.10374pt>
+<./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf, id=1538, 746.79pt x 563.10374pt>
 File: ./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf>
@@ -1311,7 +1317,7 @@ File: PLOSlogo.png Graphic file (type png)
 Package pdftex.def Info: PLOSlogo.png used on input line 265.
 (pdftex.def)             Requested size: 111.41597pt x 39.14615pt.
  [4 <./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf>]
-<./figs/Fig-Supplemental-Data-VEGFA.pdf, id=1694, 392.46625pt x 635.37375pt>
+<./figs/Fig-Supplemental-Data-VEGFA.pdf, id=1695, 392.46625pt x 635.37375pt>
 File: ./figs/Fig-Supplemental-Data-VEGFA.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-Supplemental-Data-VEGFA.pdf>
@@ -1335,11 +1341,11 @@ Package rerunfilecheck Info: File `Paper_v8.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 735.
  ) 
 Here is how much of TeX's memory you used:
- 13368 strings out of 493089
- 196606 string characters out of 6134842
- 465251 words of memory out of 5000000
- 16262 multiletter control sequences out of 15000+600000
- 14860 words of font info for 79 fonts, out of 8000000 for 9000
+ 13400 strings out of 493089
+ 197384 string characters out of 6134842
+ 465727 words of memory out of 5000000
+ 16288 multiletter control sequences out of 15000+600000
+ 15702 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,16n,47p,1913b,1699s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -1360,11 +1366,12 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/201
 5/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on Paper_v8.pdf (41 pages, 43489122 bytes).
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/marvosym/marvosym.pfb>
+Output written on Paper_v8.pdf (41 pages, 43495145 bytes).
 PDF statistics:
- 1826 PDF objects out of 2073 (max. 8388607)
- 981 compressed objects within 10 object streams
+ 1830 PDF objects out of 2073 (max. 8388607)
+ 984 compressed objects within 10 object streams
  228 named destinations out of 1000 (max. 500000)
  14392 words of extra memory for PDF output out of 14400 (max. 10000000)
 
