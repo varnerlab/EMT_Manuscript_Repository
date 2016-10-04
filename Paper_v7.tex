@@ -270,28 +270,31 @@ While we captured the central tendency of many of the molecular features of EMT 
 feature of developmental and pathological programs is population heterogeneity \citep{Park:2010fu}.
 We (and others) have previously hypothesized that deterministic model ensembles can simulate population behavior, at least at a course grained level \citep{Lequieu:2011fj}.
 We tested this hypothesis by analyzing the response of the population of EMT models to extracellular cues and then comparing this response to flow cytometry studies.
-We quantified the phenotypic response of the individual members of the ensemble to TGF$-\beta$1/2 stimulation for two downstream phenotypic markers, Vimentin (mesenchymal) and E-cadherin (epithelial) following the addition of TGF$-\beta$1/2 alone (Fig. \ref{fg:F3}), and VEGF-A in combination with NFATc inhibitors (Fig. \ref{fg:F3}).
+We quantified the phenotypic response of the individual members of the ensemble to TGF$-\beta$1/2 stimulation for two downstream phenotypic markers, Vimentin (mesenchymal) and E-cadherin (epithelial) following the addition of TGF$-\beta$1/2 alone (Fig. \ref{fg:F3}), and/or VEGF-A in combination with NFATc inhibitors (Fig. \ref{fg:F3}).
 %We were further able to use this analysis to examine the activity and effects of underlying signaling molecules.
 
-We identified model subpopulations that exhibited different behaviors following exposure to TGF$-\beta$1/2 (Fig. \ref{fg:F3}A).
+We identified model subpopulations that exhibited different behaviors following exposure to TGF$-\beta$1/2 (Fig. \ref{fg:F3}B).
 Analysis of the molecular signatures of these subpopulations suggested the abundance, localization and state of the Sp1, AP-1 and NFATc transcription factors controlled population heterogeneity.
-The majority of models ($>$80\%) responded to treatment, moving off of the untreated population (Fig \ref{fg:F3}A-C, gray).
+The majority of models ($>$80\%) responded to treatment, moving away from the untreated population (Fig \ref{fg:F3}A-C, gray).
 These models showed the classically expected behavior, a switch from an epithelial to mesenchymal phenotype following TGF$-\beta$1/2 exposure.
-Models near resembling untreated cells had evaluated nuclear localized phosphorylated Sp1, relative to non-induced cells.
-Elevated Sp1 activity decreased E-cadherin expression through Slug-mediated inhibition, which in turn increased Vimentin expression through TGF$-\beta$3 autocrine signaling and the liberation of $\beta$-catenin. However, the most biologically interesting behavior was exhibited by cells achieving a hybrid phenotype, most notable in a dual treatment condition (black arrow), but also present in a small percentage of untreated cells (Fig. \ref{fg:F3}A).
-Models with this hybrid phenotype had elevated Sp1 and NFAT transcriptional activity, resulting in the simultaneous increase of \emph{both} Vimentin and E-cadherin expression (Fig. \ref{fg:F4}A).
-Analysis of these hypothetical cells suggested they had deregulated NFAT expression and nuclear localization promoted E-cadherin expression while TGF$-\beta$1/2 induced Sp1 action promoted Vimentin expression.
+Some models resembled untreated cells; they had evaluated nuclear localized phosphorylated Sp1, relative to non-induced cells,
+which decreased E-cadherin expression through Slug-mediated inhibition, which in turn increased Vimentin expression through TGF$-\beta$3 autocrine signaling and the liberation of $\beta$-catenin. However, the most biologically interesting behavior was exhibited by cells achieving a hybrid phenotype, most notable in a dual treatment condition (\ref{fg:F3}C, black arrow), but also present in a small percentage of untreated cells (Fig. \ref{fg:F3}A).
+Models with this hybrid phenotype had elevated Sp1 and NFAT transcriptional activity, resulting in simultaneously increased Vimentin and E-cadherin expression (Fig. \ref{fg:F4}A).
 
-To test this hypothesis, we simulated the response of the network to TGF$-\beta$1/2 and VEGF-A treatment with and without NFATc inhibitors (Fig. \ref{fg:F4}).
-As expected, stimulation with VEGF-A (50 a.u.) maintained an epithelial population, while TGF$-\beta$1/2 (10 a.u.) exposure shifted
-the population from an epithelial to a mesenchymal phenotype (Fig. \ref{fg:F3}A and Fig. \ref{fg:F3}B).
+%Analysis of these hypothetical cells suggested they had deregulated NFAT expression and nuclear localization promoted E-cadherin expression while TGF$-\beta$1/2 induced Sp1 action promoted Vimentin expression.
+
+To better understand the hybrid phenotype, we simulated the response of the model population to TGF$-\beta$1/2 and VEGF-A treatment with and without NFATc inhibitors (Fig. \ref{fg:F3}).
+As expected, stimulation with VEGF-A (50 a.u.) maintained an epithelial population (Fig. \ref{fg:F3}A), while TGF$-\beta$1/2 (10 a.u.) exposure shifted
+the population from an epithelial to a mesenchymal phenotype (Fig. \ref{fg:F3}B).
 On the other hand, combined stimulation with TGF$-\beta$1/2 (10 a.u.) and VEGF-A (50 a.u.) increased both E-cadherin and Vimentin expression, resulting in a hybrid phenotype with both epithelial and mesenchymal characteristics (Fig. \ref{fg:F3}C).
 Vimentin expression was correlated with high levels of nuclear phosphorylated Sp1, following TGF$-\beta$1/2 exposure.
 Conversely, elevated E-cadherin expression depended upon the activity of NFAT transcription factors downstream of VEGF-A stimulation.
 To further isolate the role of NFAT on this hybrid state, we simulated the inhibition of NFAT transcriptional activity across all conditions (all else being equal).
-NFAT inhibition in combination with VEGF-A and TGF$-\beta$1/2 treatments blocks increased activation of E-cadherin (Fig. \ref{fg:F3}D and Fig. \ref{fg:F3}E).
-Lastly, NFATc inhibition in combination with simultaneous TGF$-\beta$1/2 and VEGF-A exposure repressed nearly all E-cadherin expression, shifting nearly the entire population towards a mesenchymal phenotype (Fig. \ref{fg:F4}F). Taken together, high levels of nuclear localized phosphorylated Sp1 correlated with Vimentin expression, while NFATc transcriptional activity was predicted to be critical for maintaining E-cadherin expression in the prescence of competing signals.
-In particular, when present, VEGF-A signaling through NFATc was predicted to provide a protective up-regulation of E-cadherin.
+NFAT inhibition in combination with VEGF-A or TGF$-\beta$1/2 treatments blocked increased E-cadherin expression in the case of VEGF-A (Fig. \ref{fg:F3}D), but did not influence TGF$-\beta$1/2 signaling (Fig. \ref{fg:F3}E).
+Lastly, NFATc inhibition in combination with simultaneous TGF$-\beta$1/2 and VEGF-A exposure repressed nearly all E-cadherin expression, shifting nearly the entire population towards a mesenchymal phenotype (Fig. \ref{fg:F3}F). Taken together, high levels of nuclear localized phosphorylated Sp1 correlated with Vimentin expression,
+while NFATc transcriptional activity was critical for maintaining E-cadherin expression in the presence of competing signals.
+
+%In particular, when present, VEGF-A signaling through NFATc was predicted to provide a protective up-regulation of E-cadherin.
 
 \subsection*{Combined TGF$-\beta$2 and VEGF-A exposure drives heterogeneity in MCF10A and DLD1 cells}
 The EMT model simulations suggested the transcriptional activity of NFATc and Sp1 could be independently tuned to generate a hybrid cell population with both epithelial and mesenchymal characteristics.
@@ -434,7 +437,7 @@ Addressing missing structural components like these, could generate more insight
 \clearpage
 
 \section*{Materials and Methods}
-All model code and parameter ensemble is freely available under an MIT software license and can be downloaded from http://www.varnerlab.org.
+The model code and parameter ensemble is freely available under an MIT software license and can be downloaded from http://www.varnerlab.org.
 
 \subsection*{Signaling network connectivity}
 The EMT model described the gene expression program resulting from TGF$-\beta$ and VEGF-A signaling in a prototypical epithelial cell.

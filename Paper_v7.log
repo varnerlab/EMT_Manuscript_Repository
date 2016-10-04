@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 OCT 2016 20:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 OCT 2016 21:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -656,80 +656,80 @@ e cen-tral ten-dency of many of the molec-
 
 [10
 
-] [11] [12] [13] [14] [15] [16
+] [11] [12] [13] [14] [15
 
-] [17] [18] [19] [20] [21] [22]
-Overfull \hbox (5.05823pt too wide) in paragraph at lines 448--471
+] [16] [17] [18] [19] [20] [21]
+Overfull \hbox (5.05823pt too wide) in paragraph at lines 451--474
 \OT1/phv/m/n/12 ac-ti-vat-ing mech-a-nism of $\OML/cmm/m/it/12 ^^L$\OT1/phv/m/n
 /12 -catenin sig-nal-ing through TGF$\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 ^^L$\
 OT1/phv/m/n/12 3 sig-nal-ing []itepMedici:2008fk.
  []
 
-[23
+[22
 
-] [24] [25] [26] [27] [28] [29] [30] [31] [32] (./Paper_v7.bbl [33
+] [23] [24] [25] [26] [27] [28] [29] [30] [31] (./Paper_v7.bbl [32
 
-] [34]
-[35] [36] [37]
+] [33]
+[34] [35] [36]
 Underfull \hbox (badness 2735) in paragraph at lines 337--341
 []\OT1/phv/m/n/12 Medici D, Po-tenta S, Kalluri R (2011) Trans-form-ing growth 
 factor-?2 pro-motes
  []
 
-[38] [39] [40]
+[37] [38] [39]
 Underfull \hbox (badness 1237) in paragraph at lines 541--544
 []\OT1/phv/m/n/12 Welch-Reardon KM, Wu N, Hughes CCW (2014) A Role for Par-tial
  Endothelial-
  []
 
-[41]) [42] <./figs/Fig1_coarse_network.pdf, id=153, 1001.7425pt x 746.79pt>
+[40]) [41] <./figs/Fig1_coarse_network.pdf, id=149, 1001.7425pt x 746.79pt>
 File: ./figs/Fig1_coarse_network.pdf Graphic file (type pdf)
 
 <use ./figs/Fig1_coarse_network.pdf>
-Package pdftex.def Info: ./figs/Fig1_coarse_network.pdf used on input line 638.
+Package pdftex.def Info: ./figs/Fig1_coarse_network.pdf used on input line 641.
 
 (pdftex.def)             Requested size: 469.75502pt x 350.20508pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 642.
- [43 <./figs/Fig1_coarse_network.pdf>]
-<./figs/Fig2_training.pdf, id=285, 614.295pt x 682.55pt>
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 645.
+ [42 <./figs/Fig1_coarse_network.pdf>]
+<./figs/Fig2_training.pdf, id=282, 614.295pt x 682.55pt>
 File: ./figs/Fig2_training.pdf Graphic file (type pdf)
 
 <use ./figs/Fig2_training.pdf>
-Package pdftex.def Info: ./figs/Fig2_training.pdf used on input line 648.
+Package pdftex.def Info: ./figs/Fig2_training.pdf used on input line 651.
 (pdftex.def)             Requested size: 469.75502pt x 521.95117pt.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 652.
- [44 <./figs/Fig2_training.pdf>]
-<./figs/Fig3_phenotype.pdf, id=305, 614.295pt x 616.3025pt>
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 655.
+ [43 <./figs/Fig2_training.pdf>]
+<./figs/Fig3_phenotype.pdf, id=302, 614.295pt x 616.3025pt>
 File: ./figs/Fig3_phenotype.pdf Graphic file (type pdf)
 
 <use ./figs/Fig3_phenotype.pdf>
-Package pdftex.def Info: ./figs/Fig3_phenotype.pdf used on input line 658.
+Package pdftex.def Info: ./figs/Fig3_phenotype.pdf used on input line 661.
 (pdftex.def)             Requested size: 469.75502pt x 471.2912pt.
- [45 <./figs/Fig3_phenotype.pdf>]
-<./figs/Fig4_mechanism.pdf, id=325, 794.97pt x 560.0925pt>
+ [44 <./figs/Fig3_phenotype.pdf>]
+<./figs/Fig4_mechanism.pdf, id=322, 794.97pt x 560.0925pt>
 File: ./figs/Fig4_mechanism.pdf Graphic file (type pdf)
 
 <use ./figs/Fig4_mechanism.pdf>
-Package pdftex.def Info: ./figs/Fig4_mechanism.pdf used on input line 673.
+Package pdftex.def Info: ./figs/Fig4_mechanism.pdf used on input line 676.
 (pdftex.def)             Requested size: 469.75502pt x 330.97304pt.
- [46 <./figs/Fig4_mechanism.pdf>]
-<./figs/Fig-5-MCF10A-Validation.pdf, id=344, 601.24625pt x 588.1975pt>
+ [45 <./figs/Fig4_mechanism.pdf>]
+<./figs/Fig-5-MCF10A-Validation.pdf, id=340, 601.24625pt x 588.1975pt>
 File: ./figs/Fig-5-MCF10A-Validation.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-5-MCF10A-Validation.pdf>
 Package pdftex.def Info: ./figs/Fig-5-MCF10A-Validation.pdf used on input line 
-685.
+688.
 (pdftex.def)             Requested size: 469.75502pt x 459.57304pt.
- [47 <./figs/Fig-5-MCF10A-Validation.pdf>] <./figs/Fig-6-Phenotyping.pdf, id=47
-4, 509.905pt x 775.89874pt>
+ [46 <./figs/Fig-5-MCF10A-Validation.pdf>] <./figs/Fig-6-Phenotyping.pdf, id=47
+1, 509.905pt x 775.89874pt>
 File: ./figs/Fig-6-Phenotyping.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-6-Phenotyping.pdf>
-Package pdftex.def Info: ./figs/Fig-6-Phenotyping.pdf used on input line 692.
+Package pdftex.def Info: ./figs/Fig-6-Phenotyping.pdf used on input line 695.
 (pdftex.def)             Requested size: 234.8775pt x 357.40317pt.
- [48 <./figs/Fig-6-Phenotyping.pdf>]
+ [47 <./figs/Fig-6-Phenotyping.pdf>]
 (./Supplemental-JB.tex [1
 
 
@@ -740,7 +740,7 @@ Package pdftex.def Info: ./figs/Fig-6-Phenotyping.pdf used on input line 692.
 
 
 ]
-<./figs/Fig-Supplemental-Error-Table.pdf, id=1109, 794.97pt x 260.975pt>
+<./figs/Fig-Supplemental-Error-Table.pdf, id=1106, 794.97pt x 260.975pt>
 File: ./figs/Fig-Supplemental-Error-Table.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-Supplemental-Error-Table.pdf>
@@ -748,7 +748,7 @@ Package pdftex.def Info: ./figs/Fig-Supplemental-Error-Table.pdf used on input
 line 30.
 (pdftex.def)             Requested size: 469.75502pt x 154.21683pt.
 
-<./figs/Fig-3-Supplemental-DLD1.pdf, id=1110, 555.07375pt x 566.115pt>
+<./figs/Fig-3-Supplemental-DLD1.pdf, id=1107, 555.07375pt x 566.115pt>
 File: ./figs/Fig-3-Supplemental-DLD1.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-3-Supplemental-DLD1.pdf>
@@ -756,7 +756,7 @@ Package pdftex.def Info: ./figs/Fig-3-Supplemental-DLD1.pdf used on input line
 174.
 (pdftex.def)             Requested size: 469.75502pt x 479.10094pt.
 
-<./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf, id=1111, 746.79pt x 563.10374pt>
+<./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf, id=1108, 746.79pt x 563.10374pt>
 File: ./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf>
@@ -765,7 +765,7 @@ put line 188.
 (pdftex.def)             Requested size: 469.75502pt x 354.20734pt.
  [2 <./figs/Fig-Supplemental-Error-Table.pdf>] [3 <./figs/Fig-3-Supplemental-DL
 D1.pdf>] [4 <./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf>]
-<./figs/Fig-Supplemental-Data-VEGFA.pdf, id=1262, 392.46625pt x 635.37375pt>
+<./figs/Fig-Supplemental-Data-VEGFA.pdf, id=1259, 392.46625pt x 635.37375pt>
 File: ./figs/Fig-Supplemental-Data-VEGFA.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-Supplemental-Data-VEGFA.pdf>
@@ -801,10 +801,10 @@ ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/
 texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf-d
 ist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Paper_v7.pdf (54 pages, 43403174 bytes).
+Output written on Paper_v7.pdf (53 pages, 43402545 bytes).
 PDF statistics:
- 1332 PDF objects out of 1440 (max. 8388607)
- 484 compressed objects within 5 object streams
+ 1329 PDF objects out of 1440 (max. 8388607)
+ 482 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
