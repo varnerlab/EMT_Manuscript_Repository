@@ -1,0 +1,619 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\bibAnnoteFile}[1]{%
+  \IfFileExists{#1}{\begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ \input{#1}\end{quotation}}{}}
+\providecommand{\bibAnnote}[2]{%
+  \begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ #2\end{quotation}}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{Thiery:2003il}
+Thiery JP (2003) Epithelial-mesenchymal transitions in development and
+  pathologies.
+\newblock Curr Opin Cell Biol 15: 740-6.
+\bibAnnoteFile{Thiery:2003il}
+
+\bibitem{Stahl:2001pd}
+Stahl PJ, Felsen D (2001) Transforming growth factor-beta, basement membrane,
+  and epithelial-mesenchymal transdifferentiation: implications for fibrosis in
+  kidney disease.
+\newblock Am J Pathol 159: 1187-92.
+\bibAnnoteFile{Stahl:2001pd}
+
+\bibitem{Eisenberg:1995ai}
+Eisenberg LM, Markwald RR (1995) Molecular regulation of atrioventricular
+  valvuloseptal morphogenesis.
+\newblock Circ Res 77: 1-6.
+\bibAnnoteFile{Eisenberg:1995ai}
+
+\bibitem{Zavadil:2005fu}
+Zavadil J, B{\"o}ttinger EP (2005) Tgf-beta and epithelial-to-mesenchymal
+  transitions.
+\newblock Oncogene 24: 5764-74.
+\bibAnnoteFile{Zavadil:2005fu}
+
+\bibitem{Xu:2009oq}
+Xu J, Lamouille S, Derynck R (2009) Tgf-beta-induced epithelial to mesenchymal
+  transition.
+\newblock Cell Res 19: 156-72.
+\bibAnnoteFile{Xu:2009oq}
+
+\bibitem{Medici:2006qa}
+Medici D, Hay ED, Goodenough DA (2006) Cooperation between snail and lef-1
+  transcription factors is essential for tgf-beta1-induced
+  epithelial-mesenchymal transition.
+\newblock Mol Biol Cell 17: 1871-9.
+\bibAnnoteFile{Medici:2006qa}
+
+\bibitem{Medici:2008fk}
+Medici D, Hay ED, Olsen BR (2008) Snail and slug promote epithelial-mesenchymal
+  transition through beta-catenin-t-cell factor-4-dependent expression of
+  transforming growth factor-beta3.
+\newblock Mol Biol Cell 19: 4875-87.
+\bibAnnoteFile{Medici:2008fk}
+
+\bibitem{Kim:2002lh}
+Kim K, Lu Z, Hay ED (2002) Direct evidence for a role of beta-catenin/lef-1
+  signaling pathway in induction of emt.
+\newblock Cell Biol Int 26: 463-76.
+\bibAnnoteFile{Kim:2002lh}
+
+\bibitem{Jiang:2007aa}
+Jiang YG, Luo Y, He Dl, Li X, Zhang Ll, et~al. (2007) Role of wnt/beta-catenin
+  signaling pathway in epithelial-mesenchymal transition of human prostate
+  cancer induced by hypoxia-inducible factor-1alpha.
+\newblock Int J Urol 14: 1034-9.
+\bibAnnoteFile{Jiang:2007aa}
+
+\bibitem{Huber:2004aa}
+Huber MA, Azoitei N, Baumann B, Gr{\"u}nert S, Sommer A, et~al. (2004)
+  Nf-kappab is essential for epithelial-mesenchymal transition and metastasis
+  in a model of breast cancer progression.
+\newblock J Clin Invest 114: 569-81.
+\bibAnnoteFile{Huber:2004aa}
+
+\bibitem{Hardy:2010aa}
+Hardy KM, Booth BW, Hendrix MJC, Salomon DS, Strizzi L (2010) Erbb/egf
+  signaling and emt in mammary development and breast cancer.
+\newblock J Mammary Gland Biol Neoplasia 15: 191-9.
+\bibAnnoteFile{Hardy:2010aa}
+
+\bibitem{Ahmed:2007mi}
+Ahmed S, Nawshad A (2007) Complexity in interpretation of embryonic
+  epithelial-mesenchymal transition in response to transforming growth
+  factor-beta signaling.
+\newblock Cells Tissues Organs 185: 131-45.
+\bibAnnoteFile{Ahmed:2007mi}
+
+\bibitem{Chung:2009jl}
+Chung SW, Miles FL, Sikes RA, Cooper CR, Farach-Carson MC, et~al. (2009)
+  Quantitative modeling and analysis of the transforming growth factor beta
+  signaling pathway.
+\newblock Biophys J 96: 1733-50.
+\bibAnnoteFile{Chung:2009jl}
+
+\bibitem{Vilar:2006gb}
+Vilar JMG, Jansen R, Sander C (2006) Signal processing in the tgf-beta
+  superfamily ligand-receptor network.
+\newblock PLoS Comput Biol 2: e3.
+\bibAnnoteFile{Vilar:2006gb}
+
+\bibitem{Cirit:2012kx}
+Cirit M, Haugh JM (2012) Data-driven modelling of receptor tyrosine kinase
+  signalling networks quantifies receptor-specific potencies of pi3k- and
+  ras-dependent erk activation.
+\newblock Biochem J 441: 77-85.
+\bibAnnoteFile{Cirit:2012kx}
+
+\bibitem{Morris:2011ys}
+Morris MK, Saez-Rodriguez J, Clarke DC, Sorger PK, Lauffenburger DA (2011)
+  Training signaling pathway maps to biochemical data with constrained fuzzy
+  logic: quantitative analysis of liver cell responses to inflammatory stimuli.
+\newblock PLoS Comput Biol 7: e1001099.
+\bibAnnoteFile{Morris:2011ys}
+
+\bibitem{2001_bailey_NatBiotech}
+Bailey JE (2001) Complex biology with no parameters.
+\newblock Nat Biotechnol 19: 503-4.
+\bibAnnoteFile{2001_bailey_NatBiotech}
+
+\bibitem{Machta:2013by}
+Machta BB, Chachra R, Transtrum MK, Sethna JP (2013) Parameter space
+  compression underlies emergent theories and predictive models.
+\newblock Science 342: 604-7.
+\bibAnnoteFile{Machta:2013by}
+
+\bibitem{Song:2010fk}
+Song SO, Chakrabarti A, Varner JD (2010) Ensembles of signal transduction
+  models using pareto optimal ensemble techniques (poets).
+\newblock Biotechnol J 5: 768-80.
+\bibAnnoteFile{Song:2010fk}
+
+\bibitem{Lequieu:2011fj}
+Lequieu J, Chakrabarti A, Nayak S, Varner JD (2011) Computational modeling and
+  analysis of insulin induced eukaryotic translation initiation.
+\newblock PLoS Comput Biol 7: e1002263.
+\bibAnnoteFile{Lequieu:2011fj}
+
+\bibitem{2010_luan_varner_MolBioSys}
+Luan D, Szlam F, Tanaka KA, Barie PS, Varner JD (2010) Ensembles of uncertain
+  mathematical models can identify network response to therapeutic
+  interventions.
+\newblock Mol Biosyst 6: 2272-86.
+\bibAnnoteFile{2010_luan_varner_MolBioSys}
+
+\bibitem{2011_kalita_brasier_JBC}
+Kalita MK, Sargsyan K, Tian B, Paulucci-Holthauzen A, Najm HN, et~al. (2011)
+  Sources of cell-to-cell variability in canonical nuclear factor-kb (nf-kb)
+  signaling pathway inferred from single cell dynamic images.
+\newblock J Biol Chem 286: 37741-57.
+\bibAnnoteFile{2011_kalita_brasier_JBC}
+
+\bibitem{2011_hasenauer_allgower_BMCBioinfo}
+Hasenauer J, Waldherr S, Doszczak M, Radde N, Scheurich P, et~al. (2011)
+  Identification of models of heterogeneous cell populations from population
+  snapshot data.
+\newblock BMC Bioinformatics 12: 125.
+\bibAnnoteFile{2011_hasenauer_allgower_BMCBioinfo}
+
+\bibitem{2012_creixell_linding_NatBiotech}
+Creixell P, Schoof EM, Erler JT, Linding R (2012) Navigating cancer network
+  attractors for tumor-specific therapy.
+\newblock Nat Biotechnol 30: 842-8.
+\bibAnnoteFile{2012_creixell_linding_NatBiotech}
+
+\bibitem{Schoeberl:2002rv}
+Schoeberl B, Eichler-Jonsson C, Gilles ED, Muller G (2002) {C}omputational
+  modeling of the dynamics of the {MAP} kinase cascade activated by surface and
+  internalized {EGF} receptors.
+\newblock Nat Biotechnol 20: 370--375.
+\bibAnnoteFile{Schoeberl:2002rv}
+
+\bibitem{Chen:2009uq}
+Chen WW, Schoeberl B, Jasper PJ, Niepel M, Nielsen UB, et~al. (2009)
+  {I}nput-output behavior of {E}rb{B} signaling pathways as revealed by a mass
+  action model trained against dynamic data.
+\newblock Mol Syst Biol 5: 239.
+\bibAnnoteFile{Chen:2009uq}
+
+\bibitem{Tasseff:2011ve}
+Tasseff R, Nayak S, Song SO, Yen A, Varner JD (2011) {M}odeling and analysis of
+  retinoic acid induced differentiation of uncommitted precursor cells.
+\newblock Integr Biol (Camb) 3: 578--591.
+\bibAnnoteFile{Tasseff:2011ve}
+
+\bibitem{Gadkar:2005vn}
+Gadkar KG, Varner J, Doyle FJ 3rd (2005) Model identification of signal
+  transduction networks from data using a state regulator problem.
+\newblock Syst Biol (Stevenage) 2: 17-30.
+\bibAnnoteFile{Gadkar:2005vn}
+
+\bibitem{Lian:2011bs}
+Lian Yg, Zhou Qg, Zhang Yj, Zheng Fl (2011) Vegf ameliorates tubulointerstitial
+  fibrosis in unilateral ureteral obstruction mice via inhibition of
+  epithelial-mesenchymal transition.
+\newblock Acta Pharmacol Sin 32: 1513-21.
+\bibAnnoteFile{Lian:2011bs}
+
+\bibitem{Milo:2010aa}
+Milo R, Jorgensen P, Moran U, Weber G, Springer M (2010) Bionumbers--the
+  database of key numbers in molecular and cell biology.
+\newblock Nucleic Acids Res 38: D750-3.
+\bibAnnoteFile{Milo:2010aa}
+
+\bibitem{Hemavathy:2000aa}
+Hemavathy K, Ashraf SI, Ip YT (2000) Snail/slug family of repressors: slowly
+  going into the fast lane of development and cancer.
+\newblock Gene 257: 1-12.
+\bibAnnoteFile{Hemavathy:2000aa}
+
+\bibitem{Hemavathy:2000ab}
+Hemavathy K, Guru SC, Harris J, Chen JD, Ip YT (2000) Human slug is a repressor
+  that localizes to sites of active transcription.
+\newblock Mol Cell Biol 20: 5087-95.
+\bibAnnoteFile{Hemavathy:2000ab}
+
+\bibitem{Dhasarathy:2011aa}
+Dhasarathy A, Phadke D, Mav D, Shah RR, Wade PA (2011) The transcription
+  factors snail and slug activate the transforming growth factor-beta signaling
+  pathway in breast cancer.
+\newblock PLoS One 6: e26514.
+\bibAnnoteFile{Dhasarathy:2011aa}
+
+\bibitem{Guaita:2002aa}
+Guaita S, Puig I, Franci C, Garrido M, Dominguez D, et~al. (2002) Snail
+  induction of epithelial to mesenchymal transition in tumor cells is
+  accompanied by muc1 repression and zeb1 expression.
+\newblock J Biol Chem 277: 39209-16.
+\bibAnnoteFile{Guaita:2002aa}
+
+\bibitem{Jackstadt:2013aa}
+Jackstadt R, R{\"o}h S, Neumann J, Jung P, Hoffmann R, et~al. (2013) Ap4 is a
+  mediator of epithelial-mesenchymal transition and metastasis in colorectal
+  cancer.
+\newblock J Exp Med 210: 1331-50.
+\bibAnnoteFile{Jackstadt:2013aa}
+
+\bibitem{Eastman:1999aa}
+Eastman Q, Grosschedl R (1999) Regulation of lef-1/tcf transcription factors by
+  wnt and other signals.
+\newblock Curr Opin Cell Biol 11: 233-40.
+\bibAnnoteFile{Eastman:1999aa}
+
+\bibitem{Park:2010fu}
+Park SY, Lee HE, Li H, Shipitsin M, Gelman R, et~al. (2010) Heterogeneity for
+  stem cell-related markers according to tumor subtype and histologic stage in
+  breast cancer.
+\newblock Clin Cancer Res 16: 876-87.
+\bibAnnoteFile{Park:2010fu}
+
+\bibitem{Aramburu:1999if}
+Aramburu J, Yaffe MB, L{\'o}pez-Rodr{\'\i}guez C, Cantley LC, Hogan PG, et~al.
+  (1999) Affinity-driven peptide selection of an nfat inhibitor more selective
+  than cyclosporin a.
+\newblock Science 285: 2129-33.
+\bibAnnoteFile{Aramburu:1999if}
+
+\bibitem{Dhimolea2010}
+Dhimolea E, Maffini MV, Soto AM, Sonnenschein C (2010) The role of collagen
+  reorganization on mammary epithelial morphogenesis in a 3d culture model.
+\newblock Biomaterials 31: 3622--3630.
+\bibAnnoteFile{Dhimolea2010}
+
+\bibitem{Butcher:2004aa}
+Butcher JT, Penrod AM, Garc{\'\i}a AJ, Nerem RM (2004) Unique morphology and
+  focal adhesion development of valvular endothelial cells in static and fluid
+  flow environments.
+\newblock Arterioscler Thromb Vasc Biol 24: 1429-34.
+\bibAnnoteFile{Butcher:2004aa}
+
+\bibitem{Hong:2013mi}
+Hong JP, Li XM, Li MX, Zheng FL (2013) Vegf suppresses epithelial-mesenchymal
+  transition by inhibiting the expression of smad3 and mir-192 a
+  smad3-dependent microrna.
+\newblock Int J Mol Med 31: 1436-42.
+\bibAnnoteFile{Hong:2013mi}
+
+\bibitem{Nagy:2007lh}
+Nagy JA, Dvorak AM, Dvorak HF (2007) Vegf-a and the induction of pathological
+  angiogenesis.
+\newblock Annu Rev Pathol 2: 251-75.
+\bibAnnoteFile{Nagy:2007lh}
+
+\bibitem{Ferrara:2002kx}
+Ferrara N (2002) Vegf and the quest for tumour angiogenesis factors.
+\newblock Nat Rev Cancer 2: 795-803.
+\bibAnnoteFile{Ferrara:2002kx}
+
+\bibitem{Willis:2007uq}
+Willis BC, Borok Z (2007) Tgf-beta-induced emt: mechanisms and implications for
+  fibrotic lung disease.
+\newblock Am J Physiol Lung Cell Mol Physiol 293: L525-34.
+\bibAnnoteFile{Willis:2007uq}
+
+\bibitem{Polyak2009}
+Polyak K, Weinberg RA (2009) Transitions between epithelial and mesenchymal
+  states: acquisition of malignant and stem cell traits.
+\newblock Nat Rev Cancer 9: 265--273.
+\bibAnnoteFile{Polyak2009}
+
+\bibitem{Strauss:2011fk}
+Strauss R, Li ZY, Liu Y, Beyer I, Persson J, et~al. (2011) Analysis of
+  epithelial and mesenchymal markers in ovarian cancer reveals phenotypic
+  heterogeneity and plasticity.
+\newblock PLoS One 6: e16186.
+\bibAnnoteFile{Strauss:2011fk}
+
+\bibitem{Neve:2006uq}
+Neve RM, Chin K, Fridlyand J, Yeh J, Baehner FL, et~al. (2006) A collection of
+  breast cancer cell lines for the study of functionally distinct cancer
+  subtypes.
+\newblock Cancer Cell 10: 515-27.
+\bibAnnoteFile{Neve:2006uq}
+
+\bibitem{Welch-Reardon:2014aa}
+Welch-Reardon KM, Wu N, Hughes CCW (2014) A role for partial
+  endothelial-mesenchymal transitions in angiogenesis?
+\newblock Arterioscler Thromb Vasc Biol .
+\bibAnnoteFile{Welch-Reardon:2014aa}
+
+\bibitem{Zajchowski:2001kx}
+Zajchowski DA, Bartholdi MF, Gong Y, Webster L, Liu HL, et~al. (2001)
+  Identification of gene expression profiles that predict the aggressive
+  behavior of breast cancer cells.
+\newblock Cancer Res 61: 5168-78.
+\bibAnnoteFile{Zajchowski:2001kx}
+
+\bibitem{Mancini2009}
+Mancini M, Toker A (2009) Nfat proteins: emerging roles in cancer progression.
+\newblock Nat Rev Cancer 9: 810--820.
+\bibAnnoteFile{Mancini2009}
+
+\bibitem{Singh:2010jx}
+Singh G, Singh SK, K{\"o}nig A, Reutlinger K, Nye MD, et~al. (2010) Sequential
+  activation of nfat and c-myc transcription factors mediates the tgf-beta
+  switch from a suppressor to a promoter of cancer cell proliferation.
+\newblock J Biol Chem 285: 27241-50.
+\bibAnnoteFile{Singh:2010jx}
+
+\bibitem{Debnath2003}
+Debnath J, Muthuswamy SK, Brugge JS (2003) Morphogenesis and oncogenesis of
+  mcf-10a mammary epithelial acini grown in three-dimensional basement membrane
+  cultures.
+\newblock Methods 30: 256--268.
+\bibAnnoteFile{Debnath2003}
+
+\bibitem{Pearson:2007qq}
+Pearson GW, Hunter T (2007) Real-time imaging reveals that noninvasive mammary
+  epithelial acini can contain motile cells.
+\newblock J Cell Biol 179: 1555-67.
+\bibAnnoteFile{Pearson:2007qq}
+
+\bibitem{OBrien2004}
+O'Brien LE, Tang K, Kats ES, Schutz-Geschwender A, Lipschutz JH, et~al. (2004)
+  Erk and mmps sequentially regulate distinct stages of epithelial tubule
+  development.
+\newblock Dev Cell 7: 21--32.
+\bibAnnoteFile{OBrien2004}
+
+\bibitem{Debnath:2005qc}
+Debnath J, Brugge JS (2005) Modelling glandular epithelial cancers in
+  three-dimensional cultures.
+\newblock Nat Rev Cancer 5: 675-88.
+\bibAnnoteFile{Debnath:2005qc}
+
+\bibitem{Moles:2003aa}
+Moles CG, Mendes P, Banga JR (2003) Parameter estimation in biochemical
+  pathways: a comparison of global optimization methods.
+\newblock Genome Res 13: 2467-74.
+\bibAnnoteFile{Moles:2003aa}
+
+\bibitem{Rodriguez-Fernandez:2013aa}
+Rodriguez-Fernandez M, Rehberg M, Kremling A, Banga JR (2013) Simultaneous
+  model discrimination and parameter estimation in dynamic models of cellular
+  systems.
+\newblock BMC Syst Biol 7: 76.
+\bibAnnoteFile{Rodriguez-Fernandez:2013aa}
+
+\bibitem{Villaverde:2014aa}
+Villaverde AF, Banga JR (2014) Reverse engineering and identification in
+  systems biology: strategies, perspectives and challenges.
+\newblock J R Soc Interface 11: 20130505.
+\bibAnnoteFile{Villaverde:2014aa}
+
+\bibitem{Choi:2012bs}
+Choi M, Shi J, Jung SH, Chen X, Cho KH (2012) Attractor landscape analysis
+  reveals feedback loops in the p53 network that control the cellular response
+  to dna damage.
+\newblock Sci Signal 5: ra83.
+\bibAnnoteFile{Choi:2012bs}
+
+\bibitem{Terfve:2012kq}
+Terfve C, Cokelaer T, Henriques D, MacNamara A, Goncalves E, et~al. (2012)
+  Cellnoptr: a flexible toolkit to train protein signaling networks to data
+  using multiple logic formalisms.
+\newblock BMC Syst Biol 6: 133.
+\bibAnnoteFile{Terfve:2012kq}
+
+\bibitem{Hyduke:2010rt}
+Hyduke DR, Palsson B{\O} (2010) Towards genome-scale signalling network
+  reconstructions.
+\newblock Nat Rev Genet 11: 297-307.
+\bibAnnoteFile{Hyduke:2010rt}
+
+\bibitem{Wayman2013}
+Wayman J, Varner J (2013) Biological systems modeling of metabolic and
+  signaling networks.
+\newblock Curr Opin Chem Eng 2: 365 - 372.
+\bibAnnoteFile{Wayman2013}
+
+\bibitem{Sainani2012}
+Sainani KL (2012) Meet the skeptics: Why some doubt biomedical models - and
+  what it takes to win them over.
+\newblock Biomedical Computation Review : 12 - 18.
+\bibAnnoteFile{Sainani2012}
+
+\bibitem{Lee:2009fk}
+Lee MW, Vassiliadis VS, Park JM (2009) Individual-based and stochastic modeling
+  of cell population dynamics considering substrate dependency.
+\newblock Biotechnol Bioeng 103: 891-9.
+\bibAnnoteFile{Lee:2009fk}
+
+\bibitem{Swain:2002ve}
+Swain PS, Elowitz MB, Siggia ED (2002) Intrinsic and extrinsic contributions to
+  stochasticity in gene expression.
+\newblock Proc Natl Acad Sci U S A 99: 12795-800.
+\bibAnnoteFile{Swain:2002ve}
+
+\bibitem{Handl:2007fk}
+Handl J, Kell DB, Knowles J (2007) Multiobjective optimization in
+  bioinformatics and computational biology.
+\newblock IEEE/ACM Trans Comput Biol Bioinform 4: 279-92.
+\bibAnnoteFile{Handl:2007fk}
+
+\bibitem{Vega:2004qf}
+Vega S, Morales AV, Oca{\~n}a OH, Vald{\'e}s F, Fabregat I, et~al. (2004) Snail
+  blocks the cell cycle and confers resistance to cell death.
+\newblock Genes Dev 18: 1131-43.
+\bibAnnoteFile{Vega:2004qf}
+
+\bibitem{Nawshad:2003ff}
+Nawshad A, Hay ED (2003) Tgfbeta3 signaling activates transcription of the lef1
+  gene to induce epithelial mesenchymal transformation during mouse palate
+  development.
+\newblock J Cell Biol 163: 1291-301.
+\bibAnnoteFile{Nawshad:2003ff}
+
+\bibitem{Cano:2000kh}
+Cano A, P{\'e}rez-Moreno MA, Rodrigo I, Locascio A, Blanco MJ, et~al. (2000)
+  The transcription factor snail controls epithelial-mesenchymal transitions by
+  repressing e-cadherin expression.
+\newblock Nat Cell Biol 2: 76-83.
+\bibAnnoteFile{Cano:2000kh}
+
+\bibitem{Arce:2009pr}
+Arce L, Pate KT, Waterman ML (2009) Groucho binds two conserved regions of
+  lef-1 for hdac-dependent repression.
+\newblock BMC Cancer 9: 159.
+\bibAnnoteFile{Arce:2009pr}
+
+\bibitem{Grumolato2013}
+Grumolato L, Liu G, Haremaki T, Mungamuri SK, Mong P, et~al. (2013)
+  ?-catenin-independent activation of tcf1/lef1 in human hematopoietic tumor
+  cells through interaction with atf2 transcription factors.
+\newblock PLoS Genet 9: e1003603.
+\bibAnnoteFile{Grumolato2013}
+
+\bibitem{Wu:2009cr}
+Wu Y, Deng J, Rychahou PG, Qiu S, Evers BM, et~al. (2009) Stabilization of
+  snail by nf-kappab is required for inflammation-induced cell migration and
+  invasion.
+\newblock Cancer Cell 15: 416-28.
+\bibAnnoteFile{Wu:2009cr}
+
+\bibitem{Sullivan:2009bh}
+Sullivan NJ, Sasser AK, Axel AE, Vesuna F, Raman V, et~al. (2009) Interleukin-6
+  induces an epithelial-mesenchymal transition phenotype in human breast cancer
+  cells.
+\newblock Oncogene 28: 2940-7.
+\bibAnnoteFile{Sullivan:2009bh}
+
+\bibitem{Niessen:2008nx}
+Niessen K, Fu Y, Chang L, Hoodless PA, McFadden D, et~al. (2008) Slug is a
+  direct notch target required for initiation of cardiac cushion
+  cellularization.
+\newblock J Cell Biol 182: 315-25.
+\bibAnnoteFile{Niessen:2008nx}
+
+\bibitem{Bullock:2012aa}
+Bullock MD, Sayan AE, Packham GK, Mirnezami AH (2012) Micrornas: critical
+  regulators of epithelial to mesenchymal (emt) and mesenchymal to epithelial
+  transition (met) in cancer progression.
+\newblock Biol Cell 104: 3-12.
+\bibAnnoteFile{Bullock:2012aa}
+
+\bibitem{Linding:2007fk}
+Linding R, Jensen LJ, Ostheimer GJ, van Vugt MATM, J{\o}rgensen C, et~al.
+  (2007) Systematic discovery of in vivo phosphorylation networks.
+\newblock Cell 129: 1415-26.
+\bibAnnoteFile{Linding:2007fk}
+
+\bibitem{Jensen:2009fk}
+Jensen LJ, Kuhn M, Stark M, Chaffron S, Creevey C, et~al. (2009) String 8--a
+  global view on proteins and their functional interactions in 630 organisms.
+\newblock Nucleic Acids Res 37: D412-6.
+\bibAnnoteFile{Jensen:2009fk}
+
+\bibitem{Zhou:2004kx}
+Zhou BP, Deng J, Xia W, Xu J, Li YM, et~al. (2004) Dual regulation of snail by
+  gsk-3beta-mediated phosphorylation in control of epithelial-mesenchymal
+  transition.
+\newblock Nat Cell Biol 6: 931-40.
+\bibAnnoteFile{Zhou:2004kx}
+
+\bibitem{Larue:2005vn}
+Larue L, Bellacosa A (2005) Epithelial-mesenchymal transition in development
+  and cancer: role of phosphatidylinositol 3' kinase/akt pathways.
+\newblock Oncogene 24: 7443-54.
+\bibAnnoteFile{Larue:2005vn}
+
+\bibitem{Derynck:2003fc}
+Derynck R, Zhang YE (2003) Smad-dependent and smad-independent pathways in
+  tgf-beta family signalling.
+\newblock Nature 425: 577-84.
+\bibAnnoteFile{Derynck:2003fc}
+
+\bibitem{Massague:2005qc}
+Massagu{\'e} J, Seoane J, Wotton D (2005) Smad transcription factors.
+\newblock Genes Dev 19: 2783-810.
+\bibAnnoteFile{Massague:2005qc}
+
+\bibitem{Nawshad:2007kl}
+Nawshad A, Medici D, Liu CC, Hay ED (2007) Tgfbeta3 inhibits e-cadherin gene
+  expression in palate medial-edge epithelial cells through a smad2-smad4-lef1
+  transcription complex.
+\newblock J Cell Sci 120: 1646-53.
+\bibAnnoteFile{Nawshad:2007kl}
+
+\bibitem{Medici2011}
+Medici D, Potenta S, Kalluri R (2011) Transforming growth factor-?2 promotes
+  snail-mediated endothelial-mesenchymal transition through convergence of
+  smad-dependent and smad-independent signalling.
+\newblock Biochem J 437: 515--520.
+\bibAnnoteFile{Medici2011}
+
+\bibitem{Suehiro:2014aa}
+Suehiro Ji, Kanki Y, Makihara C, Schadler K, Miura M, et~al. (2014) Genome-wide
+  approaches reveal functional vascular endothelial growth factor
+  (vegf)-inducible nuclear factor of activated t cells (nfat) c1 binding to
+  angiogenesis-related genes in the endothelium.
+\newblock J Biol Chem 289: 29044-59.
+\bibAnnoteFile{Suehiro:2014aa}
+
+\bibitem{pr3010178}
+Sagar A, Varner JD (2015) Dynamic modeling of the human coagulation cascade
+  using reduced order effective kinetic models.
+\newblock Processes 3: 178.
+\bibAnnoteFile{pr3010178}
+
+\bibitem{pr3010138}
+Wayman JA, Sagar A, Varner JD (2015) Dynamic modeling of cell-free biochemical
+  networks using effective kinetic models.
+\newblock Processes 3: 138.
+\bibAnnoteFile{pr3010138}
+
+\bibitem{Julia}
+Bezanson J, Edelman A, Karpinski S, Shah VB (2014) Julia: {A} fresh approach to
+  numerical computing.
+\newblock CoRR abs/1411.1607.
+\bibAnnoteFile{Julia}
+
+\bibitem{Hindmarsh2005}
+Hindmarsh A, Brown P, Grant K, Lee S, Serban R, et~al. (2005) Sundials: Suite
+  of nonlinear and differential/algebraic equation solvers.
+\newblock ACM Transactions on Mathematical Software 31: 363-396.
+\bibAnnoteFile{Hindmarsh2005}
+
+\bibitem{JuPOETs-BioArXiv}
+Bassen D, Vilkhovoy M, Minot M, Butcher JT, Varner JD (2016) {JuPOETs: A
+  Constrained Multiobjective Optimization Approach to Estimate Biochemical
+  Model Ensembles in the Julia Programming Language}.
+\newblock bioRxiv 10.1101/056044.
+\bibAnnoteFile{JuPOETs-BioArXiv}
+
+\bibitem{kohavi1995study}
+Kohavi R (1995) {A study of cross-validation and bootstrap for accuracy
+  estimation and model selection}.
+\newblock In: International joint Conference on artificial intelligence.
+  Citeseer, volume~14, pp. 1137--1145.
+\bibAnnoteFile{kohavi1995study}
+
+\bibitem{ChangPP07}
+Chang H, Park C, Parvin B (2007) Quantitative representation of
+  three-dimensional cell culture models.
+\newblock In: Proceedings of the 2007 {IEEE} International Symposium on
+  Biomedical Imaging: From Nano to Macro, Washington, DC, USA, April 12-16,
+  2007. pp. 89--92.
+\newblock \doi{10.1109/ISBI.2007.356795}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1109/ISBI.2007.356795}.
+\bibAnnoteFile{ChangPP07}
+
+\bibitem{Polizzotti}
+Polizzotti L, Basak O, Bjornsson C, Shubert K, Yener B, et~al. (2012) Novel
+  image analysis approach quantifies morphological characteristics of 3d breast
+  culture acini with varying metastatic potentials.
+\newblock J Biomed Biotech 2012: 1-16.
+\bibAnnoteFile{Polizzotti}
+
+\bibitem{IMAGEJ}
+Abramoff M, Magelhaes P, Ram S (2004) Image processing with imagej.
+\newblock Biophotonics International, 11: 36-42.
+\bibAnnoteFile{IMAGEJ}
+
+\end{thebibliography}
