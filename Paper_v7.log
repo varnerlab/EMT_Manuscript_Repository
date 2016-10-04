@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 OCT 2016 09:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 OCT 2016 10:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -643,13 +643,13 @@ mm/m/it/12 ^^L$ \OT1/phv/b/n/12 in-duced EMT \OT1/phv/m/n/12 The EMT model
 [6
 
 ] [7] [8] [9]
-Overfull \hbox (3.12497pt too wide) in paragraph at lines 269--275
+Overfull \hbox (3.12497pt too wide) in paragraph at lines 268--274
  \OT1/phv/b/n/12 TGF$\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 ^^L$\OT1/phv/b/n/12 1
 /2 and VEGF-A ex-po-sure pro-motes phe-no-type het-ero-gene-ity through NFATc
  []
 
 
-Overfull \hbox (1.2753pt too wide) in paragraph at lines 269--275
+Overfull \hbox (1.2753pt too wide) in paragraph at lines 268--274
 \OT1/phv/b/n/12 and phos-pho-ry-lated Sp1 \OT1/phv/m/n/12 While we cap-tured th
 e cen-tral ten-dency of many of the molec-
  []
@@ -679,33 +679,33 @@ Underfull \hbox (badness 1237) in paragraph at lines 536--539
 File: ./figs/Fig1_coarse_network.pdf Graphic file (type pdf)
 
 <use ./figs/Fig1_coarse_network.pdf>
-Package pdftex.def Info: ./figs/Fig1_coarse_network.pdf used on input line 628.
+Package pdftex.def Info: ./figs/Fig1_coarse_network.pdf used on input line 627.
 
 (pdftex.def)             Requested size: 469.75502pt x 350.20508pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 632.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 631.
  [42 <./figs/Fig1_coarse_network.pdf>]
 <./figs/Fig2_training.pdf, id=282, 614.295pt x 682.55pt>
 File: ./figs/Fig2_training.pdf Graphic file (type pdf)
 
 <use ./figs/Fig2_training.pdf>
-Package pdftex.def Info: ./figs/Fig2_training.pdf used on input line 638.
+Package pdftex.def Info: ./figs/Fig2_training.pdf used on input line 637.
 (pdftex.def)             Requested size: 469.75502pt x 521.95117pt.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 642.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 641.
  [43 <./figs/Fig2_training.pdf>]
 <./figs/Fig3_phenotype.pdf, id=302, 614.295pt x 616.3025pt>
 File: ./figs/Fig3_phenotype.pdf Graphic file (type pdf)
 
 <use ./figs/Fig3_phenotype.pdf>
-Package pdftex.def Info: ./figs/Fig3_phenotype.pdf used on input line 648.
+Package pdftex.def Info: ./figs/Fig3_phenotype.pdf used on input line 647.
 (pdftex.def)             Requested size: 469.75502pt x 471.2912pt.
  [44 <./figs/Fig3_phenotype.pdf>]
 <./figs/Fig4_mechanism.pdf, id=322, 794.97pt x 560.0925pt>
 File: ./figs/Fig4_mechanism.pdf Graphic file (type pdf)
 
 <use ./figs/Fig4_mechanism.pdf>
-Package pdftex.def Info: ./figs/Fig4_mechanism.pdf used on input line 663.
+Package pdftex.def Info: ./figs/Fig4_mechanism.pdf used on input line 662.
 (pdftex.def)             Requested size: 469.75502pt x 330.97304pt.
  [45 <./figs/Fig4_mechanism.pdf>]
 <./figs/Fig-5-MCF10A-Validation.pdf, id=340, 601.24625pt x 588.1975pt>
@@ -713,14 +713,14 @@ File: ./figs/Fig-5-MCF10A-Validation.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-5-MCF10A-Validation.pdf>
 Package pdftex.def Info: ./figs/Fig-5-MCF10A-Validation.pdf used on input line 
-675.
+674.
 (pdftex.def)             Requested size: 469.75502pt x 459.57304pt.
  [46 <./figs/Fig-5-MCF10A-Validation.pdf>] <./figs/Fig-6-Phenotyping.pdf, id=47
 1, 509.905pt x 775.89874pt>
 File: ./figs/Fig-6-Phenotyping.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-6-Phenotyping.pdf>
-Package pdftex.def Info: ./figs/Fig-6-Phenotyping.pdf used on input line 682.
+Package pdftex.def Info: ./figs/Fig-6-Phenotyping.pdf used on input line 681.
 (pdftex.def)             Requested size: 234.8775pt x 357.40317pt.
  [47 <./figs/Fig-6-Phenotyping.pdf>]
 (./Supplemental-JB.tex [1
@@ -794,7 +794,7 @@ ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/
 texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf-d
 ist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Paper_v7.pdf (53 pages, 43401487 bytes).
+Output written on Paper_v7.pdf (53 pages, 43401490 bytes).
 PDF statistics:
  1329 PDF objects out of 1440 (max. 8388607)
  482 compressed objects within 5 object streams
