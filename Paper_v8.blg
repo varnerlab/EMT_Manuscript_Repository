@@ -5,11 +5,12 @@ The style file: plos2009.bst
 Database file #1: References_v1.bib
 A bad cross reference---entry "ChangPP07"
 refers to entry "DBLP:conf/isbi/2007", which doesn't exist
+Warning--I didn't find a database entry for "Liu:2008aa"
 Warning--I didn't find a database entry for "DBLP:conf/isbi/2007"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 96 entries,
             2441 wiz_defined-function locations,
-            1283 strings with 30791 characters,
+            1285 strings with 30811 characters,
 and the built_in function-call counts, 79603 in all, are:
 = -- 7268
 > -- 1516
