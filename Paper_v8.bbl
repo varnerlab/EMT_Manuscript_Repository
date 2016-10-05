@@ -104,6 +104,20 @@ Vilar JMG, Jansen R, Sander C (2006) Signal processing in the tgf-beta
 \newblock PLoS Comput Biol 2: e3.
 \bibAnnoteFile{Vilar:2006gb}
 
+\bibitem{Lu:2013aa}
+Lu M, Jolly MK, Levine H, Onuchic JN, Ben-Jacob E (2013) Microrna-based
+  regulation of epithelial-hybrid-mesenchymal fate determination.
+\newblock Proc Natl Acad Sci U S A 110: 18144-9.
+\bibAnnoteFile{Lu:2013aa}
+
+\bibitem{Steinway:2014aa}
+Steinway SN, Za{\~n}udo JGT, Ding W, Rountree CB, Feith DJ, et~al. (2014)
+  Network modeling of tgfb signaling in hepatocellular carcinoma
+  epithelial-to-mesenchymal transition reveals joint sonic hedgehog and wnt
+  pathway activation.
+\newblock Cancer Res 74: 5963-77.
+\bibAnnoteFile{Steinway:2014aa}
+
 \bibitem{Cirit:2012kx}
 Cirit M, Haugh JM (2012) Data-driven modelling of receptor tyrosine kinase
   signalling networks quantifies receptor-specific potencies of pi3k- and

@@ -173,6 +173,8 @@ Previous computational models of TGF-$\beta$ induced differentiation focused on 
 For example, Chung \emph{et al.}, constructed a model of TGF-$\beta$ receptor activation and Smad signaling using ordinary differential equations and mass-action kinetics.
 Their model suggested that a reduction of functional TGF-$\beta$ receptors in cancer cells may lead to an attenuated Smad2 signal \cite{Chung:2009jl}.
 Similarly, Vilar \emph{et al.} suggested that specific changes in receptor trafficking patterns could lead to phenotypes that favor tumorigenesis \cite{Vilar:2006gb}.
+Lu \emph{et al.} modeled the role that micro-RNA can play in EMT, suggesting cell-fate determination is regulated by the miR-34/SNAIL and miR-200/ZEB mutual-inhibition feedback circuit \cite{Lu:2013aa}.
+Coarse grained modeling approaches have also been applied to EMT; Steinway \emph{et al.} used discrete dynamic modeling to study developmental EMT and known dysregulations in invasive hepatocellular carcinoma \cite{Steinway:2014aa}.
 Although these models provided insight into the role of receptor dynamics, EMT induction involves many other components, including competing second messengers and interconnected transcriptional regulatory loops.
 Integrating these additional scales of molecular signaling while maintaining the capacity for robust prediction requires a new and expanded computational and experimental strategy.
 Data-driven systems approaches \cite{Cirit:2012kx} or logical model formulations \cite{Morris:2011ys} are emerging paradigms that constrain model complexity through the incorporation of training and validation data.
@@ -434,7 +436,8 @@ disease or developmental processes in which heterogeneity plays an important rol
 
 A common criticism of ODE modeling has been the poorly characterized effect of structural and parametric uncertainty.
 In this study, parametric uncertainty was addressed by developing an ensemble of probable models instead of a single best-fit but uncertain model using multiobjective optimization.
-While computationally complex, multiobjective optimization is an important tool to address qualitative conflicts in training data that arise from experimental error or cell line artifacts \cite{Handl:2007fk}. On the other hand, structural uncertainty is defined as uncertainty in the biological connectivity.
+While computationally complex, multiobjective optimization is an important tool to address qualitative conflicts in training data that arise from experimental error or cell line artifacts \cite{Handl:2007fk}.
+On the other hand, structural uncertainty is defined as uncertainty in the biological connectivity.
 The EMT model connectivity was assembled from an extensive literature review. However, several potentially important signaling mechanisms were not included.
 First, we identified a potential gap in biological knowledge surrounding the regulation of LEF-1 expression, that was filled by the addition of the hypothetical YREG1 transcriptional repressor.
 The LEF-1 transcription factor is expressed in tissues that undergo EMT during embryogenesis \cite{Vega:2004qf,Nawshad:2003ff},
@@ -449,7 +452,10 @@ NF-$\kappa$B may also play an essential role of in the epithelial transformation
 NF-$\kappa$B may influence Snail expression through the AKT pathway and directly stabilize Snail activity \cite{Wu:2009cr}.  This is particularly important for integrating inflammation pathways, such as interleukin-6 (IL-6) and tumor necrosis factor-$\alpha$ (TNF-$\alpha$), which have been linked to EMT in pathological conditions \cite{Sullivan:2009bh}.
 Other pathways such as Notch have also been shown to act synergistically with TGF-$\beta$ to express Slug in the developing embryo \cite{Niessen:2008nx}.
 Lastly, while we have modeled classical protein signaling, we have not considered the role of regulatory RNAs on EMT.
-There is growing evidence that microRNAs (miRNAs) play a strong role in EMT, where several miRNAs, for example miR-21 and miR-31 are strongly associated with TGF-$\beta$ exposure \cite{Bullock:2012aa}. Addressing missing structural components like these, could generate more insight into TGF-$\beta$ signaling and its role in phenotypic transformation.
+There is growing evidence that microRNAs (miRNAs) play a strong role in EMT, where several miRNAs,
+for example miR-21 and miR-31 are strongly associated with TGF-$\beta$ exposure \cite{Bullock:2012aa}, and Lu et al have suggested that
+EMT is driven by a miR-34/SNAIL and miR-200/ZEB mutual-inhibition feedback circuit \cite{Lu:2013aa}.
+Addressing missing structural components like these, could generate more insight into TGF-$\beta$ signaling and its role in phenotypic transformation.
 
 \clearpage
 
