@@ -212,7 +212,9 @@ ODEs are common tools to model biochemical pathways \cite{Schoeberl:2002rv,Chen:
 However, while ODE models can simulate complex intracellular behavior,
 they require estimates for model parameters which are often difficult to obtain.
 The EMT model had 251 unknown model parameters, 169 kinetic constants 38 control constants and 44 saturation constants.
-As expected, these parameters were not uniquely identifiable given the training data \cite{Gadkar:2005vn}.
+In addition to constants appearing in the signaling kinetics, characteristic gene expression and translation parameters were estimated from literature,
+and then corrected for each protein and transcript (four correction factors per gene product, see materials and methods).
+As expected, the unknown parameters were not uniquely identifiable given the training data \cite{Gadkar:2005vn}.
 Thus, instead of identifying a single best fit (but uncertain) model,
 we estimated a sloppy population of models (each consistent with the training data) by simultaneously minimizing the difference between model simulations and 41 molecular
 data sets using the Pareto Optimal Ensemble Technique (JuPOETs).
@@ -465,20 +467,51 @@ Using a canonical architecture allowed us to explore general features of TGF$-\b
 
 Our signaling network reconstruction was based on Medici et al. who identified the pathways though which MDCKII, DLD1 colon carcinoma,
 and A375 melanoma cells transition towards a mesenchymal phenotype \cite{Medici:2008fk}.
-Sequential activation of MAPK and Smad pathways were initiated upon addition of TGF$-\beta$1/2.  Briefly, TGF$-\beta$2 signals through the RAS-RAF-MEK-ERK pathway to up-regulate Snail and Slug expression \cite{Medici:2006qa}.  Snail, a known repressor of junctional proteins, inhibits the expression of E-cadherin \cite{Cano:2000kh}. This initial repression of E-cadherin leads to a release of $\beta$-catenin from the cell membrane. This release of $\beta$-catenin can then translocate to the nucleus and form transcriptional complexes with TCF-4 to drive TGF$-\beta$3 expression \cite{Medici:2008fk}. The PI3K to GSK3 pathway was included and acted as an activating mechanism of $\beta$-catenin signaling through TGF$-\beta$3 signaling \cite{Medici:2008fk}. GSK3 is known to act on $\beta$-catenin signaling through the ubiquitin-proteasome pathway \cite{Zhou:2004kx,Larue:2005vn}. Thereby, further $\beta$-catenin release also resulted from by TGF$-\beta$3 signals to the cells interior by binding to type II receptors, which form heterodimers with type I receptors (ALK5) \cite{Derynck:2003fc}. This activates the receptors serine/threonine kinase activity to phosphorylate and activate the receptor Smads 2/3 \cite{Massague:2005qc}. In the model, receptors are simplified and represented as either bound or unbound complexes with their ligands.
-Phosphorylated Smads 2/3 (pSmad2/3) form heterodimers and translocate to the nucleus. pSmads complexes up-regulate other transcription factors, such as LEF-1. The pSmad2/4-LEF-1 complex has been shown to directly repress the E-cadherin gene \cite{Nawshad:2007kl}. LEF-1 also binds with $\beta$-catenin to upregulate mesenchymal proteins such as fibronectin \cite{Medici2011}.
+Sequential activation of MAPK and Smad pathways were initiated upon addition of TGF$-\beta$1/2.
+Briefly, TGF$-\beta$2 signals through the RAS-RAF-MEK-ERK pathway to up-regulate Snail and Slug expression \cite{Medici:2006qa}.
+Snail, a known repressor of junctional proteins, inhibits the expression of E-cadherin \cite{Cano:2000kh}.
+This initial repression of E-cadherin leads to a release of $\beta$-catenin from the cell membrane.
+This release of $\beta$-catenin can then translocate to the nucleus and form transcriptional complexes with TCF-4 to drive TGF$-\beta$3 expression \cite{Medici:2008fk}.
+The PI3K to GSK3 pathway was included and acted as an activating mechanism of $\beta$-catenin signaling through TGF$-\beta$3 signaling \cite{Medici:2008fk}.
+GSK3 is known to act on $\beta$-catenin signaling through the ubiquitin-proteasome pathway \cite{Zhou:2004kx,Larue:2005vn}.
+Thereby, further $\beta$-catenin release also resulted from by TGF$-\beta$3 signals to the cells interior by binding to type II receptors, which form heterodimers with type I receptors (ALK5) \cite{Derynck:2003fc}.
+This activates the receptors serine/threonine kinase activity to phosphorylate and activate the receptor Smads 2/3 \cite{Massague:2005qc}.
+In the model, receptors are simplified and represented as either bound or unbound complexes with their ligands.
+Phosphorylated Smads 2/3 (pSmad2/3) form heterodimers and translocate to the nucleus. pSmads complexes up-regulate other transcription factors, such as LEF-1.
+The pSmad2/4-LEF-1 complex has been shown to directly repress the E-cadherin gene \cite{Nawshad:2007kl}.
+LEF-1 also binds with $\beta$-catenin to upregulate mesenchymal proteins such as fibronectin \cite{Medici2011}.
 In the model, Smad signaling is consolidated into a single Smad species that can act in a co-dependent fashion with LEF1 to downregulate E-cadherin via a transfer function, eliminating the need for an explicity LEF-1, pSmad complex.
 The EMT gene expression program was initiated by the binding of TGF$-\beta$ isoforms to TGF$-\beta$ surface receptors, starting the downstream signaling program.
-Repression of E-cadherin expression is the central event in the transition from an epithelial to a mesenchymal phenotype \cite{Cano:2000kh}.However, this transition is not solely driven by transcriptional events.
+Repression of E-cadherin expression is the central event in the transition from an epithelial to a mesenchymal phenotype \cite{Cano:2000kh}.
+However, this transition is not solely driven by transcriptional events.
 At the protein level, the repression of E-cadherin leads to a release of $\beta$-catenin from cell membrane.
 Cystolic $\beta$-catenin then translocates to the nucleus and forms transcriptionally-active complexes with immunoglobulin transcription factor 2 (TCF-4)
-to drive TGF$-\beta$3 expression \cite{Medici:2008fk}. The PI3K to GSK3 pathway was included and acted as an activating mechanism of $\beta$-catenin signaling through TGF$-\beta$3 signaling \cite{Medici:2008fk}. GSK3 is known to act on $\beta$-catenin signaling through APC complex associated ubiquitin-proteasome pathway. The APC complex is represented in our model and serves as a second reservoir  of $\beta$-cateinin in untransformed cells whose sequestration is regulated by GSK3 \cite{Zhou:2004kx,Larue:2005vn,Medici:2008fk}. Lastly, VEGF-A activation of NFATc1 takes place through calcineurin signaling leading to an enhancement of E-cadherin expression \cite{Suehiro:2014aa},
+to drive TGF$-\beta$3 expression \cite{Medici:2008fk}.
+The PI3K to GSK3 pathway was included and acted as an activating mechanism of $\beta$-catenin signaling through TGF$-\beta$3 signaling \cite{Medici:2008fk}.
+GSK3 is known to act on $\beta$-catenin signaling through APC complex associated ubiquitin-proteasome pathway.
+The APC complex is represented in our model and serves as a second reservoir of $\beta$-cateinin in untransformed cells whose sequestration is regulated by GSK3 \cite{Zhou:2004kx,Larue:2005vn,Medici:2008fk}.
+Lastly, VEGF-A activation of NFATc1 takes place through calcineurin signaling leading to an enhancement of E-cadherin expression \cite{Suehiro:2014aa},
 as supported by our VEGF-A experimental data (Fig. \ref{fg:VEGFA-Data}).
 
 %Additional information about the interactions included in the model,
 %along with the Systems Biology Markup Language (SBML) file encoding these interactions are included in the supplemental materials.
 
 \subsection*{Formulation, solution and analysis of the EMT model equations}
+The EMT model integrated kinetic ODE modeling with a rule-based description of signaling activity and gene expression regulation.
+Regulation of enzyme activity or gene expression processes was modeled by combining individual regulatory contributions, quantified by transfer-functions,
+into a control coefficients using an integration rule. These control coefficients then modified the kinetic rates that appeared in the model.
+This strategy is similar in spirit to the Constrained Fuzzy Logic (cFL) approach of Lauffenburger and coworkers which has been used to effectively model signal transduction pathways important in human health \cite{Morris:2011ys}.
+In our formulation, Hill-like transfer functions $0 < f\left(\mathbf{x}\right) < 1$ were used to calculate the influence of factor abundance upon enzyme activity or a gene expression process.
+In this context, factors can be individual metabolite or protein levels or some function of abundance, e.g., the product of metabolite or proteins levels.
+However, more generally, factors can also correspond to non-modeled influences, categorial variables or other abstract quantities.
+In the current study, we let factors correspond to the abundance of individual proteins, inhibitors or transcription factors, as well as products of transcription factors where it is necessary to represent a co-dependent regulatory activity.
+When a protein or gene was potentially sensitive to more than one regulatory input, logical integration rules were used to select
+which regulatory transfer function influenced enzyme activity at any given time.
+Thus, our EMT network model encoded complex signaling and regulatory features with a relatively small number of equations.
+This model formulation has been used previously to construct reduced order kinetic models of synthetic RNA circuits \cite{Hu:2015aa},
+cell free metabolic models \cite{pr3010138} and reduced-order models of blood coagulation \cite{pr3010178}.
+In this study, we extended this approach to describe gene expression processes in addition to signal transduction events.
+
 \subsubsection*{EMT signaling events.}
 EMT signaling events were modeled using either saturation or mass-action kinetics within an ordinary differential equation (ODE) framework:
 \begin{equation}
@@ -516,17 +549,20 @@ $v_{j}=\mathcal{I}_{j}\left(f_{1j}\left(\cdot\right),\hdots,f_{mj}\left(\cdot\ri
 where $0\leq f_{ij}\left(\cdot\right)\leq 1$ denotes a regulatory transfer function quantifying the influence of factor $i$ on rate $j$.
 The function $\mathcal{I}_{j}\left(\cdot\right)$ is an integration rule which maps the output of regulatory transfer functions into a control
 variable. In this study, we used $\mathcal{I}_{j}\in\left\{min,max\right\}$ and hill transfer functions \cite{pr3010178,pr3010138}.
-If a process has no modifying factors, $v_{j}=1$. Factors can be individual metabolite or protein levels or some function, e.g., the product of metabolite levels. In the current study, we let factors correspond to the abundance of individual proteins, inhibitors or transcription factors, as well as products of transcription factors where it is necessasry to represent a co-dependent regulatory activity.
+If a process has no modifying factors, $v_{j}=1$.
+
+%Factors can be individual metabolite or protein levels or some function, e.g., the product of metabolite levels.
+
 
 \subsubsection*{EMT gene expression processes.}
 The EMT model described both signal transduction and gene expression events following the addition of TGF$-\beta$ and VEGF-A.
 For each gene of the $\mathcal{G}=23$ we considered, we modeled both the resulting mRNA ($m_{j}$) and protein ($p_{j}$):
 \begin{eqnarray}
-	\frac{dm_{j}}{dt} &=& r_{T,j} - \left(\mu+\delta_{m,j}\right)m_{j}+\lambda_{j}\\
-	\frac{dp_{j}}{dt} &=& r_{X,j} - \left(\mu+\delta_{p,j}\right)p_{j}
+	\frac{dm_{j}}{dt} &=& r_{T,j} - \left(\mu+\theta_{m,j}\right)m_{j}+\lambda_{j}\\
+	\frac{dp_{j}}{dt} &=& r_{X,j} - \left(\mu+\theta_{p,j}\right)p_{j}
 \end{eqnarray}where $j=1,2,\dots,\mathcal{G}$.
 The terms $r_{T,j}$ and $r_{X,j}$ denote the specific rates of transcription, and translation while
-the terms $\delta_{m,j}$ and $\delta_{p,j}$ denote degradation constants for mRNA and protein, respectively.
+the terms $\theta_{m,j}$ and $\theta_{p,j}$ denote first-order degradation constants for mRNA and protein, respectively.
 Lastly, $\mu$ denotes the specific growth rate, and $\lambda_{j}$ denotes the constitutive rate of gene expression for gene $j$.
 The specific transcription rate was modeled as the product of a kinetic term $\bar{r}_{T,j}$ and a control term $u_{j}$ which described how the
 abundance of transcription factors, or other regulators influenced the expression of gene $j$.
@@ -534,8 +570,8 @@ The kinetic rate of transcription was modeled as:
 \begin{equation}
 	\bar{r}_{T,j} = \alpha_{j}\left[V^{max}_{T}\left(\frac{G_{j}}{K_{T}+G_{j}}\right)\right]
 \end{equation}where the maximum gene expression rate was defined as the product of a characteristic transcription rate constant ($k_{T}$)
-and the abundance of RNA polymerase, $V^{max}_{T} = k_{T}\left(RNAP\right)$. The parameter $\alpha_{j}$ denotes the gene specific correction to the characteristic transcription rate.
-(estimated in this study), while $k_{T}$, $G_{j}$ and $RNAP$ were estimated from literature \cite{Milo:2010aa}.
+and the abundance of RNA polymerase, $V^{max}_{T} = k_{T}\left(RNAP\right)$.
+The parameter $\alpha_{j}$ denotes the gene specific correction to the characteristic transcription rate (estimated in this study).
 Similar to the signaling processes, the gene expression control term $0\leq u_{j}\leq 1$ depended upon the combination of factors which influenced rate process $j$.
 For each rate, we used a rule-based approach to select from competing control factors.
 If the expression of gene $j$ was influenced by $1,\dots,m$ factors, we modeled this relationship as
@@ -544,6 +580,9 @@ where $0\leq f_{ij}\left(\cdot\right)\leq 1$ denotes a regulatory transfer funct
 The function $\mathcal{I}_{j}\left(\cdot\right)$ is an integration rule which maps the output of regulatory transfer functions into a control
 variable. In this study, we used $\mathcal{I}_{j}\in\left\{min,max\right\}$ and hill transfer functions \cite{pr3010178,pr3010138}.
 If a gene expression process has no modifying factors, $u_{j}=1$.
+The degradation rate constants were defined as $\theta_{m,j} = \delta_{j}k_{d,m}$ and $\theta_{p,j} = \gamma_{j}k_{d,p}$
+where $k_{d,m}$ and $k_{d,p}$ denote characteristic degradation constants for mRNA and protein, respectively and $\delta_{j}$ and $\gamma_{j}$ denote transcript and protein specific
+correction factors to these constants.
 
 Lastly, the specific translation rate was modeled as:
 \begin{equation}
@@ -551,12 +590,15 @@ Lastly, the specific translation rate was modeled as:
 \end{equation}where $V^{max}_{X}$ denotes a characteristic maximum translation rate estimated from literature, $\beta_{j}$ denotes the transcript specific correction the characteristic translation rate,
 and $K_{X}$ denotes a translation saturation constant.
 The characteristic maximum translation rate was defined as the product of a characteristic translation rate constant ($k_{X}$)
-and the abundance of Ribosomes ($RIBO$), $V^{max}_{X} = k_{X}\left(RIBO\right)$, where both $k_{X}$ and $RIBO$ abundance were estimated from literature \cite{Milo:2010aa}.
+and the abundance of Ribosomes ($RIBO$), $V^{max}_{X} = k_{X}\left(RIBO\right)$.
 
-In this study, we estimated $k_{T}, k_{X}, RNAP$ and $RIBO$ from literature. We calculated the concentration for gene $j$ by assuming, on average,
-the cell had two copies of each gene at any given time. We also estimated characteristic values for $\delta_{m,j}$ and $\delta_{p,j}$,
-and corrected these values with mRNA/protein specific correction factors. Thus, the bulk of our gene expression parameters were based directly upon literature values.
-The values used for the characteristic transcription/translation parameters are given in the supplemental materials.
+In this study, we estimated $k_{T}, k_{X}, k_{d,m}, k_{d,p}, RNAP$ and $RIBO$ directly from literature using estimates of transcription and translation rates,
+the half-life of an typical mRNA and protein and a typical value for the copies per cell of RNA polymerase and ribosomes.
+The saturation constants $K_{X}$ and $K_{T}$ were adjusted so that gene expression and translation resulted in gene products on a biologically realistic concentration scale.
+Next, we calculated the concentration for gene $j$ by assuming, on average,
+that a cell had two copies of each gene at any given time. Thus, the bulk of our gene expression parameters were based directly upon literature values, and were not adjusted during model identification.
+The values used for the characteristic transcription/translation parameters, degradation constants and macromolecular copy number are given in the supplemental materials along with
+the specific formulas required to calculate all derived constants.
 
 The signaling and gene expression model equations were implemented in Julia and solved using the \texttt{CVODE} routine of the Sundials package \cite{Julia,Hindmarsh2005}.
 The model code and parameter ensemble is freely available under an MIT software license and can be downloaded from http://www.varnerlab.org.
@@ -586,6 +628,8 @@ The model code and parameter ensemble is freely available under an MIT software 
 \subsubsection*{Estimation of model parameters using multiobjective optimization.}
 We estimated a population of likely EMT model parameter sets (each consistent with the training data)
 using 41 data sets generated in DLD1 colon carcinoma, MDCKII, and A375 melanoma cells taken from Medici \emph{et al.} \cite{Medici:2008fk}.
+In addition to rate and saturation constants appearing in the signal transduction equations, we estimate the transcript/protein specific
+correction factors $\alpha_{j},\beta_{j},\delta_{j}$ and $\delta_{j}$ and control coefficients from these data.
 We used the Pareto Optimal Ensemble Technique (JuPOETs) multiobjective optimization framework in combination
 with leave-one-out cross-validation to estimate an ensemble of model parameters \cite{Song:2010fk,JuPOETs-BioArXiv}.
 Model parameter values were adjusted to minimize the residual between simulations and experimental measurements for the 11 objective functions (supplemental materials).
@@ -595,6 +639,7 @@ These 11 objective functions were then partitioned, where each partition contain
 The training and validation data were Western blots. We achieved a biologically realistic concentration scale by establishing characteristic rates of transcription, translation, mRNA and protein degradation, as well as characteristic concentrations of ribosomes and RNAPs using the Bionumbers database \cite{Milo:2010aa}, (supplemental materials).
 The overall concentration scale was nM, with proteins ranging from 10-1000nM and mRNA ranging from 0.01 to 1nM, reflecting the true abundances and ratios between each species.
 An initial nominal parameter set was established by inspection. JuPOETs was then allowed to search in a neighborhood of $\pm$30\% of this nominal set.
+The correction factors estimated by JuPOETs were in the range of 0.1 - 10, with the mean value of 1.68; thus, the characteristic rate parameters estimated from literature were consistent with measurements.
 The parameter ensemble estimated by JuPOETs is available with the model source code.
 JuPOETs is open source and freely available for download under an MIT software license from http://www.varnerlab.org.
 
@@ -610,7 +655,7 @@ JuPOETs is open source and freely available for download under an MIT software l
 % Robustness coefficients were calculated for each member of the ensemble (N $\simeq$ 1100).
 
 \subsection*{Cell culture and experimental interrogation}
-DLD1 colon carcinoma and MCF10A cells were acquired from the American Tissue Culture Collection (Manassas, VA). Cells were grown in culture with RPMI-1640 medium with 10\% fetal bovine serum and 1\% penicillin/streptomycin or MGEM-2 supplemented with insulin, bovine pituitary extract, cholera toxin, hEGF, hydrocortisone, 5\% horse serum, and 1\% penicillin/streptomycin, respectively.  Cells were passaged 1:3 or 1:4 every 3-6 d and used between passages 4 and 8.  During treatment regime, DLD1 and MCF10A cells aggregated overnight in hanging drop culture (20$\mu$L; 20,000 cells).  The spherical aggregates were placed on the surface of neutralized type I collagen hydrogels (1.5mg/mL) and allowed to adhere.  Cultures were then serum starved (1\% serum) for 24 hours.  Recombinant human TGF$-\beta$2 (R$\And$D Systems, Minneapolis, MN) was added to the culture medium at a concentration of 10 ng/ml and recombinant VEGFA165 at a concentration of (5ng/ml, 50ng/ml) for all relative experiments.  NFAT inhibitor (VIVIT peptide) (EMDBiosciences, Darmstadt, Germany), was added to the culture medium at a concentration of 10$\mu$M for all relative experiments.  mRNA was then harvested at both the 3hr and 48hr time-point. 
+DLD1 colon carcinoma and MCF10A cells were acquired from the American Tissue Culture Collection (Manassas, VA). Cells were grown in culture with RPMI-1640 medium with 10\% fetal bovine serum and 1\% penicillin/streptomycin or MGEM-2 supplemented with insulin, bovine pituitary extract, cholera toxin, hEGF, hydrocortisone, 5\% horse serum, and 1\% penicillin/streptomycin, respectively.  Cells were passaged 1:3 or 1:4 every 3-6 d and used between passages 4 and 8.  During treatment regime, DLD1 and MCF10A cells aggregated overnight in hanging drop culture (20$\mu$L; 20,000 cells).  The spherical aggregates were placed on the surface of neutralized type I collagen hydrogels (1.5mg/mL) and allowed to adhere.  Cultures were then serum starved (1\% serum) for 24 hours.  Recombinant human TGF$-\beta$2 (R$\And$D Systems, Minneapolis, MN) was added to the culture medium at a concentration of 10 ng/ml and recombinant VEGFA165 at a concentration of (5ng/ml, 50ng/ml) for all relative experiments.  NFAT inhibitor (VIVIT peptide) (EMDBiosciences, Darmstadt, Germany), was added to the culture medium at a concentration of 10$\mu$M for all relative experiments.  mRNA was then harvested at both the 3hr and 48hr time-point.
 
 \subsubsection*{RT-PCR}
 RNA extractions were performed using a Qiagen total RNA purification kit (Qiagen, Valencia, CA) and RNA was reverse transcribed to cDNA using the SuperScript III RT-PCR kit with oligo(dT) primer (Invitrogen).  Sufficient quality RNA was determined by an absorbance ratio A260/A280 of 1.8-2.1, while the quantity of RNA was determined by measuring the absorbance at 260nm (A260).  Real-time PCR experiments were conducted using the SYBR Green PCR system (Biorad, Hercules, CA) on a Biorad CFX96 cycler, with 40 cycles per sample. Cycling temperatures were as follows: denaturing, 95C; annealing, 60C; and extension, 70C.  Primers were designed to detect GAPDH, E-cadherin, vimentin, Slug, Sp1, and NFATc1 in cDNA clones: Sp1 (F-TTG AAA AAG GAG TTG GTG GC, R-TGC TGG TTC TGT AAG TTG GG, Accession NG030361.1), NFATc1 (F-GCA TCA CAG GGA AGA CCG TGT C, R-GAA GTT CAA TGT CGG AGT TTC TGA G, Accession  NG029226.1).  GAPDH, E-cadherin, vimentin, and Slug primers were taken from previously published literature \cite{Medici:2008fk}.

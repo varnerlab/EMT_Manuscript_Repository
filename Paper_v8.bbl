@@ -556,17 +556,23 @@ Suehiro Ji, Kanki Y, Makihara C, Schadler K, Miura M, et~al. (2014) Genome-wide
 \newblock J Biol Chem 289: 29044-59.
 \bibAnnoteFile{Suehiro:2014aa}
 
-\bibitem{pr3010178}
-Sagar A, Varner JD (2015) Dynamic modeling of the human coagulation cascade
-  using reduced order effective kinetic models.
-\newblock Processes 3: 178.
-\bibAnnoteFile{pr3010178}
+\bibitem{Hu:2015aa}
+Hu CY, Varner JD, Lucks JB (2015) Generating effective models and parameters
+  for rna genetic circuits.
+\newblock ACS Synth Biol 4: 914-26.
+\bibAnnoteFile{Hu:2015aa}
 
 \bibitem{pr3010138}
 Wayman JA, Sagar A, Varner JD (2015) Dynamic modeling of cell-free biochemical
   networks using effective kinetic models.
 \newblock Processes 3: 138.
 \bibAnnoteFile{pr3010138}
+
+\bibitem{pr3010178}
+Sagar A, Varner JD (2015) Dynamic modeling of the human coagulation cascade
+  using reduced order effective kinetic models.
+\newblock Processes 3: 178.
+\bibAnnoteFile{pr3010178}
 
 \bibitem{Julia}
 Bezanson J, Edelman A, Karpinski S, Shah VB (2014) Julia: {A} fresh approach to
