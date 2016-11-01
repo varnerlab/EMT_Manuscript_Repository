@@ -5,48 +5,47 @@ The style file: plos2009.bst
 Database file #1: References_v1.bib
 A bad cross reference---entry "ChangPP07"
 refers to entry "DBLP:conf/isbi/2007", which doesn't exist
-Warning--I didn't find a database entry for "Liu:2008aa"
 Warning--I didn't find a database entry for "DBLP:conf/isbi/2007"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 96 entries,
+You've used 99 entries,
             2441 wiz_defined-function locations,
-            1285 strings with 30811 characters,
-and the built_in function-call counts, 79603 in all, are:
-= -- 7268
-> -- 1516
+            1311 strings with 31778 characters,
+and the built_in function-call counts, 82241 in all, are:
+= -- 7508
+> -- 1572
 < -- 3
-+ -- 758
-- -- 379
-* -- 6775
-:= -- 9631
-add.period$ -- 196
-call.type$ -- 96
-change.case$ -- 100
++ -- 786
+- -- 393
+* -- 7000
+:= -- 9949
+add.period$ -- 202
+call.type$ -- 99
+change.case$ -- 103
 chr.to.int$ -- 0
-cite$ -- 192
-duplicate$ -- 7847
-empty$ -- 8147
-format.name$ -- 470
-if$ -- 17620
+cite$ -- 198
+duplicate$ -- 8097
+empty$ -- 8414
+format.name$ -- 487
+if$ -- 18206
 int.to.chr$ -- 0
-int.to.str$ -- 96
-missing$ -- 1051
-newline$ -- 497
-num.names$ -- 96
-pop$ -- 1115
+int.to.str$ -- 99
+missing$ -- 1086
+newline$ -- 512
+num.names$ -- 99
+pop$ -- 1153
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 718
+skip$ -- 742
 stack$ -- 0
-substring$ -- 11080
-swap$ -- 2112
+substring$ -- 11452
+swap$ -- 2182
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 664
-width$ -- 98
-write$ -- 1074
+while$ -- 687
+width$ -- 101
+write$ -- 1107
 (There was 1 error message)

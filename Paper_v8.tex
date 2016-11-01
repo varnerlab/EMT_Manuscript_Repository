@@ -173,7 +173,7 @@ Previous computational models of TGF-$\beta$ induced differentiation focused on 
 For example, Chung \emph{et al.}, constructed a model of TGF-$\beta$ receptor activation and Smad signaling using ordinary differential equations and mass-action kinetics.
 Their model suggested that a reduction of functional TGF-$\beta$ receptors in cancer cells may lead to an attenuated Smad2 signal \cite{Chung:2009jl}.
 Similarly, Vilar \emph{et al.} suggested that specific changes in receptor trafficking patterns could lead to phenotypes that favor tumorigenesis \cite{Vilar:2006gb}.
-Lu \emph{et al.} modeled the role that micro-RNA can play in EMT, suggesting cell-fate determination is regulated by the miR-34/SNAIL and miR-200/ZEB mutual-inhibition feedback circuit \cite{Lu:2013aa}.
+Several studies on ZEB signaling have modeled the role that micro-RNA can play in EMT, suggesting cell-fate determination is regulated by the miR-34/SNAIL and/or miR-200/ZEB mutual-inhibition feedback circuit \cite{Lu:2013aa,Zhang2014,Tian2013}.
 Coarse grained modeling approaches have also been applied to EMT; Steinway \emph{et al.} used discrete dynamic modeling to study developmental EMT and known dysregulations in invasive hepatocellular carcinoma \cite{Steinway:2014aa}.
 Although these models provided insight into the role of receptor dynamics, EMT induction involves many other components, including competing second messengers and interconnected transcriptional regulatory loops.
 Integrating these additional scales of molecular signaling while maintaining the capacity for robust prediction requires a new and expanded computational and experimental strategy.
@@ -458,8 +458,8 @@ to the repression of epithelial genes \cite{Liu:2008aa}.
 Thus, ZEB1 can act in parallel to SNAIL and thus be an alternative to the canonical signaling paradigm presented here.
 Lastly, while we have modeled classical protein signaling, we have not considered the role of regulatory RNAs on EMT.
 There is growing evidence that microRNAs (miRNAs) play a strong role in EMT, where several miRNAs,
-for example miR-21 and miR-31 are strongly associated with TGF-$\beta$ exposure \cite{Bullock:2012aa}, and Lu et al have suggested that
-EMT is driven by a miR-34/SNAIL and miR-200/ZEB mutual-inhibition feedback circuit \cite{Lu:2013aa}.
+for example miR-21 and miR-31 are strongly associated with TGF-$\beta$ exposure \cite{Bullock:2012aa}, and have suggested that
+the EMT process is driven by a miR-34/SNAIL and/or miR-200/ZEB feedback circuit \cite{Lu:2013aa,Zhang2014,Tian2013}.
 Addressing missing structural components like these, could generate more insight into TGF-$\beta$ signaling and its role in phenotypic transformation.
 
 \clearpage
@@ -707,8 +707,8 @@ Results are expressed as mean $\pm$ standard error, n$\geq$6. Data was analyzed 
 \begin{figure}
 \includegraphics [width=1.0\linewidth] {./figs/Fig1_coarse_network.pdf}
 \caption{Model connectivity recreates the core architecture during EMT. The EMT network contains 97 nodes (proteins, mRNA, and genes) interconnected by 169 interactions.
-Central to EMT induction, activation of the MAPK cascade occurs through TGF-$\beta$1/2 binding which activates the AP-1/Sp1 transcriptional axis. AP-1/Sp1 drives an autocrine response of TGF-$\beta$3, which activates the Smad cascade, leading to phenotypic change. Conversely, VEGF-A binding can stabalize an epithelial phenotype through NFAT activation.
-Downstream activation of $\beta$-catenin signaling due to E-cadherin loss and GSK3 inactivation of $\beta$-cateinin confinement is critical to the complete activation of the EMT program.
+Central to EMT induction, activation of the MAPK cascade occurs through TGF-$\beta$1/2 binding which activates the AP-1/Sp1 transcriptional axis. AP-1/Sp1 drives an autocrine response of TGF-$\beta$3, which activates the Smad cascade, leading to phenotypic change. Conversely, VEGF-A binding can stabilize an epithelial phenotype through NFAT activation.
+Downstream activation of $\beta$-catenin signaling due to E-cadherin loss and GSK3 inactivation of $\beta$-catenin confinement is critical to the complete activation of the EMT program.
 The complete list of molecular interactions that comprise the model is given in the supplement.}\label{fg:F1}
 \end{figure}
 

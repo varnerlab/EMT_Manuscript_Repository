@@ -110,6 +110,19 @@ Lu M, Jolly MK, Levine H, Onuchic JN, Ben-Jacob E (2013) Microrna-based
 \newblock Proc Natl Acad Sci U S A 110: 18144-9.
 \bibAnnoteFile{Lu:2013aa}
 
+\bibitem{Zhang2014}
+Zhang J, Tian XJXJ, Zhang H, Teng Y, Li R, et~al. (2014) {TGF- -induced
+  epithelial-to-mesenchymal transition proceeds through stepwise activation of
+  multiple feedback loops}.
+\newblock Science Signaling 7: ra91--ra91.
+\bibAnnoteFile{Zhang2014}
+
+\bibitem{Tian2013}
+Tian XJ, Zhang H, Xing J (2013) {Coupled reversible and irreversible bistable
+  switches underlying TGF??-induced epithelial to mesenchymal transition}.
+\newblock Biophysical Journal 105: 1079--1089.
+\bibAnnoteFile{Tian2013}
+
 \bibitem{Steinway:2014aa}
 Steinway SN, Za{\~n}udo JGT, Ding W, Rountree CB, Feith DJ, et~al. (2014)
   Network modeling of tgfb signaling in hepatocellular carcinoma
@@ -504,6 +517,12 @@ Niessen K, Fu Y, Chang L, Hoodless PA, McFadden D, et~al. (2008) Slug is a
   cellularization.
 \newblock J Cell Biol 182: 315-25.
 \bibAnnoteFile{Niessen:2008nx}
+
+\bibitem{Liu:2008aa}
+Liu Y, El-Naggar S, Darling DS, Higashi Y, Dean DC (2008) Zeb1 links
+  epithelial-mesenchymal transition and cellular senescence.
+\newblock Development 135: 579-88.
+\bibAnnoteFile{Liu:2008aa}
 
 \bibitem{Bullock:2012aa}
 Bullock MD, Sayan AE, Packham GK, Mirnezami AH (2012) Micrornas: critical
