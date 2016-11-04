@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -110,18 +110,18 @@ Lu M, Jolly MK, Levine H, Onuchic JN, Ben-Jacob E (2013) Microrna-based
 \newblock Proc Natl Acad Sci U S A 110: 18144-9.
 \bibAnnoteFile{Lu:2013aa}
 
-\bibitem{Zhang2014}
-Zhang J, Tian XJXJ, Zhang H, Teng Y, Li R, et~al. (2014) {TGF- -induced
+\bibitem{Zhang:2014aa}
+Zhang J, Tian XJ, Zhang H, Teng Y, Li R, et~al. (2014) Tgf-beta-induced
   epithelial-to-mesenchymal transition proceeds through stepwise activation of
-  multiple feedback loops}.
-\newblock Science Signaling 7: ra91--ra91.
-\bibAnnoteFile{Zhang2014}
+  multiple feedback loops.
+\newblock Sci Signal 7: ra91.
+\bibAnnoteFile{Zhang:2014aa}
 
-\bibitem{Tian2013}
+\bibitem{Tian:2013aa}
 Tian XJ, Zhang H, Xing J (2013) {Coupled reversible and irreversible bistable
-  switches underlying TGF??-induced epithelial to mesenchymal transition}.
-\newblock Biophysical Journal 105: 1079--1089.
-\bibAnnoteFile{Tian2013}
+  switches underlying TGFb-induced epithelial to mesenchymal transition}.
+\newblock Biophys J 105: 1079-89.
+\bibAnnoteFile{Tian:2013aa}
 
 \bibitem{Steinway:2014aa}
 Steinway SN, Za{\~n}udo JGT, Ding W, Rountree CB, Feith DJ, et~al. (2014)
@@ -523,6 +523,13 @@ Liu Y, El-Naggar S, Darling DS, Higashi Y, Dean DC (2008) Zeb1 links
   epithelial-mesenchymal transition and cellular senescence.
 \newblock Development 135: 579-88.
 \bibAnnoteFile{Liu:2008aa}
+
+\bibitem{Hong:2015aa}
+Hong T, Watanabe K, Ta CH, Villarreal-Ponce A, Nie Q, et~al. (2015) An
+  ovol2-zeb1 mutual inhibitory circuit governs bidirectional and multi-step
+  transition between epithelial and mesenchymal states.
+\newblock PLoS Comput Biol 11: e1004569.
+\bibAnnoteFile{Hong:2015aa}
 
 \bibitem{Bullock:2012aa}
 Bullock MD, Sayan AE, Packham GK, Mirnezami AH (2012) Micrornas: critical

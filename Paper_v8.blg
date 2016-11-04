@@ -7,45 +7,45 @@ A bad cross reference---entry "ChangPP07"
 refers to entry "DBLP:conf/isbi/2007", which doesn't exist
 Warning--I didn't find a database entry for "DBLP:conf/isbi/2007"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 99 entries,
+You've used 100 entries,
             2441 wiz_defined-function locations,
-            1311 strings with 31778 characters,
-and the built_in function-call counts, 82241 in all, are:
-= -- 7508
-> -- 1572
+            1311 strings with 31842 characters,
+and the built_in function-call counts, 83039 in all, are:
+= -- 7572
+> -- 1596
 < -- 3
-+ -- 786
-- -- 393
-* -- 7000
-:= -- 9949
-add.period$ -- 202
-call.type$ -- 99
-change.case$ -- 103
++ -- 798
+- -- 399
+* -- 7065
+:= -- 10051
+add.period$ -- 204
+call.type$ -- 100
+change.case$ -- 104
 chr.to.int$ -- 0
-cite$ -- 198
-duplicate$ -- 8097
-empty$ -- 8414
-format.name$ -- 487
-if$ -- 18206
+cite$ -- 200
+duplicate$ -- 8180
+empty$ -- 8493
+format.name$ -- 494
+if$ -- 18376
 int.to.chr$ -- 0
-int.to.str$ -- 99
-missing$ -- 1086
-newline$ -- 512
-num.names$ -- 99
-pop$ -- 1153
+int.to.str$ -- 100
+missing$ -- 1099
+newline$ -- 517
+num.names$ -- 100
+pop$ -- 1165
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 742
+skip$ -- 753
 stack$ -- 0
-substring$ -- 11452
-swap$ -- 2182
+substring$ -- 11541
+swap$ -- 2208
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 687
-width$ -- 101
-write$ -- 1107
+while$ -- 696
+width$ -- 103
+write$ -- 1118
 (There was 1 error message)

@@ -161,7 +161,8 @@ We found this partial cell type develops a network of invasive but stunted vascu
 \linenumbers
 
 \section*{Introduction}
-The epithelial to mesenchymal transition (EMT) is a broadly participating, evolutionarily conserved differentiation program essential for tissue morphogenesis, remodeling and pathological processes such as cancer \cite{Thiery:2003il}. During EMT polarized, tightly adhered epithelial cell monolayers are transformed into non-interacting motile mesenchymal cells that simultaneously degrade and synthesize extracellular matrix (ECM) components and invade into the underlying tissue space \cite{Stahl:2001pd}. EMT is the fundamental initiator of developmental processes such as embryonic gastrulation and valvulogenesis \cite{Eisenberg:1995ai} (also Kalluri J Clin Invest 2009, Thiery Cell 2009). Transforming growth factor $\beta$ (TGF-$\beta$) family members are important inducers of both developmental and pathological EMT \cite{Zavadil:2005fu,Xu:2009oq}. Decades of research has focused on identifying molecular regulators of EMT, but almost all on a single gene and in a nearly binary yes/no level of qualitative understanding. Medici and coworkers identified a core signaling program by which TGF-$\beta$ isoforms induce EMT across a variety of cell lines \cite{Medici:2006qa,Medici:2008fk}.
+The epithelial to mesenchymal transition (EMT) is a broadly participating, evolutionarily conserved differentiation program essential for tissue morphogenesis, remodeling and pathological processes such as cancer \cite{Thiery:2003il}. During EMT polarized, tightly adhered epithelial cell monolayers are transformed into non-interacting motile mesenchymal cells that simultaneously degrade and synthesize extracellular matrix (ECM) components and invade into the underlying tissue space \cite{Stahl:2001pd}. EMT is the fundamental initiator of developmental processes such as embryonic gastrulation and valvulogenesis \cite{Eisenberg:1995ai} (also Kalluri J Clin Invest 2009, Thiery Cell 2009). Transforming growth factor $\beta$ (TGF-$\beta$) family members are important inducers of both developmental and pathological EMT \cite{Zavadil:2005fu,Xu:2009oq}. Decades of research has focused on identifying molecular regulators of EMT, but almost all on a single gene and in a nearly binary yes/no level of qualitative understanding. Medici and coworkers identified a core signaling program by which
+TGF-$\beta$ isoforms induce EMT across a variety of cell lines \cite{Medici:2006qa,Medici:2008fk}.
 This program involves carefully orchestrated rounds of gene expression driven by the Smad and Snail families of transcription factors as well as
 other key factors such as lymphoid enhancer-binding factor 1 (LEF-1), nuclear factor of activated T-cells, cytoplasmic 1 (NFATc1), and specificity protein 1 (Sp1).
 Coregulators such as $\beta$-catenin, NF-$\kappa$B, and the ErbB family of receptor tyrosine kinases however also participate in EMT regulation, but the degree of each's influence is difficult to ascertain in isolation \cite{Kim:2002lh,Jiang:2007aa,Huber:2004aa,Hardy:2010aa}.
@@ -173,7 +174,7 @@ Previous computational models of TGF-$\beta$ induced differentiation focused on 
 For example, Chung \emph{et al.}, constructed a model of TGF-$\beta$ receptor activation and Smad signaling using ordinary differential equations and mass-action kinetics.
 Their model suggested that a reduction of functional TGF-$\beta$ receptors in cancer cells may lead to an attenuated Smad2 signal \cite{Chung:2009jl}.
 Similarly, Vilar \emph{et al.} suggested that specific changes in receptor trafficking patterns could lead to phenotypes that favor tumorigenesis \cite{Vilar:2006gb}.
-Several studies on ZEB signaling have modeled the role that micro-RNA can play in EMT, suggesting cell-fate determination is regulated by the miR-34/SNAIL and/or miR-200/ZEB mutual-inhibition feedback circuit \cite{Lu:2013aa,Zhang2014,Tian2013}.
+Several studies on ZEB signaling have modeled the role that microRNA can play in EMT, suggesting cell-fate determination is regulated by the miR-34/SNAIL and/or miR-200/ZEB mutual-inhibition feedback circuits \cite{Lu:2013aa,Zhang:2014aa,Tian:2013aa}.
 Coarse grained modeling approaches have also been applied to EMT; Steinway \emph{et al.} used discrete dynamic modeling to study developmental EMT and known dysregulations in invasive hepatocellular carcinoma \cite{Steinway:2014aa}.
 Although these models provided insight into the role of receptor dynamics, EMT induction involves many other components, including competing second messengers and interconnected transcriptional regulatory loops.
 Integrating these additional scales of molecular signaling while maintaining the capacity for robust prediction requires a new and expanded computational and experimental strategy.
@@ -257,8 +258,7 @@ TGF$-\beta$3 (10 a.u.) in combination with downstream inhibitors (DN-Smad4 and D
 
 The predictive power of the ensemble was tested using cross validation and by comparing simulations with data not used for model training.
 In whole, all of our training objectives were statistically significant (at a 95\% confidence interval) compared to a randomized parameter family (N = 100)
-generated from a random starting point. Conversely, we \emph{predicted} all of the training objectives, at a 95\% confidence interval compared to randomized parameters (Wicoxon non-parametric test). The model also captured the temporal gene expression responses of E-cadherin, pSmad2, and LEF-1 (not used for model training) to within one-standard deviation (up to the 48 hr time-point) (Fig. \ref{fg:F2}J-L). Taken together, the model captured the key signaling events revealed by Medici \emph{et al.} \cite{Medici:2008fk} that drive the phenotypic conversion.
-A listing of objective function values resulting from training, cross validation and the random parameter control is given in the supplement (Fig. \ref{fg:ObjTable}).
+generated from a random starting point. Conversely, we \emph{predicted} all of the training objectives, at a 95\% confidence interval compared to randomized parameters (Wicoxon non-parametric test). The model also captured the temporal gene expression responses of E-cadherin, pSmad2, and LEF-1 (not used for model training) to within one-standard deviation (up to the 48 hr time-point) (Fig. \ref{fg:F2}J-L). Taken together, the model captured the key signaling events revealed by Medici \emph{et al.} \cite{Medici:2008fk} that drive the phenotypic conversion. A listing of objective function values resulting from training, cross validation and the random parameter control is given in the supplement (Fig. \ref{fg:ObjTable}).
 
 \subsection*{Identification of a novel LEF-1 regulator}
 During model identification, we found that consistent TGF-$\beta$ induced EMT from a stable epithelial cell population required an additional regulatory protein.
@@ -361,8 +361,7 @@ TGF$-\beta$1/2 treatment alone resulted in irregular and spindle shaped morpholo
 Combined VEGF-A and TGF$-\beta$1/2 promoted morphology between these extremes.
 VIVIT mediated NFATc inhibition significantly reduced the circularity index, similar to TGF$-\beta$1/2 treatment (Fig. \ref{fg:F6}F).
 VEGF-A treatment also induced the formation of tubular structures (acini), but the number of tubular branches relative to total acini was significantly increased upon combined TGF$-\beta$1/2 and VEGF-A.
-No tubular structures were identified within the DLD1 constructs during the 7 day tubulogenesis endpoints, supporting that MCF10A and DLD1 cells have some cell-type specific EMT sensitivity despite their underlying competency for acquiring a heterogeneous phenotype. This suggests that initial EMT sensitivity of a cell influences downstream functional response from TGF-b and VEGFA stimulation.
-Together, these results establish that VEGF-A and TGF$-\beta$1/2 ligand concentrations potentiate between acini and ductal branch formation in 3D culture, and are dependent upon NFATc activity.
+No tubular structures were identified within the DLD1 constructs during the 7 day tubulogenesis endpoints, supporting that MCF10A and DLD1 cells have some cell-type specific EMT sensitivity despite their underlying competency for acquiring a heterogeneous phenotype. This suggests that initial EMT sensitivity of a cell influences downstream functional response from TGF-b and VEGFA stimulation. Together, these results establish that VEGF-A and TGF$-\beta$1/2 ligand concentrations potentiate between acini and ductal branch formation in 3D culture, and are dependent upon NFATc activity.
 
 
 \clearpage
@@ -456,11 +455,13 @@ In addition, other important regulatory proteins such as ZEB1 should be added to
 ZEB1 can activate the expression of mesenchymal genes such as collagens, smooth muscle actin and myosin, Vimentin while simultaneously contributing
 to the repression of epithelial genes \cite{Liu:2008aa}.
 Thus, ZEB1 can act in parallel to SNAIL and thus be an alternative to the canonical signaling paradigm presented here.
+Hong et al. developed an ODE model of ZEB1 signaling in MCF10A cells which also demonstrated intermediate EMT states \cite{Hong:2015aa}.
+However, given that we do not have ZEB1 in our canonical architecture, this suggests multiple types of hybrid phenotypes could exist within the EMT program.
 Lastly, while we have modeled classical protein signaling, we have not considered the role of regulatory RNAs on EMT.
 There is growing evidence that microRNAs (miRNAs) play a strong role in EMT, where several miRNAs,
 for example miR-21 and miR-31 are strongly associated with TGF-$\beta$ exposure \cite{Bullock:2012aa}, and have suggested that
-the EMT process is driven by a miR-34/SNAIL and/or miR-200/ZEB feedback circuit \cite{Lu:2013aa,Zhang2014,Tian2013}.
-Addressing missing structural components like these, could generate more insight into TGF-$\beta$ signaling and its role in phenotypic transformation.
+the EMT process is driven by a miR-34/SNAIL and/or miR-200/ZEB feedback circuit \cite{Lu:2013aa,Zhang:2014aa,Tian:2013aa}.
+Addressing missing structural components like these (and potentially others), could generate more insight into TGF-$\beta$ signaling and its role in phenotypic transformation.
 
 \clearpage
 
@@ -496,11 +497,11 @@ The EMT gene expression program was initiated by the binding of TGF$-\beta$ isof
 Repression of E-cadherin expression is the central event in the transition from an epithelial to a mesenchymal phenotype \cite{Cano:2000kh}.
 However, this transition is not solely driven by transcriptional events.
 At the protein level, the repression of E-cadherin leads to a release of $\beta$-catenin from cell membrane.
-Cystolic $\beta$-catenin then translocates to the nucleus and forms transcriptionally-active complexes with immunoglobulin transcription factor 2 (TCF-4)
+Cytosolic $\beta$-catenin then translocates to the nucleus and forms transcriptionally-active complexes with immunoglobulin transcription factor 2 (TCF-4)
 to drive TGF$-\beta$3 expression \cite{Medici:2008fk}.
 The PI3K to GSK3 pathway was included and acted as an activating mechanism of $\beta$-catenin signaling through TGF$-\beta$3 signaling \cite{Medici:2008fk}.
 GSK3 is known to act on $\beta$-catenin signaling through APC complex associated ubiquitin-proteasome pathway.
-The APC complex is represented in our model and serves as a second reservoir of $\beta$-cateinin in untransformed cells whose sequestration is regulated by GSK3 \cite{Zhou:2004kx,Larue:2005vn,Medici:2008fk}.
+The APC complex is represented in our model and serves as a second reservoir of $\beta$-catenin in untransformed cells whose sequestration is regulated by GSK3 \cite{Zhou:2004kx,Larue:2005vn,Medici:2008fk}.
 Lastly, VEGF-A activation of NFATc1 takes place through calcineurin signaling leading to an enhancement of E-cadherin expression \cite{Suehiro:2014aa},
 as supported by our VEGF-A experimental data (Fig. \ref{fg:VEGFA-Data}).
 
