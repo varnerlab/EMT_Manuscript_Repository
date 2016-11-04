@@ -104,25 +104,6 @@ Vilar JMG, Jansen R, Sander C (2006) Signal processing in the tgf-beta
 \newblock PLoS Comput Biol 2: e3.
 \bibAnnoteFile{Vilar:2006gb}
 
-\bibitem{Lu:2013aa}
-Lu M, Jolly MK, Levine H, Onuchic JN, Ben-Jacob E (2013) Microrna-based
-  regulation of epithelial-hybrid-mesenchymal fate determination.
-\newblock Proc Natl Acad Sci U S A 110: 18144-9.
-\bibAnnoteFile{Lu:2013aa}
-
-\bibitem{Zhang:2014aa}
-Zhang J, Tian XJ, Zhang H, Teng Y, Li R, et~al. (2014) Tgf-beta-induced
-  epithelial-to-mesenchymal transition proceeds through stepwise activation of
-  multiple feedback loops.
-\newblock Sci Signal 7: ra91.
-\bibAnnoteFile{Zhang:2014aa}
-
-\bibitem{Tian:2013aa}
-Tian XJ, Zhang H, Xing J (2013) {Coupled reversible and irreversible bistable
-  switches underlying TGFb-induced epithelial to mesenchymal transition}.
-\newblock Biophys J 105: 1079-89.
-\bibAnnoteFile{Tian:2013aa}
-
 \bibitem{Steinway:2014aa}
 Steinway SN, Za{\~n}udo JGT, Ding W, Rountree CB, Feith DJ, et~al. (2014)
   Network modeling of tgfb signaling in hepatocellular carcinoma
@@ -537,6 +518,25 @@ Bullock MD, Sayan AE, Packham GK, Mirnezami AH (2012) Micrornas: critical
   transition (met) in cancer progression.
 \newblock Biol Cell 104: 3-12.
 \bibAnnoteFile{Bullock:2012aa}
+
+\bibitem{Lu:2013aa}
+Lu M, Jolly MK, Levine H, Onuchic JN, Ben-Jacob E (2013) Microrna-based
+  regulation of epithelial-hybrid-mesenchymal fate determination.
+\newblock Proc Natl Acad Sci U S A 110: 18144-9.
+\bibAnnoteFile{Lu:2013aa}
+
+\bibitem{Zhang:2014aa}
+Zhang J, Tian XJ, Zhang H, Teng Y, Li R, et~al. (2014) Tgf-beta-induced
+  epithelial-to-mesenchymal transition proceeds through stepwise activation of
+  multiple feedback loops.
+\newblock Sci Signal 7: ra91.
+\bibAnnoteFile{Zhang:2014aa}
+
+\bibitem{Tian:2013aa}
+Tian XJ, Zhang H, Xing J (2013) {Coupled reversible and irreversible bistable
+  switches underlying TGFb-induced epithelial to mesenchymal transition}.
+\newblock Biophys J 105: 1079-89.
+\bibAnnoteFile{Tian:2013aa}
 
 \bibitem{Linding:2007fk}
 Linding R, Jensen LJ, Ostheimer GJ, van Vugt MATM, J{\o}rgensen C, et~al.
