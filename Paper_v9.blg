@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Paper_v9.aux
+The style file: plos2015.bst
+Database file #1: References_v1.bib
+A bad cross reference---entry "ChangPP07"
+refers to entry "DBLP:conf/isbi/2007", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/isbi/2007"
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+You've used 100 entries,
+            3058 wiz_defined-function locations,
+            1398 strings with 31791 characters,
+and the built_in function-call counts, 197033 in all, are:
+= -- 24588
+> -- 1680
+< -- 4
++ -- 862
+- -- 420
+* -- 17011
+:= -- 21720
+add.period$ -- 480
+call.type$ -- 100
+change.case$ -- 4
+chr.to.int$ -- 0
+cite$ -- 100
+duplicate$ -- 14767
+empty$ -- 18835
+format.name$ -- 515
+if$ -- 45686
+int.to.chr$ -- 0
+int.to.str$ -- 100
+missing$ -- 1016
+newline$ -- 584
+num.names$ -- 100
+pop$ -- 1457
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1645
+stack$ -- 0
+substring$ -- 40362
+swap$ -- 2597
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 1026
+width$ -- 103
+write$ -- 1266
+(There was 1 error message)
