@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  22 NOV 2016 16:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  23 NOV 2016 09:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1120,23 +1120,23 @@ Package pdftex.def Info: PLOSlogo.png used on input line 321.
  [27]
 File: PLOSlogo.png Graphic file (type png)
  <use PLOSlogo.png>
-Package pdftex.def Info: PLOSlogo.png used on input line 387.
+Package pdftex.def Info: PLOSlogo.png used on input line 401.
 (pdftex.def)             Requested size: 111.41597pt x 39.14615pt.
  [28]
 File: PLOSlogo.png Graphic file (type png)
  <use PLOSlogo.png>
-Package pdftex.def Info: PLOSlogo.png used on input line 466.
+Package pdftex.def Info: PLOSlogo.png used on input line 474.
 (pdftex.def)             Requested size: 111.41597pt x 39.14615pt.
  [29]
 File: PLOSlogo.png Graphic file (type png)
 
 <use PLOSlogo.png>
-Package pdftex.def Info: PLOSlogo.png used on input line 536.
+Package pdftex.def Info: PLOSlogo.png used on input line 543.
 (pdftex.def)             Requested size: 111.41597pt x 39.14615pt.
  [30]
 File: PLOSlogo.png Graphic file (type png)
  <use PLOSlogo.png>
-Package pdftex.def Info: PLOSlogo.png used on input line 614.
+Package pdftex.def Info: PLOSlogo.png used on input line 627.
 (pdftex.def)             Requested size: 111.41597pt x 39.14615pt.
  [31])
 File: PLOSlogo.png Graphic file (type png)
@@ -1144,7 +1144,7 @@ File: PLOSlogo.png Graphic file (type png)
 Package pdftex.def Info: PLOSlogo.png used on input line 663.
 (pdftex.def)             Requested size: 111.41597pt x 39.14615pt.
  [32]
-<./figs/Fig1_coarse_network.pdf, id=528, 794.97pt x 594.22pt>
+<./figs/Fig1_coarse_network.pdf, id=527, 794.97pt x 594.22pt>
 File: ./figs/Fig1_coarse_network.pdf Graphic file (type pdf)
 
 <use ./figs/Fig1_coarse_network.pdf>
@@ -1155,7 +1155,7 @@ File: PLOSlogo.png Graphic file (type png)
  <use PLOSlogo.png>
 Package pdftex.def Info: PLOSlogo.png used on input line 673.
 (pdftex.def)             Requested size: 111.41597pt x 39.14615pt.
- [33 <./figs/Fig1_coarse_network.pdf>] <./figs/Fig2_training.pdf, id=548, 614.2
+ [33 <./figs/Fig1_coarse_network.pdf>] <./figs/Fig2_training.pdf, id=547, 614.2
 95pt x 682.55pt>
 File: ./figs/Fig2_training.pdf Graphic file (type pdf)
 
@@ -1166,7 +1166,7 @@ File: PLOSlogo.png Graphic file (type png)
  <use PLOSlogo.png>
 Package pdftex.def Info: PLOSlogo.png used on input line 685.
 (pdftex.def)             Requested size: 111.41597pt x 39.14615pt.
- [34 <./figs/Fig2_training.pdf>] <./figs/Fig3_phenotype.pdf, id=570, 614.295pt 
+ [34 <./figs/Fig2_training.pdf>] <./figs/Fig3_phenotype.pdf, id=569, 614.295pt 
 x 616.3025pt>
 File: ./figs/Fig3_phenotype.pdf Graphic file (type pdf)
 
@@ -1182,7 +1182,7 @@ File: PLOSlogo.png Graphic file (type png)
 Package pdftex.def Info: PLOSlogo.png used on input line 700.
 (pdftex.def)             Requested size: 111.41597pt x 39.14615pt.
  [35 <./figs/Fig3_phenotype.pdf>]
-<./figs/Fig4_mechanism.pdf, id=591, 794.97pt x 560.0925pt>
+<./figs/Fig4_mechanism.pdf, id=590, 794.97pt x 560.0925pt>
 File: ./figs/Fig4_mechanism.pdf Graphic file (type pdf)
 
 <use ./figs/Fig4_mechanism.pdf>
@@ -1192,7 +1192,7 @@ File: PLOSlogo.png Graphic file (type png)
  <use PLOSlogo.png>
 Package pdftex.def Info: PLOSlogo.png used on input line 712.
 (pdftex.def)             Requested size: 111.41597pt x 39.14615pt.
- [36 <./figs/Fig4_mechanism.pdf>] <./figs/Fig-5-MCF10A-Validation.pdf, id=611, 
+ [36 <./figs/Fig4_mechanism.pdf>] <./figs/Fig-5-MCF10A-Validation.pdf, id=610, 
 614.295pt x 602.25pt>
 File: ./figs/Fig-5-MCF10A-Validation.pdf Graphic file (type pdf)
 
@@ -1209,7 +1209,7 @@ File: PLOSlogo.png Graphic file (type png)
 Package pdftex.def Info: PLOSlogo.png used on input line 719.
 (pdftex.def)             Requested size: 111.41597pt x 39.14615pt.
  [37 <./figs/Fig-5-MCF10A-Validation.pdf>]
-<./figs/Fig-6-Phenotyping.pdf, id=634, 523.9575pt x 794.97pt>
+<./figs/Fig-6-Phenotyping.pdf, id=633, 523.9575pt x 794.97pt>
 File: ./figs/Fig-6-Phenotyping.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-6-Phenotyping.pdf>
@@ -1262,9 +1262,12 @@ d
 <to be read again> 
                    \relax 
 l.72 \begin{equation}
-                     \label{eqn_cost2}pdfTeX warning (ext4): destination with t
-he same identifier (name{equation.0.2}) has been already used, duplicate ignore
-d
+                     \label{eqn_cost2}
+
+LaTeX Warning: Citation `IMAGEJ' on page S-2 undefined on input line 78.
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.0.2}
+) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.80 \begin{equation}
@@ -1287,7 +1290,7 @@ nored
                    \relax 
 l.80 \begin{equation}
                      \label{norm_exp_data}
-<./figs/Fig-Supplemental-Error-Table.pdf, id=721, 794.97pt x 260.975pt>
+<./figs/Fig-Supplemental-Error-Table.pdf, id=719, 794.97pt x 260.975pt>
 File: ./figs/Fig-Supplemental-Error-Table.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-Supplemental-Error-Table.pdf>
@@ -1295,7 +1298,7 @@ Package pdftex.def Info: ./figs/Fig-Supplemental-Error-Table.pdf used on input
 line 92.
 (pdftex.def)             Requested size: 379.4175pt x 124.55775pt.
 
-<./figs/Fig-3-Supplemental-DLD1.pdf, id=722, 556.0775pt x 567.11874pt>
+<./figs/Fig-3-Supplemental-DLD1.pdf, id=720, 556.0775pt x 567.11874pt>
 File: ./figs/Fig-3-Supplemental-DLD1.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-3-Supplemental-DLD1.pdf>
@@ -1303,7 +1306,7 @@ Package pdftex.def Info: ./figs/Fig-3-Supplemental-DLD1.pdf used on input line
 236.
 (pdftex.def)             Requested size: 379.4175pt x 386.95963pt.
 
-<./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf, id=723, 794.97pt x 600.2425pt>
+<./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf, id=721, 794.97pt x 600.2425pt>
 File: ./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf>
@@ -1325,7 +1328,7 @@ File: PLOSlogo.png Graphic file (type png)
 Package pdftex.def Info: PLOSlogo.png used on input line 265.
 (pdftex.def)             Requested size: 111.41597pt x 39.14615pt.
  [4 <./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf>] <./figs/Fig-Supplemental-Dat
-a-VEGFA.pdf, id=781, 393.47pt x 636.3775pt>
+a-VEGFA.pdf, id=779, 393.47pt x 636.3775pt>
 File: ./figs/Fig-Supplemental-Data-VEGFA.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-Supplemental-Data-VEGFA.pdf>
@@ -1346,12 +1349,16 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 746.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 746.
 Package rerunfilecheck Info: File `Paper_v9.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 746.
  ) 
 Here is how much of TeX's memory you used:
- 13318 strings out of 493089
- 196306 string characters out of 6134842
- 466202 words of memory out of 5000000
+ 13317 strings out of 493089
+ 196295 string characters out of 6134842
+ 466172 words of memory out of 5000000
  16289 multiletter control sequences out of 15000+600000
  15810 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1376,10 +1383,10 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
 5/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2015/t
 exmf-dist/fonts/type1/public/marvosym/marvosym.pfb>
-Output written on Paper_v9.pdf (43 pages, 19245590 bytes).
+Output written on Paper_v9.pdf (43 pages, 19245943 bytes).
 PDF statistics:
- 920 PDF objects out of 1000 (max. 8388607)
- 800 compressed objects within 8 object streams
- 236 named destinations out of 1000 (max. 500000)
+ 918 PDF objects out of 1000 (max. 8388607)
+ 798 compressed objects within 8 object streams
+ 235 named destinations out of 1000 (max. 500000)
  14392 words of extra memory for PDF output out of 14400 (max. 10000000)
 
