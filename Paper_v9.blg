@@ -2,54 +2,149 @@ This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Paper_v9.aux
 The style file: plos2015.bst
-Database file #1: References_v1.bib
-A bad cross reference---entry "ChangPP07"
-refers to entry "DBLP:conf/isbi/2007", which doesn't exist
-Warning--I didn't find a database entry for "IMAGEJ"
-Warning--I didn't find a database entry for "DBLP:conf/isbi/2007"
+I found no \bibdata command---while reading file Paper_v9.aux
+Warning--I didn't find a database entry for "Thiery:2003il"
+Warning--I didn't find a database entry for "Stahl:2001pd"
+Warning--I didn't find a database entry for "Eisenberg:1995ai"
+Warning--I didn't find a database entry for "Zavadil:2005fu"
+Warning--I didn't find a database entry for "Xu:2009oq"
+Warning--I didn't find a database entry for "Medici:2006qa"
+Warning--I didn't find a database entry for "Medici:2008fk"
+Warning--I didn't find a database entry for "Kim:2002lh"
+Warning--I didn't find a database entry for "Jiang:2007aa"
+Warning--I didn't find a database entry for "Huber:2004aa"
+Warning--I didn't find a database entry for "Hardy:2010aa"
+Warning--I didn't find a database entry for "Ahmed:2007mi"
+Warning--I didn't find a database entry for "Chung:2009jl"
+Warning--I didn't find a database entry for "Vilar:2006gb"
+Warning--I didn't find a database entry for "Steinway:2014aa"
+Warning--I didn't find a database entry for "Cirit:2012kx"
+Warning--I didn't find a database entry for "Morris:2011ys"
+Warning--I didn't find a database entry for "2001_bailey_NatBiotech"
+Warning--I didn't find a database entry for "Machta:2013by"
+Warning--I didn't find a database entry for "Song:2010fk"
+Warning--I didn't find a database entry for "Lequieu:2011fj"
+Warning--I didn't find a database entry for "2010_luan_varner_MolBioSys"
+Warning--I didn't find a database entry for "2011_kalita_brasier_JBC"
+Warning--I didn't find a database entry for "2011_hasenauer_allgower_BMCBioinfo"
+Warning--I didn't find a database entry for "2012_creixell_linding_NatBiotech"
+Warning--I didn't find a database entry for "Schoeberl:2002rv"
+Warning--I didn't find a database entry for "Chen:2009uq"
+Warning--I didn't find a database entry for "Tasseff:2011ve"
+Warning--I didn't find a database entry for "Gadkar:2005vn"
+Warning--I didn't find a database entry for "Lian:2011bs"
+Warning--I didn't find a database entry for "Milo:2010aa"
+Warning--I didn't find a database entry for "Park:2010fu"
+Warning--I didn't find a database entry for "Hemavathy:2000aa"
+Warning--I didn't find a database entry for "Hemavathy:2000ab"
+Warning--I didn't find a database entry for "Dhasarathy:2011aa"
+Warning--I didn't find a database entry for "Guaita:2002aa"
+Warning--I didn't find a database entry for "Jackstadt:2013aa"
+Warning--I didn't find a database entry for "Eastman:1999aa"
+Warning--I didn't find a database entry for "Aramburu:1999if"
+Warning--I didn't find a database entry for "Dhimolea2010"
+Warning--I didn't find a database entry for "Butcher:2004aa"
+Warning--I didn't find a database entry for "Hong:2013mi"
+Warning--I didn't find a database entry for "Nagy:2007lh"
+Warning--I didn't find a database entry for "Ferrara:2002kx"
+Warning--I didn't find a database entry for "Willis:2007uq"
+Warning--I didn't find a database entry for "Polyak2009"
+Warning--I didn't find a database entry for "Strauss:2011fk"
+Warning--I didn't find a database entry for "Neve:2006uq"
+Warning--I didn't find a database entry for "Welch-Reardon:2014aa"
+Warning--I didn't find a database entry for "Zajchowski:2001kx"
+Warning--I didn't find a database entry for "Mancini2009"
+Warning--I didn't find a database entry for "Singh:2010jx"
+Warning--I didn't find a database entry for "Debnath2003"
+Warning--I didn't find a database entry for "Pearson:2007qq"
+Warning--I didn't find a database entry for "OBrien2004"
+Warning--I didn't find a database entry for "Debnath:2005qc"
+Warning--I didn't find a database entry for "Moles:2003aa"
+Warning--I didn't find a database entry for "Rodriguez-Fernandez:2013aa"
+Warning--I didn't find a database entry for "Villaverde:2014aa"
+Warning--I didn't find a database entry for "Choi:2012bs"
+Warning--I didn't find a database entry for "Terfve:2012kq"
+Warning--I didn't find a database entry for "Hyduke:2010rt"
+Warning--I didn't find a database entry for "Wayman2013"
+Warning--I didn't find a database entry for "Sainani2012"
+Warning--I didn't find a database entry for "Lee:2009fk"
+Warning--I didn't find a database entry for "Swain:2002ve"
+Warning--I didn't find a database entry for "Handl:2007fk"
+Warning--I didn't find a database entry for "Vega:2004qf"
+Warning--I didn't find a database entry for "Nawshad:2003ff"
+Warning--I didn't find a database entry for "Cano:2000kh"
+Warning--I didn't find a database entry for "Arce:2009pr"
+Warning--I didn't find a database entry for "Grumolato2013"
+Warning--I didn't find a database entry for "Wu:2009cr"
+Warning--I didn't find a database entry for "Sullivan:2009bh"
+Warning--I didn't find a database entry for "Niessen:2008nx"
+Warning--I didn't find a database entry for "Liu:2008aa"
+Warning--I didn't find a database entry for "Hong:2015aa"
+Warning--I didn't find a database entry for "Bullock:2012aa"
+Warning--I didn't find a database entry for "Lu:2013aa"
+Warning--I didn't find a database entry for "Zhang:2014aa"
+Warning--I didn't find a database entry for "Tian:2013aa"
+Warning--I didn't find a database entry for "Linding:2007fk"
+Warning--I didn't find a database entry for "Jensen:2009fk"
+Warning--I didn't find a database entry for "Zhou:2004kx"
+Warning--I didn't find a database entry for "Larue:2005vn"
+Warning--I didn't find a database entry for "Derynck:2003fc"
+Warning--I didn't find a database entry for "Massague:2005qc"
+Warning--I didn't find a database entry for "Nawshad:2007kl"
+Warning--I didn't find a database entry for "Medici2011"
+Warning--I didn't find a database entry for "Suehiro:2014aa"
+Warning--I didn't find a database entry for "Hu:2015aa"
+Warning--I didn't find a database entry for "pr3010138"
+Warning--I didn't find a database entry for "pr3010178"
+Warning--I didn't find a database entry for "Julia"
+Warning--I didn't find a database entry for "Hindmarsh2005"
+Warning--I didn't find a database entry for "JuPOETs-BioArXiv"
+Warning--I didn't find a database entry for "kohavi1995study"
+Warning--I didn't find a database entry for "ChangPP07"
+Warning--I didn't find a database entry for "Polizzotti"
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 99 entries,
+You've used 0 entries,
             3058 wiz_defined-function locations,
-            1394 strings with 31683 characters,
-and the built_in function-call counts, 195464 in all, are:
-= -- 24381
-> -- 1668
-< -- 4
-+ -- 850
-- -- 417
-* -- 16886
-:= -- 21549
-add.period$ -- 476
-call.type$ -- 99
-change.case$ -- 4
+            819 strings with 6929 characters,
+and the built_in function-call counts, 27 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 16
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 99
-duplicate$ -- 14612
-empty$ -- 18690
-format.name$ -- 511
-if$ -- 45316
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
 int.to.chr$ -- 0
-int.to.str$ -- 99
-missing$ -- 1007
-newline$ -- 579
-num.names$ -- 99
-pop$ -- 1442
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1633
+skip$ -- 1
 stack$ -- 0
-substring$ -- 40088
-swap$ -- 2577
-text.length$ -- 4
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 1017
-width$ -- 101
-write$ -- 1255
+while$ -- 0
+width$ -- 0
+write$ -- 2
 (There was 1 error message)

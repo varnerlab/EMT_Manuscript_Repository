@@ -161,7 +161,7 @@ We found this partial cell type develops a network of invasive but stunted vascu
 \linenumbers
 
 \section*{Introduction}
-The epithelial to mesenchymal transition (EMT) is a broadly participating, evolutionarily conserved differentiation program essential for tissue morphogenesis, remodeling and pathological processes such as cancer \cite{Thiery:2003il}. During EMT polarized, tightly adhered epithelial cell monolayers are transformed into non-interacting motile mesenchymal cells that simultaneously degrade and synthesize extracellular matrix (ECM) components and invade into the underlying tissue space \cite{Stahl:2001pd}. EMT is the fundamental initiator of developmental processes such as embryonic gastrulation and valvulogenesis \cite{Eisenberg:1995ai} (also Kalluri J Clin Invest 2009, Thiery Cell 2009). Transforming growth factor $\beta$ (TGF-$\beta$) family members are important inducers of both developmental and pathological EMT \cite{Zavadil:2005fu,Xu:2009oq}. Decades of research has focused on identifying molecular regulators of EMT, but almost all on a single gene and in a nearly binary yes/no level of qualitative understanding. Medici and coworkers identified a core signaling program by which
+The epithelial to mesenchymal transition (EMT) is a broadly participating, evolutionarily conserved differentiation program essential for tissue morphogenesis, remodeling and pathological processes such as cancer \cite{Thiery:2003il}. During EMT polarized, tightly adhered epithelial cell monolayers are transformed into non-interacting motile mesenchymal cells that simultaneously degrade and synthesize extracellular matrix (ECM) components and invade into the underlying tissue space \cite{Stahl:2001pd}. EMT is the fundamental initiator of developmental processes such as embryonic gastrulation and valvulogenesis \cite{Eisenberg:1995ai}. Transforming growth factor $\beta$ (TGF-$\beta$) family members are important inducers of both developmental and pathological EMT \cite{Zavadil:2005fu,Xu:2009oq}. Decades of research has focused on identifying molecular regulators of EMT, but almost all on a single gene and in a nearly binary yes/no level of qualitative understanding. Medici and coworkers identified a core signaling program by which
 TGF-$\beta$ isoforms induce EMT across a variety of cell lines \cite{Medici:2006qa,Medici:2008fk}.
 This program involves carefully orchestrated rounds of gene expression driven by the Smad and Snail families of transcription factors as well as
 other key factors such as lymphoid enhancer-binding factor 1 (LEF-1), nuclear factor of activated T-cells, cytoplasmic 1 (NFATc1), and specificity protein 1 (Sp1).
@@ -174,7 +174,7 @@ Previous computational models of TGF-$\beta$ induced differentiation focused on 
 For example, Chung \emph{et al.}, constructed a model of TGF-$\beta$ receptor activation and Smad signaling using ordinary differential equations and mass-action kinetics.
 Their model suggested that a reduction of functional TGF-$\beta$ receptors in cancer cells may lead to an attenuated Smad2 signal \cite{Chung:2009jl}.
 Similarly, Vilar \emph{et al.} suggested that specific changes in receptor trafficking patterns could lead to phenotypes that favor tumorigenesis \cite{Vilar:2006gb}.
-Coarse grained modeling approaches have also been applied to EMT; Steinway \emph{et al.} used discrete dynamic modeling to study developmental EMT and known dysregulations in invasive hepatocellular carcinoma \cite{Steinway:2014aa}.
+Coarse grained modeling approaches have also been applied to EMT; Steinway \emph{et al.} used discrete dynamic modeling to study developmental EMT and known dysregulation in invasive hepatocellular carcinoma \cite{Steinway:2014aa}.
 Although these models provided insight into the role of receptor dynamics, EMT induction involves many other components, including competing second messengers and interconnected transcriptional regulatory loops.
 Integrating these additional scales of molecular signaling while maintaining the capacity for robust prediction requires a new and expanded computational and experimental strategy.
 Data-driven systems approaches \cite{Cirit:2012kx} or logical model formulations \cite{Morris:2011ys} are emerging paradigms that constrain model complexity through the incorporation of training and validation data.
@@ -246,7 +246,6 @@ Each phase involved the hierarchal expression and/or post-translational modifica
 During the first phase, stimulation with TGF-$\beta$1/2 (10 a.u.) activated both the SMAD and MAPK pathways.
 MAPK activation resulted in the phosphorylation of the transcription factor activator protein 1 (AP-1), which in-turn upregulated the expression of Snail, a well established transcriptional repressor (Fig. \ref{fg:F2}A).
 Snail expression was MAPK-dependent; the MEK inhibitor U0126 blocked AP-1 activation and Snail expression following TGF-$\beta$1/2 exposure (Fig. \ref{fg:F2}A, Lane 3).
-Similar results were obtained for Slug expression, confirming initial activation through the MAPK pathway (data not shown).
 Overexpression of either Snail or Slug upregulated TGF-$\beta$3 expression (Fig. \ref{fg:F2}C) while simultaneously downregulating E-cadeherin expression (Fig. \ref{fg:F2}F).
 During the second phase, TGF$-\beta$3 secretion and the subsequent autocrine signaling resulted in the upregulation of mesenchymal marker expression.
 The TGF$-\beta$3 induced gene expression program involves a complex hierarchy of transcriptional and post-translational regulatory events.
@@ -254,6 +253,9 @@ Absence of E-cadherin indirectly promoted TGF$-\beta$3 expression through the $\
 Conversely, over-expression of E-cadherin inhibited the TGF$-\beta$3 autocrine production by sequestering cytosolic $\beta$-catenin, thereby blocking EMT (Fig. \ref{fg:F2}C, Lane 4 or 5).
 TGF$-\beta$3 signaled through the Smad pathway to regulate LEF-1 expression and downstream target EMT genes (Fig. \ref{fg:F2}G).
 TGF$-\beta$3 (10 a.u.) in combination with downstream inhibitors (DN-Smad4 and DN-LEF-1) completely inhibited Vimentin expression, while elevating E-cadherin expression (Fig. \ref{fg:F2}H,I).
+
+% JV REMOVED 11/28/16
+%Similar results were obtained for Slug expression, confirming initial activation through the MAPK pathway (data not shown).
 
 The predictive power of the ensemble was tested using cross validation and by comparing simulations with data not used for model training.
 In whole, all of our training objectives were statistically significant (at a 95\% confidence interval) compared to a randomized parameter family (N = 100)
@@ -507,7 +509,7 @@ The EMT model integrated kinetic ODE modeling with a rule-based description of s
 Regulation of enzyme activity or gene expression processes was modeled by combining individual regulatory contributions, quantified by transfer-functions,
 into a control coefficients using an integration rule. These control coefficients then modified the kinetic rates that appeared in the model.
 This strategy is similar in spirit to the Constrained Fuzzy Logic (cFL) approach of Lauffenburger and coworkers which has been used to effectively model signal transduction pathways important in human health \cite{Morris:2011ys}.
-In our formulation, Hill-like transfer functions $0 < f\left(\mathbf{x}\right) < 1$ were used to calculate the influence of factor abundance upon enzyme activity or a gene expression process.
+In our formulation, Hill-like transfer functions $0 \leq f\left(\mathbf{x}\right) \leq 1$ were used to calculate the influence of factor abundance upon enzyme activity or a gene expression process.
 In this context, factors can be individual metabolite or protein levels or some function of abundance, e.g., the product of metabolite or proteins levels.
 However, more generally, factors can also correspond to non-modeled influences, categorial variables or other abstract quantities.
 In the current study, we let factors correspond to the abundance of individual proteins, inhibitors or transcription factors, as well as products of transcription factors where it is necessary to represent a co-dependent regulatory activity.
@@ -555,7 +557,7 @@ $v_{j}=\mathcal{I}_{j}\left(f_{1j}\left(\cdot\right),\hdots,f_{mj}\left(\cdot\ri
 where $0\leq f_{ij}\left(\cdot\right)\leq 1$ denotes a regulatory transfer function quantifying the influence of factor $i$ on rate $j$.
 The function $\mathcal{I}_{j}\left(\cdot\right)$ is an integration rule which maps the output of regulatory transfer functions into a control
 variable. In this study, we used $\mathcal{I}_{j}\in\left\{min,max\right\}$ and hill transfer functions \cite{pr3010178,pr3010138}.
-If a process has no modifying factors, $v_{j}=1$.
+If a process had no modifying factors, $v_{j}=1$.
 
 %Factors can be individual metabolite or protein levels or some function, e.g., the product of metabolite levels.
 
@@ -576,7 +578,7 @@ The kinetic rate of transcription was modeled as:
 \begin{equation}
 	\bar{r}_{T,j} = \alpha_{j}\left[V^{max}_{T}\left(\frac{G_{j}}{K_{T}+G_{j}}\right)\right]
 \end{equation}where the maximum gene expression rate was defined as the product of a characteristic transcription rate constant ($k_{T}$)
-and the abundance of RNA polymerase, $V^{max}_{T} = k_{T}\left(RNAP\right)$.
+and the abundance of RNA polymerase, $V^{max}_{T} = k_{T}\left(\rm RNAP\right)$.
 The parameter $\alpha_{j}$ denotes the gene specific correction to the characteristic transcription rate (estimated in this study).
 Similar to the signaling processes, the gene expression control term $0\leq u_{j}\leq 1$ depended upon the combination of factors which influenced rate process $j$.
 For each rate, we used a rule-based approach to select from competing control factors.
@@ -596,13 +598,13 @@ Lastly, the specific translation rate was modeled as:
 \end{equation}where $V^{max}_{X}$ denotes a characteristic maximum translation rate estimated from literature, $\beta_{j}$ denotes the transcript specific correction the characteristic translation rate,
 and $K_{X}$ denotes a translation saturation constant.
 The characteristic maximum translation rate was defined as the product of a characteristic translation rate constant ($k_{X}$)
-and the abundance of Ribosomes ($RIBO$), $V^{max}_{X} = k_{X}\left(RIBO\right)$.
+and the abundance of ribosomes ($\rm RIBO$), $V^{max}_{X} = k_{X}\left(\rm RIBO\right)$.
 
-In this study, we estimated $k_{T}, k_{X}, k_{d,m}, k_{d,p}, RNAP$ and $RIBO$ directly from literature using estimates of transcription and translation rates,
-the half-life of an typical mRNA and protein and a typical value for the copies per cell of RNA polymerase and ribosomes.
+In this study, we estimated $k_{T}, k_{X}, k_{d,m}, k_{d,p}, \rm RNAP$ and $\rm RIBO$ directly from literature using estimates of transcription and translation rates,
+the half-life of a typical mRNA and protein and a typical value for the copies per cell of RNA polymerase and ribosomes.
 The saturation constants $K_{X}$ and $K_{T}$ were adjusted so that gene expression and translation resulted in gene products on a biologically realistic concentration scale.
 Next, we calculated the concentration for gene $j$ by assuming, on average,
-that a cell had two copies of each gene at any given time. Thus, the bulk of our gene expression parameters were based directly upon literature values, and were not adjusted during model identification. The values used for the characteristic transcription/translation parameters, degradation constants and macromolecular copy number are given in the supplemental materials along with the specific formulas required to calculate all derived constants.
+that a cell had two copies of each gene at any given time. Thus, the bulk of our gene expression parameters were based directly upon literature values, and were not adjusted during model identification. The values used for the characteristic transcription/translation parameters, degradation constants and macromolecular copy number are given in the supplement along with the specific formulas required to calculate all derived constants.
 
 The signaling and gene expression model equations were implemented in Julia and solved using the \texttt{CVODE} routine of the Sundials package \cite{Julia,Hindmarsh2005}.
 The model code and parameter ensemble is freely available under an MIT software license and can be downloaded from http://www.varnerlab.org.
@@ -614,7 +616,7 @@ In addition to rate and saturation constants appearing in the signal transductio
 correction factors $\alpha_{j},\beta_{j},\delta_{j}$ and $\delta_{j}$ and control coefficients from these data.
 We used the Pareto Optimal Ensemble Technique (JuPOETs) multiobjective optimization framework in combination
 with leave-one-out cross-validation to estimate an ensemble of model parameters \cite{Song:2010fk,JuPOETs-BioArXiv}.
-Model parameter values were adjusted to minimize the residual between simulations and experimental measurements for the 11 objective functions (supplemental materials).
+Model parameter values were adjusted to minimize the residual between simulations and experimental measurements.
 Cross-validation was used to calculate both training and prediction error during the parameter estimation procedure \cite{kohavi1995study}.
 The 41 intracellular protein and mRNA data-sets used for identification were organized into 11 objective functions.
 These 11 objective functions were then partitioned, where each partition contained ten training objectives and one validation objective.
@@ -657,13 +659,689 @@ Results are expressed as mean $\pm$ standard error, n$\geq$6. Data was analyzed 
 
 \clearpage
 
+% References directly in *.tex file
+% JV 11/28/16
+%\bibliography{References_v1}
+\begin{thebibliography}{10}
 
-\bibliography{References_v1}
+\bibitem{Thiery:2003il}
+Thiery JP.
+\newblock Epithelial-mesenchymal transitions in development and pathologies.
+\newblock Curr Opin Cell Biol. 2003;15(6):740--6.
+
+\bibitem{Stahl:2001pd}
+Stahl PJ, Felsen D.
+\newblock Transforming growth factor-beta, basement membrane, and
+  epithelial-mesenchymal transdifferentiation: implications for fibrosis in
+  kidney disease.
+\newblock Am J Pathol. 2001;159(4):1187--92.
+
+\bibitem{Eisenberg:1995ai}
+Eisenberg LM, Markwald RR.
+\newblock Molecular regulation of atrioventricular valvuloseptal morphogenesis.
+\newblock Circ Res. 1995;77(1):1--6.
+
+\bibitem{Zavadil:2005fu}
+Zavadil J, B{\"o}ttinger EP.
+\newblock TGF-beta and epithelial-to-mesenchymal transitions.
+\newblock Oncogene. 2005;24(37):5764--74.
+\newblock doi:{10.1038/sj.onc.1208927}.
+
+\bibitem{Xu:2009oq}
+Xu J, Lamouille S, Derynck R.
+\newblock TGF-beta-induced epithelial to mesenchymal transition.
+\newblock Cell Res. 2009;19(2):156--72.
+\newblock doi:{10.1038/cr.2009.5}.
+
+\bibitem{Medici:2006qa}
+Medici D, Hay ED, Goodenough DA.
+\newblock Cooperation between snail and LEF-1 transcription factors is
+  essential for TGF-beta1-induced epithelial-mesenchymal transition.
+\newblock Mol Biol Cell. 2006;17(4):1871--9.
+\newblock doi:{10.1091/mbc.E05-08-0767}.
+
+\bibitem{Medici:2008fk}
+Medici D, Hay ED, Olsen BR.
+\newblock Snail and Slug promote epithelial-mesenchymal transition through
+  beta-catenin-T-cell factor-4-dependent expression of transforming growth
+  factor-beta3.
+\newblock Mol Biol Cell. 2008;19(11):4875--87.
+\newblock doi:{10.1091/mbc.E08-05-0506}.
+
+\bibitem{Kim:2002lh}
+Kim K, Lu Z, Hay ED.
+\newblock Direct evidence for a role of beta-catenin/LEF-1 signaling pathway in
+  induction of EMT.
+\newblock Cell Biol Int. 2002;26(5):463--76.
+
+\bibitem{Jiang:2007aa}
+Jiang YG, Luo Y, He Dl, Li X, Zhang Ll, Peng T, et~al.
+\newblock Role of Wnt/beta-catenin signaling pathway in epithelial-mesenchymal
+  transition of human prostate cancer induced by hypoxia-inducible
+  factor-1alpha.
+\newblock Int J Urol. 2007;14(11):1034--9.
+\newblock doi:{10.1111/j.1442-2042.2007.01866.x}.
+
+\bibitem{Huber:2004aa}
+Huber MA, Azoitei N, Baumann B, Gr{\"u}nert S, Sommer A, Pehamberger H, et~al.
+\newblock NF-kappaB is essential for epithelial-mesenchymal transition and
+  metastasis in a model of breast cancer progression.
+\newblock J Clin Invest. 2004;114(4):569--81.
+\newblock doi:{10.1172/JCI21358}.
+
+\bibitem{Hardy:2010aa}
+Hardy KM, Booth BW, Hendrix MJC, Salomon DS, Strizzi L.
+\newblock ErbB/EGF signaling and EMT in mammary development and breast cancer.
+\newblock J Mammary Gland Biol Neoplasia. 2010;15(2):191--9.
+\newblock doi:{10.1007/s10911-010-9172-2}.
+
+\bibitem{Ahmed:2007mi}
+Ahmed S, Nawshad A.
+\newblock Complexity in interpretation of embryonic epithelial-mesenchymal
+  transition in response to transforming growth factor-beta signaling.
+\newblock Cells Tissues Organs. 2007;185(1-3):131--45.
+\newblock doi:{10.1159/000101314}.
+
+\bibitem{Chung:2009jl}
+Chung SW, Miles FL, Sikes RA, Cooper CR, Farach-Carson MC, Ogunnaike BA.
+\newblock Quantitative modeling and analysis of the transforming growth factor
+  beta signaling pathway.
+\newblock Biophys J. 2009;96(5):1733--50.
+\newblock doi:{10.1016/j.bpj.2008.11.050}.
+
+\bibitem{Vilar:2006gb}
+Vilar JMG, Jansen R, Sander C.
+\newblock Signal processing in the TGF-beta superfamily ligand-receptor
+  network.
+\newblock PLoS Comput Biol. 2006;2(1):e3.
+\newblock doi:{10.1371/journal.pcbi.0020003}.
+
+\bibitem{Steinway:2014aa}
+Steinway SN, Za{\~n}udo JGT, Ding W, Rountree CB, Feith DJ, Loughran TP Jr,
+  et~al.
+\newblock Network modeling of TGFB signaling in hepatocellular carcinoma
+  epithelial-to-mesenchymal transition reveals joint sonic hedgehog and Wnt
+  pathway activation.
+\newblock Cancer Res. 2014;74(21):5963--77.
+\newblock doi:{10.1158/0008-5472.CAN-14-0225}.
+
+\bibitem{Cirit:2012kx}
+Cirit M, Haugh JM.
+\newblock Data-driven modelling of receptor tyrosine kinase signalling networks
+  quantifies receptor-specific potencies of PI3K- and Ras-dependent ERK
+  activation.
+\newblock Biochem J. 2012;441(1):77--85.
+\newblock doi:{10.1042/BJ20110833}.
+
+\bibitem{Morris:2011ys}
+Morris MK, Saez-Rodriguez J, Clarke DC, Sorger PK, Lauffenburger DA.
+\newblock Training signaling pathway maps to biochemical data with constrained
+  fuzzy logic: quantitative analysis of liver cell responses to inflammatory
+  stimuli.
+\newblock PLoS Comput Biol. 2011;7(3):e1001099.
+\newblock doi:{10.1371/journal.pcbi.1001099}.
+
+\bibitem{2001_bailey_NatBiotech}
+Bailey JE.
+\newblock Complex biology with no parameters.
+\newblock Nat Biotechnol. 2001;19(6):503--4.
+\newblock doi:{10.1038/89204}.
+
+\bibitem{Machta:2013by}
+Machta BB, Chachra R, Transtrum MK, Sethna JP.
+\newblock Parameter space compression underlies emergent theories and
+  predictive models.
+\newblock Science. 2013;342(6158):604--7.
+\newblock doi:{10.1126/science.1238723}.
+
+\bibitem{Song:2010fk}
+Song SO, Chakrabarti A, Varner JD.
+\newblock Ensembles of signal transduction models using Pareto Optimal Ensemble
+  Techniques (POETs).
+\newblock Biotechnol J. 2010;5(7):768--80.
+\newblock doi:{10.1002/biot.201000059}.
+
+\bibitem{Lequieu:2011fj}
+Lequieu J, Chakrabarti A, Nayak S, Varner JD.
+\newblock Computational modeling and analysis of insulin induced eukaryotic
+  translation initiation.
+\newblock PLoS Comput Biol. 2011;7(11):e1002263.
+\newblock doi:{10.1371/journal.pcbi.1002263}.
+
+\bibitem{2010_luan_varner_MolBioSys}
+Luan D, Szlam F, Tanaka KA, Barie PS, Varner JD.
+\newblock Ensembles of uncertain mathematical models can identify network
+  response to therapeutic interventions.
+\newblock Mol Biosyst. 2010;6(11):2272--86.
+\newblock doi:{10.1039/b920693k}.
+
+\bibitem{2011_kalita_brasier_JBC}
+Kalita MK, Sargsyan K, Tian B, Paulucci-Holthauzen A, Najm HN, Debusschere BJ,
+  et~al.
+\newblock Sources of cell-to-cell variability in canonical nuclear factor-kB
+  (NF-kB) signaling pathway inferred from single cell dynamic images.
+\newblock J Biol Chem. 2011;286(43):37741--57.
+\newblock doi:{10.1074/jbc.M111.280925}.
+
+\bibitem{2011_hasenauer_allgower_BMCBioinfo}
+Hasenauer J, Waldherr S, Doszczak M, Radde N, Scheurich P, Allg{\"o}wer F.
+\newblock Identification of models of heterogeneous cell populations from
+  population snapshot data.
+\newblock BMC Bioinformatics. 2011;12:125.
+\newblock doi:{10.1186/1471-2105-12-125}.
+
+\bibitem{2012_creixell_linding_NatBiotech}
+Creixell P, Schoof EM, Erler JT, Linding R.
+\newblock Navigating cancer network attractors for tumor-specific therapy.
+\newblock Nat Biotechnol. 2012;30(9):842--8.
+\newblock doi:{10.1038/nbt.2345}.
+
+\bibitem{Schoeberl:2002rv}
+Schoeberl B, Eichler-Jonsson C, Gilles ED, Muller G.
+\newblock {C}omputational modeling of the dynamics of the {MAP} kinase cascade
+  activated by surface and internalized {EGF} receptors.
+\newblock Nat Biotechnol. 2002;20(4):370--375.
+\newblock doi:{10.1038/nbt0402-370}.
+
+\bibitem{Chen:2009uq}
+Chen WW, Schoeberl B, Jasper PJ, Niepel M, Nielsen UB, Lauffenburger DA, et~al.
+\newblock {I}nput-output behavior of {E}rb{B} signaling pathways as revealed by
+  a mass action model trained against dynamic data.
+\newblock Mol Syst Biol. 2009;5:239.
+\newblock doi:{10.1038/msb.2008.74}.
+
+\bibitem{Tasseff:2011ve}
+Tasseff R, Nayak S, Song SO, Yen A, Varner JD.
+\newblock {M}odeling and analysis of retinoic acid induced differentiation of
+  uncommitted precursor cells.
+\newblock Integr Biol (Camb). 2011;3(5):578--591.
+\newblock doi:{10.1039/c0ib00141d}.
+
+\bibitem{Gadkar:2005vn}
+Gadkar KG, Varner J, Doyle FJ 3rd.
+\newblock Model identification of signal transduction networks from data using
+  a state regulator problem.
+\newblock Syst Biol (Stevenage). 2005;2(1):17--30.
+
+\bibitem{Lian:2011bs}
+Lian Yg, Zhou Qg, Zhang Yj, Zheng Fl.
+\newblock VEGF ameliorates tubulointerstitial fibrosis in unilateral ureteral
+  obstruction mice via inhibition of epithelial-mesenchymal transition.
+\newblock Acta Pharmacol Sin. 2011;32(12):1513--21.
+\newblock doi:{10.1038/aps.2011.111}.
+
+\bibitem{Milo:2010aa}
+Milo R, Jorgensen P, Moran U, Weber G, Springer M.
+\newblock BioNumbers--the database of key numbers in molecular and cell
+  biology.
+\newblock Nucleic Acids Res. 2010;38(Database issue):D750--3.
+\newblock doi:{10.1093/nar/gkp889}.
+
+\bibitem{Park:2010fu}
+Park SY, Lee HE, Li H, Shipitsin M, Gelman R, Polyak K.
+\newblock Heterogeneity for stem cell-related markers according to tumor
+  subtype and histologic stage in breast cancer.
+\newblock Clin Cancer Res. 2010;16(3):876--87.
+\newblock doi:{10.1158/1078-0432.CCR-09-1532}.
+
+\bibitem{Hemavathy:2000aa}
+Hemavathy K, Ashraf SI, Ip YT.
+\newblock Snail/slug family of repressors: slowly going into the fast lane of
+  development and cancer.
+\newblock Gene. 2000;257(1):1--12.
+
+\bibitem{Hemavathy:2000ab}
+Hemavathy K, Guru SC, Harris J, Chen JD, Ip YT.
+\newblock Human Slug is a repressor that localizes to sites of active
+  transcription.
+\newblock Mol Cell Biol. 2000;20(14):5087--95.
+
+\bibitem{Dhasarathy:2011aa}
+Dhasarathy A, Phadke D, Mav D, Shah RR, Wade PA.
+\newblock The transcription factors Snail and Slug activate the transforming
+  growth factor-beta signaling pathway in breast cancer.
+\newblock PLoS One. 2011;6(10):e26514.
+\newblock doi:{10.1371/journal.pone.0026514}.
+
+\bibitem{Guaita:2002aa}
+Guaita S, Puig I, Franci C, Garrido M, Dominguez D, Batlle E, et~al.
+\newblock Snail induction of epithelial to mesenchymal transition in tumor
+  cells is accompanied by MUC1 repression and ZEB1 expression.
+\newblock J Biol Chem. 2002;277(42):39209--16.
+\newblock doi:{10.1074/jbc.M206400200}.
+
+\bibitem{Jackstadt:2013aa}
+Jackstadt R, R{\"o}h S, Neumann J, Jung P, Hoffmann R, Horst D, et~al.
+\newblock AP4 is a mediator of epithelial-mesenchymal transition and metastasis
+  in colorectal cancer.
+\newblock J Exp Med. 2013;210(7):1331--50.
+\newblock doi:{10.1084/jem.20120812}.
+
+\bibitem{Eastman:1999aa}
+Eastman Q, Grosschedl R.
+\newblock Regulation of LEF-1/TCF transcription factors by Wnt and other
+  signals.
+\newblock Curr Opin Cell Biol. 1999;11(2):233--40.
+
+\bibitem{Aramburu:1999if}
+Aramburu J, Yaffe MB, L{\'o}pez-Rodr{\'\i}guez C, Cantley LC, Hogan PG, Rao A.
+\newblock Affinity-driven peptide selection of an NFAT inhibitor more selective
+  than cyclosporin A.
+\newblock Science. 1999;285(5436):2129--33.
+
+\bibitem{Dhimolea2010}
+Dhimolea E, Maffini MV, Soto AM, Sonnenschein C.
+\newblock The role of collagen reorganization on mammary epithelial
+  morphogenesis in a 3D culture model.
+\newblock Biomaterials. 2010;31(13):3622--3630.
+\newblock doi:{10.1016/j.biomaterials.2010.01.077}.
+
+\bibitem{Butcher:2004aa}
+Butcher JT, Penrod AM, Garc{\'\i}a AJ, Nerem RM.
+\newblock Unique morphology and focal adhesion development of valvular
+  endothelial cells in static and fluid flow environments.
+\newblock Arterioscler Thromb Vasc Biol. 2004;24(8):1429--34.
+\newblock doi:{10.1161/01.ATV.0000130462.50769.5a}.
+
+\bibitem{Hong:2013mi}
+Hong JP, Li XM, Li MX, Zheng FL.
+\newblock VEGF suppresses epithelial-mesenchymal transition by inhibiting the
+  expression of Smad3 and miR-192 a Smad3-dependent microRNA.
+\newblock Int J Mol Med. 2013;31(6):1436--42.
+\newblock doi:{10.3892/ijmm.2013.1337}.
+
+\bibitem{Nagy:2007lh}
+Nagy JA, Dvorak AM, Dvorak HF.
+\newblock VEGF-A and the induction of pathological angiogenesis.
+\newblock Annu Rev Pathol. 2007;2:251--75.
+\newblock doi:{10.1146/annurev.pathol.2.010506.134925}.
+
+\bibitem{Ferrara:2002kx}
+Ferrara N.
+\newblock VEGF and the quest for tumour angiogenesis factors.
+\newblock Nat Rev Cancer. 2002;2(10):795--803.
+\newblock doi:{10.1038/nrc909}.
+
+\bibitem{Willis:2007uq}
+Willis BC, Borok Z.
+\newblock TGF-beta-induced EMT: mechanisms and implications for fibrotic lung
+  disease.
+\newblock Am J Physiol Lung Cell Mol Physiol. 2007;293(3):L525--34.
+\newblock doi:{10.1152/ajplung.00163.2007}.
+
+\bibitem{Polyak2009}
+Polyak K, Weinberg RA.
+\newblock Transitions between epithelial and mesenchymal states: acquisition of
+  malignant and stem cell traits.
+\newblock Nat Rev Cancer. 2009;9(4):265--273.
+\newblock doi:{10.1038/nrc2620}.
+
+\bibitem{Strauss:2011fk}
+Strauss R, Li ZY, Liu Y, Beyer I, Persson J, Sova P, et~al.
+\newblock Analysis of epithelial and mesenchymal markers in ovarian cancer
+  reveals phenotypic heterogeneity and plasticity.
+\newblock PLoS One. 2011;6(1):e16186.
+\newblock doi:{10.1371/journal.pone.0016186}.
+
+\bibitem{Neve:2006uq}
+Neve RM, Chin K, Fridlyand J, Yeh J, Baehner FL, Fevr T, et~al.
+\newblock A collection of breast cancer cell lines for the study of
+  functionally distinct cancer subtypes.
+\newblock Cancer Cell. 2006;10(6):515--27.
+\newblock doi:{10.1016/j.ccr.2006.10.008}.
+
+\bibitem{Welch-Reardon:2014aa}
+Welch-Reardon KM, Wu N, Hughes CCW.
+\newblock A Role for Partial Endothelial-Mesenchymal Transitions in
+  Angiogenesis?
+\newblock Arterioscler Thromb Vasc Biol. 2014;doi:{10.1161/ATVBAHA.114.303220}.
+
+\bibitem{Zajchowski:2001kx}
+Zajchowski DA, Bartholdi MF, Gong Y, Webster L, Liu HL, Munishkin A, et~al.
+\newblock Identification of gene expression profiles that predict the
+  aggressive behavior of breast cancer cells.
+\newblock Cancer Res. 2001;61(13):5168--78.
+
+\bibitem{Mancini2009}
+Mancini M, Toker A.
+\newblock NFAT proteins: emerging roles in cancer progression.
+\newblock Nat Rev Cancer. 2009;9(11):810--820.
+\newblock doi:{10.1038/nrc2735}.
+
+\bibitem{Singh:2010jx}
+Singh G, Singh SK, K{\"o}nig A, Reutlinger K, Nye MD, Adhikary T, et~al.
+\newblock Sequential activation of NFAT and c-Myc transcription factors
+  mediates the TGF-beta switch from a suppressor to a promoter of cancer cell
+  proliferation.
+\newblock J Biol Chem. 2010;285(35):27241--50.
+\newblock doi:{10.1074/jbc.M110.100438}.
+
+\bibitem{Debnath2003}
+Debnath J, Muthuswamy SK, Brugge JS.
+\newblock Morphogenesis and oncogenesis of MCF-10A mammary epithelial acini
+  grown in three-dimensional basement membrane cultures.
+\newblock Methods. 2003;30(3):256--268.
+
+\bibitem{Pearson:2007qq}
+Pearson GW, Hunter T.
+\newblock Real-time imaging reveals that noninvasive mammary epithelial acini
+  can contain motile cells.
+\newblock J Cell Biol. 2007;179(7):1555--67.
+\newblock doi:{10.1083/jcb.200706099}.
+
+\bibitem{OBrien2004}
+O'Brien LE, Tang K, Kats ES, Schutz-Geschwender A, Lipschutz JH, Mostov KE.
+\newblock ERK and MMPs sequentially regulate distinct stages of epithelial
+  tubule development.
+\newblock Dev Cell. 2004;7(1):21--32.
+\newblock doi:{10.1016/j.devcel.2004.06.001}.
+
+\bibitem{Debnath:2005qc}
+Debnath J, Brugge JS.
+\newblock Modelling glandular epithelial cancers in three-dimensional cultures.
+\newblock Nat Rev Cancer. 2005;5(9):675--88.
+\newblock doi:{10.1038/nrc1695}.
+
+\bibitem{Moles:2003aa}
+Moles CG, Mendes P, Banga JR.
+\newblock Parameter estimation in biochemical pathways: a comparison of global
+  optimization methods.
+\newblock Genome Res. 2003;13(11):2467--74.
+\newblock doi:{10.1101/gr.1262503}.
+
+\bibitem{Rodriguez-Fernandez:2013aa}
+Rodriguez-Fernandez M, Rehberg M, Kremling A, Banga JR.
+\newblock Simultaneous model discrimination and parameter estimation in dynamic
+  models of cellular systems.
+\newblock BMC Syst Biol. 2013;7:76.
+\newblock doi:{10.1186/1752-0509-7-76}.
+
+\bibitem{Villaverde:2014aa}
+Villaverde AF, Banga JR.
+\newblock Reverse engineering and identification in systems biology:
+  strategies, perspectives and challenges.
+\newblock J R Soc Interface. 2014;11(91):20130505.
+\newblock doi:{10.1098/rsif.2013.0505}.
+
+\bibitem{Choi:2012bs}
+Choi M, Shi J, Jung SH, Chen X, Cho KH.
+\newblock Attractor landscape analysis reveals feedback loops in the p53
+  network that control the cellular response to DNA damage.
+\newblock Sci Signal. 2012;5(251):ra83.
+\newblock doi:{10.1126/scisignal.2003363}.
+
+\bibitem{Terfve:2012kq}
+Terfve C, Cokelaer T, Henriques D, MacNamara A, Goncalves E, Morris MK, et~al.
+\newblock CellNOptR: a flexible toolkit to train protein signaling networks to
+  data using multiple logic formalisms.
+\newblock BMC Syst Biol. 2012;6:133.
+\newblock doi:{10.1186/1752-0509-6-133}.
+
+\bibitem{Hyduke:2010rt}
+Hyduke DR, Palsson B{\O}.
+\newblock Towards genome-scale signalling network reconstructions.
+\newblock Nat Rev Genet. 2010;11(4):297--307.
+\newblock doi:{10.1038/nrg2750}.
+
+\bibitem{Wayman2013}
+Wayman J, Varner J.
+\newblock Biological systems modeling of metabolic and signaling networks.
+\newblock Curr Opin Chem Eng. 2013;2:365 -- 372.
+
+\bibitem{Sainani2012}
+Sainani KL.
+\newblock Meet the Skeptics: Why some doubt biomedical models - and what it
+  takes to win them over.
+\newblock Biomedical Computation Review. 2012; p. 12 -- 18.
+
+\bibitem{Lee:2009fk}
+Lee MW, Vassiliadis VS, Park JM.
+\newblock Individual-based and stochastic modeling of cell population dynamics
+  considering substrate dependency.
+\newblock Biotechnol Bioeng. 2009;103(5):891--9.
+\newblock doi:{10.1002/bit.22327}.
+
+\bibitem{Swain:2002ve}
+Swain PS, Elowitz MB, Siggia ED.
+\newblock Intrinsic and extrinsic contributions to stochasticity in gene
+  expression.
+\newblock Proc Natl Acad Sci U S A. 2002;99(20):12795--800.
+\newblock doi:{10.1073/pnas.162041399}.
+
+\bibitem{Handl:2007fk}
+Handl J, Kell DB, Knowles J.
+\newblock Multiobjective optimization in bioinformatics and computational
+  biology.
+\newblock IEEE/ACM Trans Comput Biol Bioinform. 2007;4(2):279--92.
+\newblock doi:{10.1109/TCBB.2007.070203}.
+
+\bibitem{Vega:2004qf}
+Vega S, Morales AV, Oca{\~n}a OH, Vald{\'e}s F, Fabregat I, Nieto MA.
+\newblock Snail blocks the cell cycle and confers resistance to cell death.
+\newblock Genes Dev. 2004;18(10):1131--43.
+\newblock doi:{10.1101/gad.294104}.
+
+\bibitem{Nawshad:2003ff}
+Nawshad A, Hay ED.
+\newblock TGFbeta3 signaling activates transcription of the LEF1 gene to induce
+  epithelial mesenchymal transformation during mouse palate development.
+\newblock J Cell Biol. 2003;163(6):1291--301.
+\newblock doi:{10.1083/jcb.200306024}.
+
+\bibitem{Cano:2000kh}
+Cano A, P{\'e}rez-Moreno MA, Rodrigo I, Locascio A, Blanco MJ, del Barrio MG,
+  et~al.
+\newblock The transcription factor snail controls epithelial-mesenchymal
+  transitions by repressing E-cadherin expression.
+\newblock Nat Cell Biol. 2000;2(2):76--83.
+\newblock doi:{10.1038/35000025}.
+
+\bibitem{Arce:2009pr}
+Arce L, Pate KT, Waterman ML.
+\newblock Groucho binds two conserved regions of LEF-1 for HDAC-dependent
+  repression.
+\newblock BMC Cancer. 2009;9:159.
+\newblock doi:{10.1186/1471-2407-9-159}.
+
+\bibitem{Grumolato2013}
+Grumolato L, Liu G, Haremaki T, Mungamuri SK, Mong P, Akiri G, et~al.
+\newblock ?-Catenin-Independent Activation of TCF1/LEF1 in Human Hematopoietic
+  Tumor Cells through Interaction with ATF2 Transcription Factors.
+\newblock PLoS Genet. 2013;9(8):e1003603.
+\newblock doi:{10.1371/journal.pgen.1003603}.
+
+\bibitem{Wu:2009cr}
+Wu Y, Deng J, Rychahou PG, Qiu S, Evers BM, Zhou BP.
+\newblock Stabilization of snail by NF-kappaB is required for
+  inflammation-induced cell migration and invasion.
+\newblock Cancer Cell. 2009;15(5):416--28.
+\newblock doi:{10.1016/j.ccr.2009.03.016}.
+
+\bibitem{Sullivan:2009bh}
+Sullivan NJ, Sasser AK, Axel AE, Vesuna F, Raman V, Ramirez N, et~al.
+\newblock Interleukin-6 induces an epithelial-mesenchymal transition phenotype
+  in human breast cancer cells.
+\newblock Oncogene. 2009;28(33):2940--7.
+\newblock doi:{10.1038/onc.2009.180}.
+
+\bibitem{Niessen:2008nx}
+Niessen K, Fu Y, Chang L, Hoodless PA, McFadden D, Karsan A.
+\newblock Slug is a direct Notch target required for initiation of cardiac
+  cushion cellularization.
+\newblock J Cell Biol. 2008;182(2):315--25.
+\newblock doi:{10.1083/jcb.200710067}.
+
+\bibitem{Liu:2008aa}
+Liu Y, El-Naggar S, Darling DS, Higashi Y, Dean DC.
+\newblock Zeb1 links epithelial-mesenchymal transition and cellular senescence.
+\newblock Development. 2008;135(3):579--88.
+\newblock doi:{10.1242/dev.007047}.
+
+\bibitem{Hong:2015aa}
+Hong T, Watanabe K, Ta CH, Villarreal-Ponce A, Nie Q, Dai X.
+\newblock An Ovol2-Zeb1 Mutual Inhibitory Circuit Governs Bidirectional and
+  Multi-step Transition between Epithelial and Mesenchymal States.
+\newblock PLoS Comput Biol. 2015;11(11):e1004569.
+\newblock doi:{10.1371/journal.pcbi.1004569}.
+
+\bibitem{Bullock:2012aa}
+Bullock MD, Sayan AE, Packham GK, Mirnezami AH.
+\newblock MicroRNAs: critical regulators of epithelial to mesenchymal (EMT) and
+  mesenchymal to epithelial transition (MET) in cancer progression.
+\newblock Biol Cell. 2012;104(1):3--12.
+\newblock doi:{10.1111/boc.201100115}.
+
+\bibitem{Lu:2013aa}
+Lu M, Jolly MK, Levine H, Onuchic JN, Ben-Jacob E.
+\newblock MicroRNA-based regulation of epithelial-hybrid-mesenchymal fate
+  determination.
+\newblock Proc Natl Acad Sci U S A. 2013;110(45):18144--9.
+\newblock doi:{10.1073/pnas.1318192110}.
+
+\bibitem{Zhang:2014aa}
+Zhang J, Tian XJ, Zhang H, Teng Y, Li R, Bai F, et~al.
+\newblock TGF-beta-induced epithelial-to-mesenchymal transition proceeds
+  through stepwise activation of multiple feedback loops.
+\newblock Sci Signal. 2014;7(345):ra91.
+\newblock doi:{10.1126/scisignal.2005304}.
+
+\bibitem{Tian:2013aa}
+Tian XJ, Zhang H, Xing J.
+\newblock {Coupled reversible and irreversible bistable switches underlying
+  TGFb-induced epithelial to mesenchymal transition}.
+\newblock Biophys J. 2013;105(4):1079--89.
+\newblock doi:{10.1016/j.bpj.2013.07.011}.
+
+\bibitem{Linding:2007fk}
+Linding R, Jensen LJ, Ostheimer GJ, van Vugt MATM, J{\o}rgensen C, Miron IM,
+  et~al.
+\newblock Systematic discovery of in vivo phosphorylation networks.
+\newblock Cell. 2007;129(7):1415--26.
+\newblock doi:{10.1016/j.cell.2007.05.052}.
+
+\bibitem{Jensen:2009fk}
+Jensen LJ, Kuhn M, Stark M, Chaffron S, Creevey C, Muller J, et~al.
+\newblock STRING 8--a global view on proteins and their functional interactions
+  in 630 organisms.
+\newblock Nucleic Acids Res. 2009;37(Database issue):D412--6.
+\newblock doi:{10.1093/nar/gkn760}.
+
+\bibitem{Zhou:2004kx}
+Zhou BP, Deng J, Xia W, Xu J, Li YM, Gunduz M, et~al.
+\newblock Dual regulation of Snail by GSK-3beta-mediated phosphorylation in
+  control of epithelial-mesenchymal transition.
+\newblock Nat Cell Biol. 2004;6(10):931--40.
+\newblock doi:{10.1038/ncb1173}.
+
+\bibitem{Larue:2005vn}
+Larue L, Bellacosa A.
+\newblock Epithelial-mesenchymal transition in development and cancer: role of
+  phosphatidylinositol 3' kinase/AKT pathways.
+\newblock Oncogene. 2005;24(50):7443--54.
+\newblock doi:{10.1038/sj.onc.1209091}.
+
+\bibitem{Derynck:2003fc}
+Derynck R, Zhang YE.
+\newblock Smad-dependent and Smad-independent pathways in TGF-beta family
+  signalling.
+\newblock Nature. 2003;425(6958):577--84.
+\newblock doi:{10.1038/nature02006}.
+
+\bibitem{Massague:2005qc}
+Massagu{\'e} J, Seoane J, Wotton D.
+\newblock Smad transcription factors.
+\newblock Genes Dev. 2005;19(23):2783--810.
+\newblock doi:{10.1101/gad.1350705}.
+
+\bibitem{Nawshad:2007kl}
+Nawshad A, Medici D, Liu CC, Hay ED.
+\newblock TGFbeta3 inhibits E-cadherin gene expression in palate medial-edge
+  epithelial cells through a Smad2-Smad4-LEF1 transcription complex.
+\newblock J Cell Sci. 2007;120(Pt 9):1646--53.
+\newblock doi:{10.1242/jcs.003129}.
+
+\bibitem{Medici2011}
+Medici D, Potenta S, Kalluri R.
+\newblock Transforming growth factor-?2 promotes Snail-mediated
+  endothelial-mesenchymal transition through convergence of Smad-dependent and
+  Smad-independent signalling.
+\newblock Biochem J. 2011;437(3):515--520.
+\newblock doi:{10.1042/BJ20101500}.
+
+\bibitem{Suehiro:2014aa}
+Suehiro Ji, Kanki Y, Makihara C, Schadler K, Miura M, Manabe Y, et~al.
+\newblock Genome-wide approaches reveal functional vascular endothelial growth
+  factor (VEGF)-inducible nuclear factor of activated T cells (NFAT) c1 binding
+  to angiogenesis-related genes in the endothelium.
+\newblock J Biol Chem. 2014;289(42):29044--59.
+\newblock doi:{10.1074/jbc.M114.555235}.
+
+\bibitem{Hu:2015aa}
+Hu CY, Varner JD, Lucks JB.
+\newblock Generating Effective Models and Parameters for RNA Genetic Circuits.
+\newblock ACS Synth Biol. 2015;4(8):914--26.
+\newblock doi:{10.1021/acssynbio.5b00077}.
+
+\bibitem{pr3010138}
+Wayman JA, Sagar A, Varner JD.
+\newblock Dynamic Modeling of Cell-Free Biochemical Networks Using Effective
+  Kinetic Models.
+\newblock Processes. 2015;3(1):138.
+\newblock doi:{10.3390/pr3010138}.
+
+\bibitem{pr3010178}
+Sagar A, Varner JD.
+\newblock Dynamic Modeling of the Human Coagulation Cascade Using Reduced Order
+  Effective Kinetic Models.
+\newblock Processes. 2015;3(1):178.
+\newblock doi:{10.3390/pr3010178}.
+
+\bibitem{Julia}
+Bezanson J, Edelman A, Karpinski S, Shah VB.
+\newblock Julia: {A} Fresh Approach to Numerical Computing.
+\newblock CoRR. 2014;abs/1411.1607.
+
+\bibitem{Hindmarsh2005}
+Hindmarsh A, Brown P, Grant K, Lee S, Serban R, Shumaker D, et~al.
+\newblock SUNDIALS: Suite of nonlinear and differential/algebraic equation
+  solvers.
+\newblock ACM Transactions on Mathematical Software. 2005;31:363--396.
+
+\bibitem{JuPOETs-BioArXiv}
+Bassen D, Vilkhovoy M, Minot M, Butcher JT, Varner JD.
+\newblock {JuPOETs: A Constrained Multiobjective Optimization Approach to
+  Estimate Biochemical Model Ensembles in the Julia Programming Language}.
+\newblock bioRxiv. 2016;10.1101/056044.
+\newblock doi:{10.1101/056044}.
+
+\bibitem{kohavi1995study}
+Kohavi R.
+\newblock {A study of cross-validation and bootstrap for accuracy estimation
+  and model selection}.
+\newblock In: International joint Conference on artificial intelligence.
+  vol.~14. Citeseer; 1995. p. 1137--1145.
+
+\bibitem{ChangPP07}
+Chang H, Park C, Parvin B.
+\newblock Quantitative Representation of Three-dimensional Cell Culture Models.
+\newblock In: Proceedings of the 2007 {IEEE} International Symposium on
+  Biomedical Imaging: From Nano to Macro, Washington, DC, USA, April 12-16,
+  2007; 2007. p. 89--92.
+\newblock Available from: \url{http://dx.doi.org/10.1109/ISBI.2007.356795}.
+
+\bibitem{Polizzotti}
+Polizzotti L, Basak O, Bjornsson C, Shubert K, Yener B, Plopper G.
+\newblock Novel Image Analysis Approach Quantifies Morphological
+  Characteristics of 3D Breast Culture Acini with Varying Metastatic
+  Potentials.
+\newblock J Biomed Biotech. 2012;2012(doi:10.1155/2012/102036):1--16.
+
+\end{thebibliography}
 
 \clearpage
 
 \begin{figure}
-\includegraphics [width=1.0\linewidth] {./figs/Fig1_coarse_network.pdf}
+%\includegraphics [width=1.0\linewidth] {./figs/Fig1_coarse_network.pdf}
 \caption{Model connectivity recreates the core architecture during EMT. The EMT network contains 97 nodes (proteins, mRNA, and genes) interconnected by 169 interactions.
 Central to EMT induction, activation of the MAPK cascade occurs through TGF-$\beta$1/2 binding which activates the AP-1/Sp1 transcriptional axis. AP-1/Sp1 drives an autocrine response of TGF-$\beta$3, which activates the Smad cascade, leading to phenotypic change. Conversely, VEGF-A binding can stabilize an epithelial phenotype through NFAT activation.
 Downstream activation of $\beta$-catenin signaling due to E-cadherin loss and GSK3 inactivation of $\beta$-catenin confinement is critical to the complete activation of the EMT program.
@@ -673,7 +1351,7 @@ The complete list of molecular interactions that comprise the model is given in 
 \clearpage
 
 \begin{figure}
-\includegraphics [width=1.0\linewidth] {./figs/Fig2_training.pdf}
+%\includegraphics [width=1.0\linewidth] {./figs/Fig2_training.pdf}
 \caption{Training and validation simulations. The population of EMT models qualitatively captured TGF$-\beta$-induced EMT signaling.
 (A-I) The population was generated using JuPOETs and trained using 11 different objective functions (41 data sets) taken from Medici \emph{et al.} \cite{Medici:2008fk}.
 The model captured the simulated experiments for all cases when compared to randomized controls.
@@ -685,7 +1363,7 @@ These blot intensities were then used as the training data for the EMT parameter
 \clearpage
 
 \begin{figure}
-\includegraphics [width=1.0\linewidth] {./figs/Fig3_phenotype.pdf}
+%\includegraphics [width=1.0\linewidth] {./figs/Fig3_phenotype.pdf}
 \caption{Simulated VEGF-A and TGF$-\beta$1/2 exposure promoted phenotype heterogeneity.
 Simulated response to TGF$-\beta$1/2 and VEGF-A exposure with and without axis specific inhibitors.
 Vimentin and E-cadherin abundances (in nM) were used to quantify the shift in population at 48 hrs.
@@ -700,11 +1378,11 @@ In whole, high levels of phosphorylated-Sp1 correlated with vimentin expression,
 \clearpage
 
 \begin{figure}
-\includegraphics [width=1.0\linewidth] {./figs/Fig4_mechanism.pdf}
+%\includegraphics [width=1.0\linewidth] {./figs/Fig4_mechanism.pdf}
 \caption{Analysis of underlying signaling responses.
 (A) We examined the distribution of NFATc1 and AP1/SP1 in cells containing the hybrid phenotype (VEGF-A + TGF$-\beta$2 case), showing the potential for cells to express both SP1 and NFATc1 in a non exclusive manner.
-(B) We were able to show a fit to an additional objective demonstrating the actiation of GSK3 through PI3K. Our model captures this activation through TGF$-\beta$3 signaling. LY294002 is a PI3K inhibitor.
-(C) We identified a novel regulator of LEF1 called YREG1 that allows Snail/Slug to emulate an inducer by repressing YREG1, which was required to stabalize the untreated population.
+(B) We fit an additional objective demonstrating the activation of GSK3 through PI3K. The model captured this activation through TGF$-\beta$3 signaling. LY294002 is a PI3K inhibitor.
+(C) We identified a novel regulator of LEF1 called YREG1 that allows Snail/Slug to emulate an inducer by repressing YREG1, which was required to stabilize the untreated population.
 YREG1 overexpression revealed an enhanced epithelial phenotype, while some inherently transformed cells moved towards a hybrid phenotype.
 (D) In the absence of YREG1, most of the population failed to consistently to retain a stable epithelial state.}\label{fg:F4}
 \end{figure}
@@ -712,14 +1390,14 @@ YREG1 overexpression revealed an enhanced epithelial phenotype, while some inher
 \clearpage
 
 \begin{figure}
-\includegraphics [width=1.0\linewidth] {./figs/Fig-5-MCF10A-Validation.pdf}
+%\includegraphics [width=1.0\linewidth] {./figs/Fig-5-MCF10A-Validation.pdf}
 \caption{Simultaneous TGF-$\beta$1/2 and VEGF-A treatment induced phenotype heterogeneity and is dependent upon NFAT activity \emph{in-vitro}.  (A) In MCF10A, treatment with (10ng/ml) TGF$-\beta$2 increased Slug and vimentin, while ecadherin expression was inhibited at both the gene and protein level at 48 hrs.  Conversely, VEGFA alone increased both NFATc1 and ecadherin gene expression.  Simultaneous TGF$-\beta$2 (10ng/ml) and VEGFA (50ng/ml) treatment increased Slug, NFATc1, and vimentin expression, while also increasing ecadherin levels via qPCR.  (B-C)  Immunofluorescence confirmed these results and nuclear co-localization of both phospho-Sp1 and NFAT were found dependent upon TGF$-\beta$2 and VEGFA, respectively. (D) To isolate the effect of NFAT, treatment of VEGFA (50ng/ml) and VIVIT (10$\mu$M) reduced ecadherin expression at 48hrs (control-dashed line).  Similarly, combined TGF$-\beta$2, VEGFA and VIVIT treatment increased Slug and vimentin expression, while inhibiting ecadherin levels via qPCR.  (E) These findings were confirmed via immunofluorescence as the VIVIT peptide inhibited ecadherin and nuclear localization of NFATc1 in all three cases.  (F)  Quantitative flow cytometry also confirmed this trend.  Similar experiments in DLD1 followed a similar trend (supplement).  Magnification, 40x. Scale bars: 50$\mu$m.  C=Control, T=TGF$-\beta$2 , V=VEGFA, VI= NFAT inhibitor (VIVIT).  Asterisks signify statistical differences from each other according to a one-way ANOVA with Tukey's post hoc (p$\prec$0.05).}\label{fg:F5}
 \end{figure}
 
 \clearpage
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth] {./figs/Fig-6-Phenotyping.pdf}
+%\includegraphics[width=0.5\linewidth] {./figs/Fig-6-Phenotyping.pdf}
 \caption{Ductal branching is dependent upon phenotype heterogeneity within MCF10A in 3-D culture.  MCF10A and DLD1 were formed into spheroids overnight and explanted to a collagen gel for 72 hrs.  For compaction and tubular assays, cells were embedded into collagen gels for 72 hrs, and the extent of tubulogenesis was measured at 7 days.  (A-D) Within MCF10A, TGF$-\beta$2 (10ng/ml) enhanced invasion and contractile properties while, VEGFA (50ng/ml) promoted increased migration.  TGF$-\beta$2 with VEGFA significantly increased migration, while limiting with compaction.  VIVIT (10$\mu$M) in combination with VEGFA and TGF$-\beta$2 decreased migration and compaction, while increasing invasion.  (D) Likewise, cell morphology (circularity index) correlated with both invasion and compaction in MCF10A.  (E-F) The size of tubular structures (acini) also increased significantly upon addition of VEGFA, while the number of ductal branches was most significant upon simultaneous TGF$-\beta$2 and VEGFA treatment (Red-Ecadherin, Green-Factin, Blue-Nuclear).   DLD1 cells followed a similar trend, although the degree of migration, invasion, and compaction was less significant.  In addition, no tubular structures were identified during the 7 day tubulogenesis endpoints.  Scale bars: 500$\mu$m, 1000$\mu$m, 250$\mu$m, and 80$\mu$m, respectively.  C=Control, T=TGF$-\beta$2 , V=VEGFA, VI= NFAT inhibitor (VIVIT).  Asterisks signify statistical differences from each other according to a one-way ANOVA with Tukey's post hoc (p$\prec$0.05).
 Boxes in the left-most panel identify regions identified by arrows that were then imaged in greater zoom in the panel immediately below.
 The box diagram was not repeated for arrows in the other panels for clarity, but the same method was applied.}\label{fg:F6}
@@ -741,6 +1419,48 @@ The box diagram was not repeated for arrows in the other panels for clarity, but
 \setcounter{page}{1}
 
 \clearpage
-\input{Supplemental-JB}
+
+\begin{figure}
+	%\includegraphics [width=1.0\linewidth] {./figs/Fig-Supplemental-Error-Table.pdf}
+	\caption{Training and prediction values as a function of condition for the 11 TGF-$\beta$ objective functions versus a random parameter control.}\label{fg:ObjTable}
+\end{figure}
+
+\begin{figure}
+%\includegraphics [width=1.0\linewidth] {./figs/Fig-3-Supplemental-DLD1.pdf}
+\caption{VEGF-A attenuates TGF-$\beta$1/2 to induce phenotype heterogeneity in DLD1.
+(A) In DLD1, we found that 5ng/ml of VEGFA increased NFATc1 and E-cadherin gene expression via qPCR and 50ng/ml potentiated this effect at 48 hrs.
+(B - C) These findings were confirmed at the protein level via immunofluorescence, as ecadherin levels and nuclear localization of NFATc1 increased.
+(D) Treatment with (10ng/ml) TGF$\beta$2 resulted in mesenchymal transformation as measured via qPCR against target genes Slug, ecadherin, vimentin, Sp1, and NFATc1.
+(E - F) Immunofluorescence and nuclear localization revealed a strong presence of phospho-Sp1.
+(G) Combination of VEGFA (50ng/ml) and TGF$\beta$2 (10ng/ml) treatment resulted in increased Slug, NFATc1, and vimentin expression, while also increasing ecadherin levels compared to control.
+(H) Immunofluorescence confirmed these results, as both ecadherin and vimentin levels were elevated.
+(I) A significant increase in nuclear localization of both NFATc1 and phospho-Sp1 were also found.
+Magnification, 40x. Scale bars: 50$\mu$m.  C=Control, T=TGF$\beta$2 , V=VEGFA, VI=NFAT inhibitor (VIVIT).
+Asterisks signify statistical differences from each other according to a one-way ANOVA with Tukey's post hoc (p$\prec$0.05).}\label{fg:S3}
+\end{figure}
+
+\begin{figure}
+%\includegraphics [width=1.0\linewidth] {./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf}
+\caption{E-cadherin expression is dependent upon NFAT activity in DLD1.
+(A) Treatment with VEGFA (50ng/ml) and NFAT inhibitory peptide VIVIT (10$\mu$M) resulted in significantly reduced ecadherin expression (qRT-PCR at 48hrs).
+Addition of TGF$\beta$2 (10ng/ml) and VIVIT resulted in increased Slug and vimentin expression, while inhibiting ecadherin levels.
+Combined TGF$\beta$2, VEGFA, and VIVIT treatment resulted in target genes Slug and vimentin expression increased, while inhibiting ecadherin levels.
+No change in Sp1 or NFATc1 expression was found.
+(B) These findings were confirmed via immunofluorescence as the VIVIT inhibitors was shown to inhibit ecadherin levels in all three cases.
+We also found no change in gene or nuclear localization of NFATc1 in all three cases, while phospho-Sp1 was found to increase in both TGF$\beta$ conditions.
+(C) Quantitative flow cytometry also confirmed this trend.
+(D,E)  TGF$\beta$2, VEGFA and VIVIT treatment in DLD1 and MCF10A resulted in no change of Sp1 expression or NFATc1 expression.
+(F)  Likewise, no change in nuclear localization of NFAT in all three cases, however phospho-Sp1 was found to increase in both TGF$\beta$ conditions.
+Magnification, 40x. Scale bars: 50$\mu$m.  C=Control, T=TGF$\beta$2 , V=VEGFA, VI= NFAT inhibitor (VIVIT).
+Asterisks signify statistical differences from each other according to a one-way ANOVA with Tukey's post hoc (p$\prec$0.05).}\label{fg:S4}
+\end{figure}
+
+\begin{figure}
+	%\includegraphics [width=0.75\linewidth] {./figs/Fig-Supplemental-Data-VEGFA.pdf}
+	\caption{VEGF-A qPCR data used to hand fit VEGF enhancement of E-cadherin expression. mRNA was harvested after 3hr and 48hr timepoint.}\label{fg:VEGFA-Data}
+\end{figure}
+
+\newpage
+%\include{S1_Text}
 
 \end{document}

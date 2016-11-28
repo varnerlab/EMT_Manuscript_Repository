@@ -1,5 +1,15 @@
+
+% Reset the layout for the supplemental text -
+
+
 \nolinenumbers
+
 \section*{Supplemental Materials and Methods}
+
+\raggedright
+\setlength{\parindent}{0.5cm}
+\textwidth 6.25in
+\textheight 8.75in
 
 \subsection*{Characteristic transcription and translation parameters.}
 We used literature based transcription and translation parameters to establish the characteristic synthesis and degradation rates for both mRNA and protein.
@@ -75,7 +85,7 @@ The squared error for $\mathbf{k}_{i+1}$ for training set $j$ was defined as:
 The symbol $\hat{\mathcal{M}}_{ij}$ denotes scaled experimental observations (from training set $j$) while $\hat{y}_{ij}$ denotes the scaled simulation output (from training set $j$).
 The quantity $i$ denotes the sampled time-index and $\mathcal{T}_{j}$ denotes the number of time points for experiment $j$.
 In this study, the experimental data used for model training was typically the band intensity from Western or Northern blots.
-Band intensity was estimated using the ImageJ software package \cite{IMAGEJ}.
+Band intensity was estimated using the ImageJ software package.
 The scaled measurement for species $x$ at time $i=\{t_{1},t_{2},..,t_{n}\}$ in condition $j$ is given by:
 \begin{equation}\label{norm_exp_data}
 \hat{\mathcal{M}}_{ij} = \frac{\mathcal{M}_{ij} - \min_{i}\mathcal{M}_{ij}}{\max_{i}{\mathcal{M}_{ij}}-\min_{i}{\mathcal{M}_{ij}}}
@@ -85,63 +95,58 @@ A similar scaling was defined for the simulation output. By doing this scaling, 
 JuPOETs is free or charge, open source and available for download under an MIT software license from http://www.varnerlab.org.
 Details of the JuPOETs implementation, including example codes are presented in Bassen et al., \cite{JuPOETs-BioArXiv}.
 
-\begin{figure}
-	\center
-	\includegraphics [width=1.0\linewidth] {./figs/Fig-Supplemental-Error-Table.pdf}
-	\caption{Training and prediction values as a function of condition for the 11 TGF-$\beta$ objective functions versus a random parameter control.}\label{fg:ObjTable}
-\end{figure}
+% \begin{figure}
+% 	\center
+% 	\includegraphics [width=1.0\linewidth] {./figs/Fig-Supplemental-Error-Table.pdf}
+% 	\caption{Training and prediction values as a function of condition for the 11 TGF-$\beta$ objective functions versus a random parameter control.}\label{fg:ObjTable}
+% \end{figure}
 
-\begin{figure}
-\includegraphics [width=1.0\linewidth] {./figs/Fig-3-Supplemental-DLD1.pdf}
-\caption{VEGF-A attenuates TGF-$\beta$1/2 to induce phenotype heterogeneity in DLD1.
-(A) In DLD1, we found that 5ng/ml of VEGFA increased NFATc1 and E-cadherin gene expression via qPCR and 50ng/ml potentiated this effect at 48 hrs.
-(B - C) These findings were confirmed at the protein level via immunofluorescence, as ecadherin levels and nuclear localization of NFATc1 increased.
-(D) Treatment with (10ng/ml) TGF$\beta$2 resulted in mesenchymal transformation as measured via qPCR against target genes Slug, ecadherin, vimentin, Sp1, and NFATc1.
-(E - F) Immunofluorescence and nuclear localization revealed a strong presence of phospho-Sp1.
-(G) Combination of VEGFA (50ng/ml) and TGF$\beta$2 (10ng/ml) treatment resulted in increased Slug, NFATc1, and vimentin expression, while also increasing ecadherin levels compared to control.
-(H) Immunofluorescence confirmed these results, as both ecadherin and vimentin levels were elevated.
-(I) A significant increase in nuclear localization of both NFATc1 and phospho-Sp1 were also found.
-Magnification, 40x. Scale bars: 50$\mu$m.  C=Control, T=TGF$\beta$2 , V=VEGFA, VI=NFAT inhibitor (VIVIT).
-Asterisks signify statistical differences from each other according to a one-way ANOVA with Tukey's post hoc (p$\prec$0.05).}\label{fg:S3}
-\end{figure}
+% \begin{figure}
+% \includegraphics [width=1.0\linewidth] {./figs/Fig-3-Supplemental-DLD1.pdf}
+% \caption{VEGF-A attenuates TGF-$\beta$1/2 to induce phenotype heterogeneity in DLD1.
+% (A) In DLD1, we found that 5ng/ml of VEGFA increased NFATc1 and E-cadherin gene expression via qPCR and 50ng/ml potentiated this effect at 48 hrs.
+% (B - C) These findings were confirmed at the protein level via immunofluorescence, as ecadherin levels and nuclear localization of NFATc1 increased.
+% (D) Treatment with (10ng/ml) TGF$\beta$2 resulted in mesenchymal transformation as measured via qPCR against target genes Slug, ecadherin, vimentin, Sp1, and NFATc1.
+% (E - F) Immunofluorescence and nuclear localization revealed a strong presence of phospho-Sp1.
+% (G) Combination of VEGFA (50ng/ml) and TGF$\beta$2 (10ng/ml) treatment resulted in increased Slug, NFATc1, and vimentin expression, while also increasing ecadherin levels compared to control.
+% (H) Immunofluorescence confirmed these results, as both ecadherin and vimentin levels were elevated.
+% (I) A significant increase in nuclear localization of both NFATc1 and phospho-Sp1 were also found.
+% Magnification, 40x. Scale bars: 50$\mu$m.  C=Control, T=TGF$\beta$2 , V=VEGFA, VI=NFAT inhibitor (VIVIT).
+% Asterisks signify statistical differences from each other according to a one-way ANOVA with Tukey's post hoc (p$\prec$0.05).}\label{fg:S3}
+% \end{figure}
 
-\begin{figure}
-\includegraphics [width=1.0\linewidth] {./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf}
-\caption{E-cadherin expression is dependent upon NFAT activity in DLD1.
-(A) Treatment with VEGFA (50ng/ml) and NFAT inhibitory peptide VIVIT (10$\mu$M) resulted in significantly reduced ecadherin expression (qRT-PCR at 48hrs).
-Addition of TGF$\beta$2 (10ng/ml) and VIVIT resulted in increased Slug and vimentin expression, while inhibiting ecadherin levels.
-Combined TGF$\beta$2, VEGFA, and VIVIT treatment resulted in target genes Slug and vimentin expression increased, while inhibiting ecadherin levels.
-No change in Sp1 or NFATc1 expression was found.
-(B) These findings were confirmed via immunofluorescence as the VIVIT inhibitors was shown to inhibit ecadherin levels in all three cases.
-We also found no change in gene or nuclear localization of NFATc1 in all three cases, while phospho-Sp1 was found to increase in both TGF$\beta$ conditions.
-(C) Quantitative flow cytometry also confirmed this trend.
-(D,E)  TGF$\beta$2, VEGFA and VIVIT treatment in DLD1 and MCF10A resulted in no change of Sp1 expression or NFATc1 expression.
-(F)  Likewise, no change in nuclear localization of NFAT in all three cases, however phospho-Sp1 was found to increase in both TGF$\beta$ conditions.
-Magnification, 40x. Scale bars: 50$\mu$m.  C=Control, T=TGF$\beta$2 , V=VEGFA, VI= NFAT inhibitor (VIVIT).
-Asterisks signify statistical differences from each other according to a one-way ANOVA with Tukey's post hoc (p$\prec$0.05).}\label{fg:S4}
-\end{figure}
+% \begin{figure}
+% \includegraphics [width=1.0\linewidth] {./figs/Fig-4-Supplemental-DLD1-FlowCyto.pdf}
+% \caption{E-cadherin expression is dependent upon NFAT activity in DLD1.
+% (A) Treatment with VEGFA (50ng/ml) and NFAT inhibitory peptide VIVIT (10$\mu$M) resulted in significantly reduced ecadherin expression (qRT-PCR at 48hrs).
+% Addition of TGF$\beta$2 (10ng/ml) and VIVIT resulted in increased Slug and vimentin expression, while inhibiting ecadherin levels.
+% Combined TGF$\beta$2, VEGFA, and VIVIT treatment resulted in target genes Slug and vimentin expression increased, while inhibiting ecadherin levels.
+% No change in Sp1 or NFATc1 expression was found.
+% (B) These findings were confirmed via immunofluorescence as the VIVIT inhibitors was shown to inhibit ecadherin levels in all three cases.
+% We also found no change in gene or nuclear localization of NFATc1 in all three cases, while phospho-Sp1 was found to increase in both TGF$\beta$ conditions.
+% (C) Quantitative flow cytometry also confirmed this trend.
+% (D,E)  TGF$\beta$2, VEGFA and VIVIT treatment in DLD1 and MCF10A resulted in no change of Sp1 expression or NFATc1 expression.
+% (F)  Likewise, no change in nuclear localization of NFAT in all three cases, however phospho-Sp1 was found to increase in both TGF$\beta$ conditions.
+% Magnification, 40x. Scale bars: 50$\mu$m.  C=Control, T=TGF$\beta$2 , V=VEGFA, VI= NFAT inhibitor (VIVIT).
+% Asterisks signify statistical differences from each other according to a one-way ANOVA with Tukey's post hoc (p$\prec$0.05).}\label{fg:S4}
+% \end{figure}
 
-\newpage
-
-\begin{figure}
-	\center
-	\includegraphics [width=0.75\linewidth] {./figs/Fig-Supplemental-Data-VEGFA.pdf}
-	\caption{VEGF-A qPCR data used to hand fit VEGF enhancement of E-cadherin expression. mRNA was harvested after 3hr and 48hr timepoint.}\label{fg:VEGFA-Data}
-\end{figure}
+% \begin{figure}
+% 	\center
+% 	\includegraphics [width=0.75\linewidth] {./figs/Fig-Supplemental-Data-VEGFA.pdf}
+% 	\caption{VEGF-A qPCR data used to hand fit VEGF enhancement of E-cadherin expression. mRNA was harvested after 3hr and 48hr timepoint.}\label{fg:VEGFA-Data}
+% \end{figure}
 
 
 %\bibliography{References_v1}
 
 % in place ref %
-
-@article{IMAGEJ,
-	Author = {Abramoff, M.D. and Magelhaes, P.J. and Ram, S.J.},
-	Date-Added = {2011-11-07 13:49:32 -0500},
-	Date-Modified = {2011-11-07 13:49:32 -0500},
-	Journal = {Biophotonics International,},
-	Pages = {36-42},
-	Title = {Image Processing with ImageJ},
-	Volume = {11},
-	Year = {2004}}
-
-
+% @article{IMAGEJ,
+% 	Author = {Abramoff, M.D. and Magelhaes, P.J. and Ram, S.J.},
+% 	Date-Added = {2011-11-07 13:49:32 -0500},
+% 	Date-Modified = {2011-11-07 13:49:32 -0500},
+% 	Journal = {Biophotonics International,},
+% 	Pages = {36-42},
+% 	Title = {Image Processing with ImageJ},
+% 	Volume = {11},
+% 	Year = {2004}}
